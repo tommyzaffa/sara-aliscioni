@@ -254,7 +254,7 @@
   gsap.set(".loader__sub", { opacity: 0, y: 12 });
   $(".loader__name").classList.add("is-ready");
 
-  const MIN_MS = 4200;                 // the count never runs faster than this
+  const MIN_MS = 3400;                 // the count never runs faster than this
   const toLoad = $$(".hero__slide img").slice(0, 2);
   const total = toLoad.length + 1;
   let loaded = 0, shown = 0, revealed = 0, subShown = false, doneAt = 0, introStarted = false;
@@ -285,7 +285,7 @@
     }
     if (!subShown && shown > 72) { subShown = true; gsap.to(".loader__sub", { opacity: 1, y: 0, duration: 1.4, ease: "power3.out" }); }
     if (shown >= 100 && !doneAt) doneAt = now;
-    if (doneAt && now - doneAt > 900) intro();
+    if (doneAt && now - doneAt > 600) intro();
   }
   gsap.ticker.add(loaderTick);
 
@@ -294,9 +294,9 @@
     introStarted = true;
     gsap.ticker.remove(loaderTick);
     const tl = gsap.timeline({ defaults: { ease: "expo.inOut" } });
-    tl.to(letters, { yPercent: -110, duration: 1, stagger: .03, ease: "expo.in" })
-      .to(".loader__sub, .loader__count, .loader__bar", { opacity: 0, duration: .7, ease: "power2.in" }, "<.2")
-      .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1.6 }, "-=.35")
+    tl.to(letters, { yPercent: -110, duration: .85, stagger: .025, ease: "expo.in" })
+      .to(".loader__sub, .loader__count, .loader__bar", { opacity: 0, duration: .6, ease: "power2.in" }, "<.15")
+      .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1.45 }, "-=.3")
       .add(() => { document.body.classList.remove("is-loading"); hero.start(); }, "-=1.2")
       .from(".hero__slide.is-active img", { scale: 1.35, duration: 2.8, ease: "expo.out" }, "-=1.3")
       .from(".hero__title .word", { yPercent: 110, duration: 1.7, stagger: .16, ease: "expo.out" }, "-=2.3")
@@ -425,6 +425,7 @@
     ScrollTrigger.batch(".card", {
       start: "top 92%", once: true,
       onEnter: batch => {
+        batch.forEach(c => { c.dataset.shown = "1"; });
         gsap.fromTo(batch.map(c => $(".card__media", c)), { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.3, ease: "expo.inOut", stagger: .1 });
         gsap.fromTo(batch.map(c => $(".card__body", c)), { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: "expo.out", stagger: .1, delay: .35 });
       }
@@ -456,7 +457,11 @@
     const track = $(".frames__track");
     let setW = 0, pos = 0, target = 0, visible = false, hover = false, drag = null, suppressClick = false;
     const DRIFT = reduce ? 0 : 0.45;         // px per frame when idle
-    const measure = () => { setW = track.scrollWidth / 2; };
+    const measure = () => {
+      const old = setW;
+      setW = track.scrollWidth / 2;
+      if (old && setW && old !== setW) { const r = setW / old; pos *= r; target *= r; }
+    };
     measure();
     window.addEventListener("resize", measure);
     window.addEventListener("load", measure);
@@ -474,9 +479,16 @@
       track.style.transform = `translate3d(${-pos}px,0,0)`;
     });
 
-    // the page scroll pushes the strip sideways (down → left, up → right)
+    // the page scroll pushes the strip sideways (down → left, up → right).
+    // Clamped, so a fast flick on a phone can't throw it across several photos.
+    const coarse = window.matchMedia("(pointer: coarse)").matches;
     let carY = window.scrollY;
-    const onPage = y => { const d = y - carY; carY = y; if (visible && !drag && !reduce) target += d * 0.85; };
+    const onPage = y => {
+      const d = y - carY; carY = y;
+      if (!visible || drag || reduce) return;
+      const lim = coarse ? 24 : 60;
+      target += Math.max(-lim, Math.min(lim, d)) * (coarse ? 0.6 : 0.85);
+    };
     if (lenis) lenis.on("scroll", e => onPage(e.scroll));
     else window.addEventListener("scroll", () => onPage(window.scrollY), { passive: true });
 
@@ -491,32 +503,40 @@
     vp.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hover = false; });
     vp.addEventListener("pointerdown", e => {
       if (e.pointerType === "mouse" && e.button !== 0) return;
-      drag = { id: e.pointerId, x: e.clientX, pos, lastX: e.clientX, lastT: performance.now(), v: 0, moved: false };
+      drag = { id: e.pointerId, x: e.clientX, y: e.clientY, pos, moved: false, samples: [[performance.now(), e.clientX]] };
       suppressClick = false;
     });
     window.addEventListener("pointermove", e => {
       if (!drag || e.pointerId !== drag.id) return;
       const dx = e.clientX - drag.x;
-      if (!drag.moved && Math.abs(dx) > 6) { drag.moved = true; vp.classList.add("is-dragging"); }
-      if (!drag.moved) return;
+      const dy = e.clientY - drag.y;
+      if (!drag.moved) {
+        if (Math.abs(dy) > 8 && Math.abs(dy) > Math.abs(dx)) { drag = null; return; }   // it's a vertical scroll: let it go
+        if (Math.abs(dx) < 8) return;
+        drag.moved = true; vp.classList.add("is-dragging");
+      }
       const now = performance.now();
-      const step = (e.clientX - drag.lastX) / Math.max(1, now - drag.lastT) * 16.67;
-      drag.v = drag.v * 0.3 + step * 0.7;
-      drag.lastX = e.clientX; drag.lastT = now;
+      drag.samples.push([now, e.clientX]);
+      while (drag.samples.length > 2 && now - drag.samples[0][0] > 100) drag.samples.shift();
       pos = target = drag.pos - dx;
     }, { passive: true });
-    const end = e => {
+    const end = (e, cancelled) => {
       if (!drag || e.pointerId !== drag.id) return;
       if (drag.moved) {
-        target = pos - drag.v * 22;      // a little inertia
+        if (!cancelled) {
+          // velocity over the last ~100 ms, clamped → gentle, predictable glide
+          const s = drag.samples, a = s[0], b = s[s.length - 1];
+          const v = (b[1] - a[1]) / Math.max(16, b[0] - a[0]) * 16.67;
+          target = pos - Math.max(-30, Math.min(30, v)) * 14;
+        } else target = pos;
         suppressClick = true;
         setTimeout(() => { suppressClick = false; }, 400);
       }
       drag = null;
       vp.classList.remove("is-dragging");
     };
-    window.addEventListener("pointerup", end);
-    window.addEventListener("pointercancel", end);
+    window.addEventListener("pointerup", e => end(e, false));
+    window.addEventListener("pointercancel", e => end(e, true));
     vp.addEventListener("click", e => { if (suppressClick) { e.preventDefault(); e.stopPropagation(); } }, true);
   })();
 
@@ -584,78 +604,118 @@
   }
 
   /* ==========================================================================
-     Works — the image appears in a fixed frame beside the list.
-     It follows the hovered row, or the row crossing the middle of the screen.
+     Works — two frames beside the list: the top one serves the first half
+     of the projects, the bottom one the second half. Each follows the
+     hovered row, or the row crossing the middle of the screen.
      ========================================================================== */
   if (!mqMobile.matches) {
-    const frame = $(".wp__frame");
-    const metaEls = [$(".wp__num"), $(".wp__title"), $(".wp__count")];
     const rows = $$(".work");
     const feat = PROJECTS.filter(p => p.featured);
-    let active = -1, token = 0, cycle = null, hovering = false;
+    const split = Math.ceil(feat.length / 2);
+    const frames = $$(".wp").map(wp => ({
+      frame: $(".wp__frame", wp), meta: [$(".wp__num", wp), $(".wp__title", wp), $(".wp__count", wp)],
+      active: -1, token: 0, cycle: null
+    }));
+    let hovering = false, current = -1;
 
-    const put = (id, dur) => {
-      const my = ++token;
+    const put = (f, id, dur) => {
+      const my = ++f.token;
       const img = new Image();
       img.alt = ""; img.decoding = "async";
       img.sizes = "36vw"; img.srcset = srcset(id); img.src = src(id, "s");
       const show = () => {
-        if (my !== token) return;
-        frame.appendChild(img);
-        if (reduce) { while (frame.children.length > 1) frame.firstElementChild.remove(); return; }
+        if (my !== f.token) return;
+        f.frame.appendChild(img);
+        if (reduce) { while (f.frame.children.length > 1) f.frame.firstElementChild.remove(); return; }
         gsap.fromTo(img, { clipPath: "inset(100% 0% 0% 0%)", scale: 1.16 }, {
           clipPath: "inset(0% 0% 0% 0%)", scale: 1, duration: dur, ease: "expo.inOut",
-          onComplete: () => { while (frame.children.length > 1 && frame.firstElementChild !== img) frame.firstElementChild.remove(); }
+          onComplete: () => { while (f.frame.children.length > 1 && f.frame.firstElementChild !== img) f.frame.firstElementChild.remove(); }
         });
       };
       (img.decode ? img.decode() : Promise.resolve()).then(show, show);
     };
-    const setMeta = (i, animate) => {
+    const setMeta = (f, i, animate) => {
       const p = feat[i];
-      metaEls[0].textContent = pad(i + 1);
-      metaEls[1].textContent = p.title[lang];
-      metaEls[2].textContent = `${p.images.length} ${lang === "it" ? "foto" : "photos"}`;
-      if (animate && !reduce) gsap.fromTo(metaEls, { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: .8, stagger: .05, ease: "expo.out" });
+      f.meta[0].textContent = pad(i + 1);
+      f.meta[1].textContent = p.title[lang];
+      f.meta[2].textContent = `${p.images.length} ${lang === "it" ? "foto" : "photos"}`;
+      if (animate && !reduce) gsap.fromTo(f.meta, { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: .8, stagger: .05, ease: "expo.out" });
     };
-    const showRow = i => {
-      if (i === active) return;
-      active = i;
+    const load = (i, animate) => {
+      const f = frames[i < split ? 0 : 1];
+      if (f.active === i) return f;
+      f.active = i;
+      put(f, feat[i].cover, animate ? 1.1 : .01);
+      setMeta(f, i, animate);
+      return f;
+    };
+    const focusRow = i => {
+      if (i === current) return;
+      current = i;
       rows.forEach((r, k) => r.classList.toggle("is-active", k === i));
+      const f = load(i, true);
+      frames.forEach(x => clearInterval(x.cycle));
       const p = feat[i];
-      put(p.cover, 1.1);
-      setMeta(i, true);
-      clearInterval(cycle);
       const ids = p.images.map(x => x[0]).filter(id => id !== p.cover).slice(0, 4);
       let k = 0;
-      if (ids.length && !reduce) cycle = setInterval(() => { put(ids[k % ids.length], 1.4); k++; }, 2600);
+      if (ids.length && !reduce) f.cycle = setInterval(() => { put(f, ids[k % ids.length], 1.4); k++; }, 2600);
     };
 
     rows.forEach((r, i) => {
-      r.addEventListener("pointerenter", () => { hovering = true; showRow(i); });
-      ScrollTrigger.create({ trigger: r, start: "top 58%", end: "bottom 58%", onToggle: self => { if (self.isActive && !hovering) showRow(i); } });
+      r.addEventListener("pointerenter", () => { hovering = true; focusRow(i); });
+      ScrollTrigger.create({ trigger: r, start: "top 58%", end: "bottom 58%", onToggle: self => { if (self.isActive && !hovering) focusRow(i); } });
     });
     $(".works__list").addEventListener("pointerleave", () => { hovering = false; });
-    // warm the cache so the first hovers are instant
     feat.forEach(p => { const im = new Image(); im.src = src(p.cover, "s"); });
-    showRow(0);
-    worksPreview = { refresh: () => active >= 0 && setMeta(active, false) };
+    // both frames start filled: first project on top, first of the second half below
+    load(split, false);
+    focusRow(0);
+    worksPreview = { refresh: () => frames.forEach(f => f.active >= 0 && setMeta(f, f.active, false)) };
   }
 
   /* ==========================================================================
-     Archive filters
+     Archive — filters, and on mobile a "load more" every 10 projects
      ========================================================================== */
-  $$(".filters button").forEach(btn => btn.addEventListener("click", () => {
-    $$(".filters button").forEach(b => b.classList.toggle("is-active", b === btn));
-    const f = btn.dataset.filter;
+  const archive = (() => {
+    const STEP = 10;
     const cards = $$(".card");
-    gsap.to(cards, { opacity: 0, y: 16, duration: .3, ease: "power2.in", stagger: .01, onComplete: () => {
-      cards.forEach(c => c.classList.toggle("is-hidden", f !== "all" && c.dataset.cat !== f));
-      const vis = cards.filter(c => !c.classList.contains("is-hidden"));
-      gsap.set(vis.map(c => $(".card__media", c)), { clipPath: "inset(0% 0% 0% 0%)" });
-      gsap.fromTo(vis, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: .8, ease: "expo.out", stagger: .03 });
+    const moreWrap = $(".archive__more");
+    const moreBtn = $(".more", moreWrap);
+    let filter = "all";
+    let limit = mqMobile.matches ? STEP : Infinity;
+
+    function apply(reveal) {
+      const match = cards.filter(c => filter === "all" || c.dataset.cat === filter);
+      const before = cards.filter(c => !c.classList.contains("is-hidden"));
+      cards.forEach(c => c.classList.add("is-hidden"));
+      const vis = match.slice(0, limit);
+      vis.forEach(c => c.classList.remove("is-hidden"));
+      const left = match.length - vis.length;
+      moreWrap.classList.toggle("is-visible", left > 0);
+      $("sup", moreBtn).textContent = left;
+      if (reveal) {
+        // cards already revealed once just fade back; new ones get the curtain reveal when they scroll in
+        const seen = vis.filter(c => c.dataset.shown && (reveal === "all" || !before.includes(c)));
+        gsap.set(seen.map(c => $(".card__media", c)), { clipPath: "inset(0% 0% 0% 0%)" });
+        gsap.set(vis.filter(c => !c.dataset.shown), { opacity: 1, y: 0 });
+        if (!reduce && seen.length) gsap.fromTo(seen, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: .8, ease: "expo.out", stagger: .04 });
+      }
       ScrollTrigger.refresh();
-    } });
-  }));
+    }
+
+    $$(".filters button").forEach(btn => btn.addEventListener("click", () => {
+      $$(".filters button").forEach(b => b.classList.toggle("is-active", b === btn));
+      filter = btn.dataset.filter;
+      limit = mqMobile.matches ? STEP : Infinity;
+      const shown = cards.filter(c => !c.classList.contains("is-hidden"));
+      if (reduce) return apply("all");
+      gsap.to(shown, { opacity: 0, y: 16, duration: .3, ease: "power2.in", stagger: .01, onComplete: () => apply("all") });
+    }));
+    moreBtn.addEventListener("click", () => { limit += STEP; apply("fresh"); });
+    mqMobile.addEventListener("change", () => { limit = mqMobile.matches ? STEP : Infinity; apply(false); });
+    apply(false);
+    return { apply };
+  })();
 
   /* ==========================================================================
      Project viewer
