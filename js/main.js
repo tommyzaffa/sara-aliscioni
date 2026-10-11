@@ -27,6 +27,7 @@
     : ((navigator.language || "it").toLowerCase().startsWith("it") ? "it" : "en");
 
   let lenis = null;
+  let worksPreview = null;
   const t = key => (C.i18n[lang] && C.i18n[lang][key]) || C.i18n.it[key] || "";
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   /* bilingual inline text: <span data-it data-en>current</span> */
@@ -94,8 +95,10 @@
       <li class="work">
         <a class="work__link" href="#/p/${p.key}" data-project="${p.key}" data-cursor="open">
           <span class="work__num mono">${pad(i + 1)}</span>
-          <span class="work__title">${bi(shortTitle(p))}</span>
-          <span class="work__place mono">${bi({ it: t2("it", "cat." + p.cat), en: t2("en", "cat." + p.cat) }, "span", "work__cat")}${bi(p.place)}</span>
+          <span class="work__main">
+            <span class="work__title">${bi(shortTitle(p))}</span>
+            <span class="work__place mono">${bi({ it: t2("it", "cat." + p.cat), en: t2("en", "cat." + p.cat) }, "span", "work__cat")}${bi(p.place)}</span>
+          </span>
           <span class="work__year mono">${esc(p.year)}</span>
           <span class="work__arrow" aria-hidden="true">→</span>
           <span class="work__thumb">${imgTag(p.cover, p.title[lang], "(max-width: 860px) 92vw, 1px")}</span>
@@ -105,16 +108,17 @@
 
   function renderFrames() {
     const track = $(".frames__track");
-    track.innerHTML = C.frames.map(([id, key], i) => {
+    const set = copy => C.frames.map(([id, key], i) => {
       const p = byKey[key];
       const im = p.images.find(x => x[0] === id);
       const cap = (im && im[3]) || { it: p.title.it, en: p.title.en };
       const [w, h] = IMG[id] || [1600, 1200];
-      return `<a class="frame" href="#/p/${key}" data-cursor="view">
-        <div class="frame__media" style="aspect-ratio:${w}/${h}">${imgTag(id, cap[lang], `${Math.round((w / h) * 58)}vh`, 'style="width:100%;height:100%"')}</div>
+      return `<a class="frame" href="#/p/${key}" data-cursor="view" draggable="false"${copy ? ' aria-hidden="true" tabindex="-1"' : ""}>
+        <div class="frame__media" style="aspect-ratio:${w}/${h}">${imgTag(id, cap[lang], `${Math.round((w / h) * 56)}vh`, 'draggable="false"')}</div>
         <p class="frame__cap mono"><b>Fr. ${pad(i + 1)}</b>${bi(cap)}</p>
       </a>`;
     }).join("");
+    track.innerHTML = set(false) + set(true);
   }
 
   function renderArchive() {
@@ -138,13 +142,6 @@
   function t2(l, key) { return C.i18n[l][key] || ""; }
 
   function renderBio() {
-    const img = $(".bio__img");
-    const id = C.about.id;
-    const [w, h] = IMG[id] || [C.about.w, C.about.h];
-    img.src = src(id, "s");
-    img.srcset = srcset(id);
-    img.sizes = "(max-width: 860px) 92vw, 40vw";
-    img.width = w; img.height = h;
     $(".edu__list").innerHTML = C.education.map(e => `<li><span>${esc(e.y)}</span>${bi(e)}</li>`).join("");
   }
 
@@ -179,6 +176,7 @@
       renderContactTitle();
       setHeroCaption(hero.index, false);
       if (viewer.current) viewer.render(viewer.current, true);
+      if (worksPreview) worksPreview.refresh();
       if (hasGSAP) ScrollTrigger.refresh();
     }
   }
@@ -222,7 +220,7 @@
 
   /* ---------- Lenis smooth scroll ---------- */
   if (!reduce && typeof window.Lenis !== "undefined") {
-    lenis = new Lenis({ lerp: 0.085, wheelMultiplier: 1, smoothWheel: true });
+    lenis = new Lenis({ lerp: 0.12, wheelMultiplier: 1, smoothWheel: true });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add(time => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -250,40 +248,60 @@
   const loader = $(".loader");
   const loaderNum = $(".loader__num");
   const loaderBar = $(".loader__bar span");
-  const prog = { v: 0 };
-  let loaded = 0;
+  $$(".loader__word").forEach(w => { w.innerHTML = [...w.textContent].map(ch => `<span class="ch">${ch}</span>`).join(""); });
+  const letters = $$(".loader__name .ch");
+  gsap.set(letters, { yPercent: 110 });
+  gsap.set(".loader__sub", { opacity: 0, y: 12 });
+  $(".loader__name").classList.add("is-ready");
+
+  const MIN_MS = 4200;                 // the count never runs faster than this
   const toLoad = $$(".hero__slide img").slice(0, 2);
   const total = toLoad.length + 1;
-  const bump = () => { loaded++; gsap.to(prog, { v: loaded / total * 100, duration: .8, ease: "power2.out", onUpdate: drawProg }); };
-  function drawProg() { loaderNum.textContent = pad(Math.round(prog.v)); loaderBar.style.transform = `scaleX(${prog.v / 100})`; }
+  let loaded = 0, shown = 0, revealed = 0, subShown = false, doneAt = 0, introStarted = false;
+  const bump = () => { loaded++; };
   toLoad.forEach(img => {
     if (img.complete && img.naturalWidth) bump();
     else { img.addEventListener("load", bump, { once: true }); img.addEventListener("error", bump, { once: true }); }
   });
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(bump);
 
-  gsap.from(".loader__name span, .loader__name em", { yPercent: 110, duration: 1.2, ease: "expo.out", stagger: .08, delay: .1 });
-  gsap.from(".loader__sub", { opacity: 0, y: 10, duration: 1, delay: .5 });
-
-  let introStarted = false;
   const startAt = performance.now();
-  const waitDone = setInterval(() => {
-    const elapsed = performance.now() - startAt;
-    if ((loaded >= total && prog.v >= 99.5 && elapsed > 1500) || elapsed > 6000) { clearInterval(waitDone); intro(); }
-  }, 60);
+  const easeIO = x => -(Math.cos(Math.PI * x) - 1) / 2;   // gentle, no sprint in the middle
+  function loaderTick() {
+    const now = performance.now();
+    const el = now - startAt;
+    const timeP = easeIO(Math.min(1, el / MIN_MS)) * 100;
+    const realP = loaded / total * 100;
+    const target = el > 10000 ? 100 : Math.min(timeP, realP);
+    shown += (target - shown) * 0.1;
+    if (target - shown < .25) shown = target;
+    loaderNum.textContent = pad(Math.round(shown));
+    loaderBar.style.transform = `scaleX(${shown / 100})`;
+    // one letter after another, the last one lands just before 100
+    const want = Math.min(letters.length, Math.floor(shown / 92 * letters.length));
+    while (revealed < want) {
+      gsap.to(letters[revealed], { yPercent: 0, duration: 1.2, ease: "expo.out" });
+      revealed++;
+    }
+    if (!subShown && shown > 72) { subShown = true; gsap.to(".loader__sub", { opacity: 1, y: 0, duration: 1.4, ease: "power3.out" }); }
+    if (shown >= 100 && !doneAt) doneAt = now;
+    if (doneAt && now - doneAt > 900) intro();
+  }
+  gsap.ticker.add(loaderTick);
 
   function intro() {
     if (introStarted) return;
     introStarted = true;
-    prog.v = 100; drawProg();
+    gsap.ticker.remove(loaderTick);
     const tl = gsap.timeline({ defaults: { ease: "expo.inOut" } });
-    tl.to(".loader__center, .loader__count, .loader__bar", { opacity: 0, y: -20, duration: .6, ease: "power2.in" })
-      .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1.2 }, "-=.1")
-      .add(() => { document.body.classList.remove("is-loading"); hero.start(); }, "-=.9")
-      .from(".hero__slide.is-active img", { scale: 1.35, duration: 2.2, ease: "expo.out" }, "-=1")
-      .from(".hero__title .word", { yPercent: 110, duration: 1.4, stagger: .12, ease: "expo.out" }, "-=1.9")
-      .from(".hero__top > *, .hero__bottom > *", { opacity: 0, y: 14, duration: 1, stagger: .06, ease: "power3.out" }, "-=1.1")
-      .from(".nav", { opacity: 0, duration: 1.2, ease: "power2.out" }, "-=1.1")
+    tl.to(letters, { yPercent: -110, duration: 1, stagger: .03, ease: "expo.in" })
+      .to(".loader__sub, .loader__count, .loader__bar", { opacity: 0, duration: .7, ease: "power2.in" }, "<.2")
+      .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1.6 }, "-=.35")
+      .add(() => { document.body.classList.remove("is-loading"); hero.start(); }, "-=1.2")
+      .from(".hero__slide.is-active img", { scale: 1.35, duration: 2.8, ease: "expo.out" }, "-=1.3")
+      .from(".hero__title .word", { yPercent: 110, duration: 1.7, stagger: .16, ease: "expo.out" }, "-=2.3")
+      .from(".hero__top > *, .hero__bottom > *", { opacity: 0, y: 14, duration: 1.2, stagger: .07, ease: "power3.out" }, "-=1.3")
+      .from(".nav", { opacity: 0, duration: 1.3, ease: "power2.out" }, "-=1.3")
       .add(() => {
         loader.remove();
         if (lenis) lenis.start();
@@ -296,10 +314,11 @@
      Hero slideshow — slow dissolves, long takes
      ========================================================================== */
   const hero = {
-    index: 0, timer: null, DUR: 7,
+    index: 0, timer: null, DUR: 7, kb: null, pr: null, started: false,
     slides: $$(".hero__slide"),
     start() {
       if (reduce) return;
+      this.started = true;
       this.kenBurns(this.slides[0]);
       this.progress();
       this.timer = gsap.delayedCall(this.DUR, () => this.next());
@@ -307,9 +326,10 @@
     kenBurns(slide) {
       const img = $("img", slide);
       const dir = Math.random() > .5 ? 1 : -1;
-      gsap.fromTo(img, { scale: 1.14, xPercent: 1.5 * dir }, { scale: 1.0, xPercent: 0, duration: this.DUR + 2, ease: "none" });
+      this.kb = gsap.fromTo(img, { scale: 1.14, xPercent: 1.5 * dir }, { scale: 1.0, xPercent: 0, duration: this.DUR + 2, ease: "none" });
     },
-    progress() { gsap.fromTo(".hero__progress span", { scaleX: 0 }, { scaleX: 1, duration: this.DUR, ease: "none" }); },
+    progress() { this.pr = gsap.fromTo(".hero__progress span", { scaleX: 0 }, { scaleX: 1, duration: this.DUR, ease: "none" }); },
+    pause(p) { if (!this.started) return; [this.kb, this.pr, this.timer].forEach(x => x && (p ? x.pause() : x.resume())); },
     go(i) {
       const prev = this.slides[this.index];
       const next = this.slides[i];
@@ -331,6 +351,7 @@
 
   // parallax on the hero while leaving
   if (!reduce) {
+    ScrollTrigger.create({ trigger: ".hero", start: "top top", end: "bottom top", onLeave: () => hero.pause(true), onEnterBack: () => hero.pause(false) });
     gsap.to(".hero__slides", { yPercent: 22, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     gsap.to(".hero__title", { yPercent: -28, opacity: .2, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
   }
@@ -354,8 +375,10 @@
   };
   marquee.measure();
   window.addEventListener("resize", () => marquee.measure());
+  let marqueeVisible = true;
+  new IntersectionObserver(([e]) => { marqueeVisible = e.isIntersecting; }).observe($(".marquee"));
   if (!reduce) {
-    gsap.ticker.add(() => marquee.tick());
+    gsap.ticker.add(() => { if (marqueeVisible) marquee.tick(); });
     ScrollTrigger.create({ onUpdate(self) {
       const v = self.getVelocity();
       marquee.boost = self.direction * (1 + Math.min(Math.abs(v) / 220, 8));
@@ -398,7 +421,7 @@
       tl.fromTo(el, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "expo.inOut" });
       if (img) tl.fromTo(img, { scale: 1.3 }, { scale: 1, duration: 1.8, ease: "expo.out", clearProps: "transform" }, 0.1);
     });
-    curtain($$(".news__img, .bio__figure"));
+    curtain($$(".news__img, .bio__figure, .contact__figure"));
     ScrollTrigger.batch(".card", {
       start: "top 92%", once: true,
       onEnter: batch => {
@@ -408,8 +431,6 @@
     });
     gsap.set(".card__media", { clipPath: "inset(100% 0% 0% 0%)" });
 
-    // bio image slow drift
-    gsap.fromTo(".bio__img", { yPercent: -4 }, { yPercent: 4, ease: "none", scrollTrigger: { trigger: ".bio", start: "top bottom", end: "bottom top", scrub: true } });
 
     // cv rows
     gsap.utils.toArray(".cv__group").forEach(g => {
@@ -427,25 +448,77 @@
   }
 
   /* ==========================================================================
-     Frames — horizontal strip pinned on desktop
+     Frames — free carousel: drifts on its own, follows the page scroll,
+     and can be dragged / swiped. It never blocks the vertical scroll.
      ========================================================================== */
-  const mm = gsap.matchMedia();
-  mm.add("(min-width: 861px) and (prefers-reduced-motion: no-preference)", () => {
+  (() => {
+    const vp = $(".frames__viewport");
     const track = $(".frames__track");
-    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth);
-    const scrollTween = gsap.to(track, {
-      x: () => -dist(), ease: "none",
-      scrollTrigger: {
-        trigger: ".frames", start: "top top", end: () => "+=" + dist(), pin: true, scrub: .9, invalidateOnRefresh: true, anticipatePin: 1,
-        onUpdate: self => gsap.set(".frames__bar span", { scaleX: self.progress })
+    let setW = 0, pos = 0, target = 0, visible = false, hover = false, drag = null, suppressClick = false;
+    const DRIFT = reduce ? 0 : 0.45;         // px per frame when idle
+    const measure = () => { setW = track.scrollWidth / 2; };
+    measure();
+    window.addEventListener("resize", measure);
+    window.addEventListener("load", measure);
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { rootMargin: "120px 0px" }).observe(vp);
+
+    gsap.ticker.add((time, dt) => {
+      if (!visible || !setW) return;
+      const k = Math.min(dt / 16.67, 3);
+      if (!drag) {
+        if (!hover) target += DRIFT * k;
+        pos += (target - pos) * Math.min(1, 0.07 * k);
       }
+      while (pos >= setW) { pos -= setW; target -= setW; if (drag) drag.pos -= setW; }
+      while (pos < 0) { pos += setW; target += setW; if (drag) drag.pos += setW; }
+      track.style.transform = `translate3d(${-pos}px,0,0)`;
     });
-    $$(".frame").forEach(f => {
-      const img = $("img", f);
-      gsap.fromTo(img, { xPercent: -6 }, { xPercent: 6, ease: "none", scrollTrigger: { trigger: f, containerAnimation: scrollTween, start: "left right", end: "right left", scrub: true } });
+
+    // the page scroll pushes the strip sideways (down → left, up → right)
+    let carY = window.scrollY;
+    const onPage = y => { const d = y - carY; carY = y; if (visible && !drag && !reduce) target += d * 0.85; };
+    if (lenis) lenis.on("scroll", e => onPage(e.scroll));
+    else window.addEventListener("scroll", () => onPage(window.scrollY), { passive: true });
+
+    // trackpad horizontal swipe
+    vp.addEventListener("wheel", e => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { e.preventDefault(); e.stopPropagation(); target += e.deltaX; }
+    }, { passive: false });
+
+    // mouse drag + touch swipe (touch-action: pan-y keeps vertical page scroll native)
+    vp.addEventListener("dragstart", e => e.preventDefault());
+    vp.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") hover = true; });
+    vp.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hover = false; });
+    vp.addEventListener("pointerdown", e => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      drag = { id: e.pointerId, x: e.clientX, pos, lastX: e.clientX, lastT: performance.now(), v: 0, moved: false };
+      suppressClick = false;
     });
-    gsap.from(".frames__head .section__title, .frames__hint", { y: 30, opacity: 0, duration: 1.2, ease: "expo.out", stagger: .08, scrollTrigger: { trigger: ".frames", start: "top 75%", once: true } });
-  });
+    window.addEventListener("pointermove", e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x;
+      if (!drag.moved && Math.abs(dx) > 6) { drag.moved = true; vp.classList.add("is-dragging"); }
+      if (!drag.moved) return;
+      const now = performance.now();
+      const step = (e.clientX - drag.lastX) / Math.max(1, now - drag.lastT) * 16.67;
+      drag.v = drag.v * 0.3 + step * 0.7;
+      drag.lastX = e.clientX; drag.lastT = now;
+      pos = target = drag.pos - dx;
+    }, { passive: true });
+    const end = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      if (drag.moved) {
+        target = pos - drag.v * 22;      // a little inertia
+        suppressClick = true;
+        setTimeout(() => { suppressClick = false; }, 400);
+      }
+      drag = null;
+      vp.classList.remove("is-dragging");
+    };
+    window.addEventListener("pointerup", end);
+    window.addEventListener("pointercancel", end);
+    vp.addEventListener("click", e => { if (suppressClick) { e.preventDefault(); e.stopPropagation(); } }, true);
+  })();
 
   /* ==========================================================================
      Nav: hide on scroll down, current section
@@ -456,6 +529,7 @@
     if (document.body.classList.contains("menu-open")) return;
     const down = y > lastY;
     nav.classList.toggle("is-hidden", down && y > window.innerHeight * .9);
+    nav.classList.toggle("is-scrolled", y > 40);
     lastY = y;
   };
   if (lenis) lenis.on("scroll", e => onScrollNav(e.scroll));
@@ -488,71 +562,83 @@
   burger.addEventListener("click", () => toggleMenu(!document.body.classList.contains("menu-open")));
 
   /* ==========================================================================
-     Cursor + floating preview
+     Cursor
      ========================================================================== */
   const cursor = $(".cursor");
   const cursorLabel = $(".cursor__label");
-  const preview = $(".preview");
-  const previewInner = $(".preview__inner");
   if (finePointer && !reduce) {
     document.body.classList.add("has-cursor");
     const cx = gsap.quickTo(cursor, "x", { duration: .25, ease: "power3" });
     const cy = gsap.quickTo(cursor, "y", { duration: .25, ease: "power3" });
-    const px = gsap.quickTo(preview, "x", { duration: .7, ease: "power3" });
-    const py = gsap.quickTo(preview, "y", { duration: .7, ease: "power3" });
-    let lastX = 0;
     window.addEventListener("pointermove", e => {
       cx(e.clientX); cy(e.clientY);
       cursor.classList.add("is-visible");
-      const pw = preview.offsetWidth, ph = preview.offsetHeight;
-      px(Math.min(e.clientX + 32, window.innerWidth - pw - 16));
-      py(Math.min(Math.max(e.clientY - ph / 2, 16), window.innerHeight - ph - 16));
-      const vx = e.clientX - lastX; lastX = e.clientX;
-      gsap.to(previewInner, { rotate: gsap.utils.clamp(-8, 8, vx * .4), duration: .6, ease: "power3" });
     }, { passive: true });
     document.addEventListener("mouseleave", () => cursor.classList.remove("is-visible"));
-
-    const labelFor = el => {
-      const c = el.closest("[data-cursor]");
-      return c ? t("cursor." + c.dataset.cursor) : "";
-    };
     document.addEventListener("pointerover", e => {
-      const l = labelFor(e.target);
+      const c = e.target.closest("[data-cursor]");
+      const l = c ? t("cursor." + c.dataset.cursor) : "";
       cursor.classList.toggle("is-active", !!l);
       cursorLabel.textContent = l;
     });
+  }
 
-    // works list hover preview
-    const list = $(".works__list");
-    let cycle = null;
-    const showPreview = key => {
-      const p = byKey[key];
-      if (!p) return;
-      const ids = [p.cover, ...p.images.map(i => i[0]).filter(id => id !== p.cover)].slice(0, 5);
-      let k = 0;
-      const put = id => {
-        const img = new Image();
-        img.src = src(id, "s"); img.alt = "";
-        previewInner.appendChild(img);
-        gsap.fromTo(img, { clipPath: "inset(100% 0 0 0)", scale: 1.15 }, { clipPath: "inset(0% 0 0 0)", scale: 1, duration: .8, ease: "expo.out", onComplete: () => {
-          while (previewInner.children.length > 1) previewInner.firstChild.remove();
-        } });
+  /* ==========================================================================
+     Works — the image appears in a fixed frame beside the list.
+     It follows the hovered row, or the row crossing the middle of the screen.
+     ========================================================================== */
+  if (!mqMobile.matches) {
+    const frame = $(".wp__frame");
+    const metaEls = [$(".wp__num"), $(".wp__title"), $(".wp__count")];
+    const rows = $$(".work");
+    const feat = PROJECTS.filter(p => p.featured);
+    let active = -1, token = 0, cycle = null, hovering = false;
+
+    const put = (id, dur) => {
+      const my = ++token;
+      const img = new Image();
+      img.alt = ""; img.decoding = "async";
+      img.sizes = "36vw"; img.srcset = srcset(id); img.src = src(id, "s");
+      const show = () => {
+        if (my !== token) return;
+        frame.appendChild(img);
+        if (reduce) { while (frame.children.length > 1) frame.firstElementChild.remove(); return; }
+        gsap.fromTo(img, { clipPath: "inset(100% 0% 0% 0%)", scale: 1.16 }, {
+          clipPath: "inset(0% 0% 0% 0%)", scale: 1, duration: dur, ease: "expo.inOut",
+          onComplete: () => { while (frame.children.length > 1 && frame.firstElementChild !== img) frame.firstElementChild.remove(); }
+        });
       };
-      put(ids[0]);
-      clearInterval(cycle);
-      cycle = setInterval(() => { k = (k + 1) % ids.length; put(ids[k]); }, 900);
+      (img.decode ? img.decode() : Promise.resolve()).then(show, show);
     };
-    list.addEventListener("pointerenter", () => {
-      list.classList.add("is-hovering");
-      gsap.to(preview, { autoAlpha: 1, duration: .4 });
-      gsap.fromTo(previewInner, { scale: .85 }, { scale: 1, duration: .6, ease: "expo.out" });
-    });
-    list.addEventListener("pointerleave", () => {
-      list.classList.remove("is-hovering");
+    const setMeta = (i, animate) => {
+      const p = feat[i];
+      metaEls[0].textContent = pad(i + 1);
+      metaEls[1].textContent = p.title[lang];
+      metaEls[2].textContent = `${p.images.length} ${lang === "it" ? "foto" : "photos"}`;
+      if (animate && !reduce) gsap.fromTo(metaEls, { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: .8, stagger: .05, ease: "expo.out" });
+    };
+    const showRow = i => {
+      if (i === active) return;
+      active = i;
+      rows.forEach((r, k) => r.classList.toggle("is-active", k === i));
+      const p = feat[i];
+      put(p.cover, 1.1);
+      setMeta(i, true);
       clearInterval(cycle);
-      gsap.to(preview, { autoAlpha: 0, duration: .35 });
+      const ids = p.images.map(x => x[0]).filter(id => id !== p.cover).slice(0, 4);
+      let k = 0;
+      if (ids.length && !reduce) cycle = setInterval(() => { put(ids[k % ids.length], 1.4); k++; }, 2600);
+    };
+
+    rows.forEach((r, i) => {
+      r.addEventListener("pointerenter", () => { hovering = true; showRow(i); });
+      ScrollTrigger.create({ trigger: r, start: "top 58%", end: "bottom 58%", onToggle: self => { if (self.isActive && !hovering) showRow(i); } });
     });
-    $$(".work__link", list).forEach(a => a.addEventListener("pointerenter", () => showPreview(a.dataset.project)));
+    $(".works__list").addEventListener("pointerleave", () => { hovering = false; });
+    // warm the cache so the first hovers are instant
+    feat.forEach(p => { const im = new Image(); im.src = src(p.cover, "s"); });
+    showRow(0);
+    worksPreview = { refresh: () => active >= 0 && setMeta(active, false) };
   }
 
   /* ==========================================================================

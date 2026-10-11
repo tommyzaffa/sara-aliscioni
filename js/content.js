@@ -15,8 +15,6 @@ window.SA_CONTENT = {
     ["cracovia-06", "cracovia"], ["sofia-03", "sofia"], ["dummies-06", "dummies"]
   ],
 
-  about: { id: "praga-01", w: 1280, h: 1600 },
-
   links: {
     instagram: "https://www.instagram.com/sara_aliscioni/",
     behance: "https://www.behance.net/saraalisci0c79",
@@ -48,7 +46,7 @@ window.SA_CONTENT = {
       "works.photos": "foto",
       "frames.label": "Fotogrammi",
       "frames.title": "Un'immagine, una storia",
-      "frames.hint": "Scorri per sfogliare",
+      "frames.hint": "Trascina o scorri",
       "archive.label": "Archivio",
       "archive.title": "Tutti i progetti",
       "archive.all": "Tutto", "archive.serie": "Serie", "archive.impressioni": "Impressioni",
@@ -110,7 +108,7 @@ window.SA_CONTENT = {
       "works.photos": "photos",
       "frames.label": "Frames",
       "frames.title": "One image, one story",
-      "frames.hint": "Scroll to browse",
+      "frames.hint": "Drag or scroll",
       "archive.label": "Archive",
       "archive.title": "All projects",
       "archive.all": "All", "archive.serie": "Series", "archive.impressioni": "Impressions",

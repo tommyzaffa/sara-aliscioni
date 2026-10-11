@@ -42,12 +42,11 @@
 <body class="is-loading">
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
-  <div class="preview" aria-hidden="true"><div class="preview__inner"></div></div>
 
   <!-- Loader -->
   <div class="loader" aria-hidden="true">
     <div class="loader__center">
-      <p class="loader__name"><span>Sara</span> <em>Aliscioni</em></p>
+      <p class="loader__name" aria-label="Sara Aliscioni"><span class="loader__word">Sara</span> <em class="loader__word">Aliscioni</em></p>
       <p class="loader__sub mono" data-i18n="loader.sub">Fotografia — Roma</p>
     </div>
     <div class="loader__bar"><span></span></div>
@@ -134,19 +133,28 @@
         <p class="label mono"><span class="label__n">(02)</span> <span data-i18n="works.label">Lavori scelti</span></p>
         <h2 class="section__title serif reveal" data-i18n="works.title">Serie e reportage</h2>
       </div>
-      <ol class="works__list"></ol>
+      <div class="works__body">
+        <ol class="works__list"></ol>
+        <aside class="works__preview" aria-hidden="true">
+          <div class="wp__frame"></div>
+          <div class="wp__meta mono">
+            <span class="wp__num">01</span>
+            <span class="wp__title"></span>
+            <span class="wp__count"></span>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <!-- Frames: horizontal strip -->
     <section class="frames" id="fotogrammi">
-      <div class="frames__pin">
-        <div class="frames__head">
-          <p class="label mono"><span class="label__n">(03)</span> <span data-i18n="frames.label">Fotogrammi</span></p>
-          <h2 class="section__title serif" data-i18n="frames.title">Un'immagine, una storia</h2>
-          <p class="frames__hint mono"><span data-i18n="frames.hint">Scorri per sfogliare</span> <i>→</i></p>
-        </div>
+      <div class="frames__head">
+        <p class="label mono"><span class="label__n">(03)</span> <span data-i18n="frames.label">Fotogrammi</span></p>
+        <h2 class="section__title serif reveal" data-i18n="frames.title">Un'immagine, una storia</h2>
+        <p class="frames__hint mono"><span data-i18n="frames.hint">Trascina o scorri</span> <i>↔</i></p>
+      </div>
+      <div class="frames__viewport" data-cursor="drag">
         <div class="frames__track"></div>
-        <div class="frames__bar"><span></span></div>
       </div>
     </section>
 
@@ -197,8 +205,8 @@
     <section class="bio section" id="bio">
       <div class="bio__media">
         <figure class="bio__figure">
-          <img class="bio__img" alt="Sara Aliscioni — Praga, 2010" loading="lazy" decoding="async">
-          <figcaption class="mono">Praga, 2010</figcaption>
+          <img class="bio__img" src="images/sara-ritratto-s.webp" srcset="images/sara-ritratto-s.webp 600w, images/sara-ritratto.webp 920w" sizes="(max-width: 860px) 92vw, 36vw" width="920" height="1125" alt="Ritratto di Sara Aliscioni con la macchina fotografica" loading="lazy" decoding="async">
+          <figcaption class="mono">Sara Aliscioni</figcaption>
         </figure>
       </div>
       <div class="bio__text">
@@ -235,8 +243,15 @@
     <!-- Contact -->
     <section class="contact section" id="contatti">
       <p class="label mono"><span class="label__n">(08)</span> <span data-i18n="contact.label">Contatti</span></p>
-      <h2 class="contact__title serif" data-i18n-html="contact.title"></h2>
-      <p class="contact__text reveal" data-i18n="contact.text"></p>
+      <div class="contact__grid">
+        <div class="contact__main">
+          <h2 class="contact__title serif" data-i18n-html="contact.title"></h2>
+          <p class="contact__text reveal" data-i18n="contact.text"></p>
+        </div>
+        <figure class="contact__figure">
+          <img src="images/sara-scale.webp" width="768" height="982" alt="Sara Aliscioni con la macchina fotografica" loading="lazy" decoding="async">
+        </figure>
+      </div>
       <ul class="contact__links">
         <li><a href="https://www.instagram.com/sara_aliscioni/" target="_blank" rel="noopener"><span class="mono">01</span><b>Instagram</b><em class="mono">@sara_aliscioni</em><i>↗</i></a></li>
         <li><a href="https://www.behance.net/saraalisci0c79" target="_blank" rel="noopener"><span class="mono">02</span><b>Behance</b><em class="mono">saraalisci0c79</em><i>↗</i></a></li>
