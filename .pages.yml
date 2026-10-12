@@ -1,0 +1,166 @@
+# Pannello contenuti per Pages CMS (https://app.pagescms.org).
+# Sara accede con il suo account GitHub e modifica questi contenuti con dei moduli:
+# ogni salvataggio aggiorna il sito in circa un minuto.
+
+media:
+  input: images/uploads
+  output: images/uploads
+
+content:
+  - name: home
+    label: Home — foto a rotazione
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: interval_seconds
+        label: Secondi per ogni foto
+        type: number
+      - name: slides
+        label: Foto della home (circa 10)
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Foto, type: image }
+          - { name: caption_it, label: Didascalia (italiano), type: string }
+          - { name: caption_en, label: Didascalia (inglese), type: string }
+          - { name: gallery, label: "Galleria collegata (identificativo, es. bosnia)", type: string }
+
+  - name: galleries
+    label: Gallerie
+    type: file
+    path: content/galleries.json
+    format: json
+    list: true
+    fields:
+      - { name: id, label: "Identificativo (minuscole senza spazi, es. bosnia)", type: string, required: true }
+      - name: category
+        label: Menu in cui compare
+        type: select
+        options:
+          values:
+            - { value: serie, label: Serie }
+            - { value: impressioni, label: Impressioni di viaggio }
+      - { name: title_it, label: Titolo (italiano), type: string, required: true }
+      - { name: title_en, label: Titolo (inglese), type: string }
+      - { name: place_it, label: Luogo (italiano), type: string }
+      - { name: place_en, label: Luogo (inglese), type: string }
+      - { name: year, label: Anno, type: string }
+      - { name: text_it, label: Testo di presentazione (italiano), type: text }
+      - { name: text_en, label: Testo di presentazione (inglese), type: text }
+      - { name: cover, label: Copertina, type: image }
+      - name: images
+        label: Foto della galleria
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Foto, type: image }
+          - { name: caption_it, label: Didascalia (italiano), type: string }
+          - { name: caption_en, label: Didascalia (inglese), type: string }
+          - { name: w, label: Larghezza, type: number, hidden: true }
+          - { name: h, label: Altezza, type: number, hidden: true }
+
+  - name: news
+    label: News
+    type: file
+    path: content/news.json
+    format: json
+    list: true
+    fields:
+      - { name: date, label: "Data per l'ordinamento (AAAA-MM-GG)", type: string }
+      - { name: when_it, label: "Quando, come appare sul sito (italiano, es. 9–28 ottobre 2026)", type: string }
+      - { name: when_en, label: Quando (inglese), type: string }
+      - { name: title_it, label: Titolo (italiano), type: string, required: true }
+      - { name: title_en, label: Titolo (inglese), type: string }
+      - { name: place_it, label: Luogo (italiano), type: string }
+      - { name: place_en, label: Luogo (inglese), type: string }
+      - { name: text_it, label: Testo (italiano), type: text }
+      - { name: text_en, label: Testo (inglese), type: text }
+      - { name: image, label: Immagine (facoltativa), type: image }
+      - { name: link, label: Link esterno (facoltativo), type: string }
+
+  - name: blog
+    label: Blog
+    type: file
+    path: content/blog.json
+    format: json
+    list: true
+    fields:
+      - { name: id, label: "Identificativo (minuscole senza spazi, es. mostra-latina)", type: string, required: true }
+      - { name: date, label: "Data (AAAA-MM-GG)", type: string }
+      - { name: title_it, label: Titolo (italiano), type: string, required: true }
+      - { name: title_en, label: Titolo (inglese), type: string }
+      - { name: cover, label: Immagine di copertina, type: image }
+      - { name: excerpt_it, label: Riassunto (italiano), type: text }
+      - { name: excerpt_en, label: Riassunto (inglese), type: text }
+      - { name: body_it, label: "Testo (italiano) — una riga vuota tra i paragrafi", type: text }
+      - { name: body_en, label: Testo (inglese), type: text }
+
+  - name: bio
+    label: Biografia
+    type: file
+    path: content/bio.json
+    format: json
+    fields:
+      - { name: portrait, label: Ritratto, type: image }
+      - { name: lead_it, label: Frase d'apertura (italiano), type: text }
+      - { name: lead_en, label: Frase d'apertura (inglese), type: text }
+      - { name: text_it, label: "Biografia (italiano) — una riga vuota tra i paragrafi", type: text }
+      - { name: text_en, label: Biografia (inglese), type: text }
+      - name: facts
+        label: Dati in evidenza
+        type: object
+        list: true
+        fields:
+          - { name: label_it, label: Etichetta (italiano), type: string }
+          - { name: label_en, label: Etichetta (inglese), type: string }
+          - { name: value_it, label: Valore (italiano), type: string }
+          - { name: value_en, label: Valore (inglese), type: string }
+      - name: education
+        label: Formazione
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Anno, type: string }
+          - { name: text_it, label: Descrizione (italiano), type: string }
+          - { name: text_en, label: Descrizione (inglese), type: string }
+      - { name: languages_it, label: Lingue (italiano), type: string }
+      - { name: languages_en, label: Lingue (inglese), type: string }
+
+  - name: cv
+    label: Mostre, premi e pubblicazioni
+    type: file
+    path: content/cv.json
+    format: json
+    fields:
+      - name: solo
+        label: Mostre personali
+        type: object
+        list: true
+        fields: &cvrow
+          - { name: year, label: Anno, type: string }
+          - { name: title_it, label: Titolo (italiano), type: string }
+          - { name: title_en, label: Titolo (inglese), type: string }
+          - { name: place_it, label: Luogo / dettagli (italiano), type: string }
+          - { name: place_en, label: Luogo / dettagli (inglese), type: string }
+      - { name: group, label: Mostre collettive, type: object, list: true, fields: *cvrow }
+      - { name: awards, label: Premi e riconoscimenti, type: object, list: true, fields: *cvrow }
+      - { name: publications, label: Pubblicazioni, type: object, list: true, fields: *cvrow }
+      - { name: work, label: Backstage e collaborazioni, type: object, list: true, fields: *cvrow }
+
+  - name: site
+    label: Contatti
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: email, label: Email, type: string }
+      - { name: phone, label: Telefono (facoltativo), type: string }
+      - { name: instagram, label: Instagram (link), type: string }
+      - { name: facebook, label: Facebook (link), type: string }
+      - { name: linkedin, label: LinkedIn (link), type: string }
+      - { name: behance, label: Behance (link), type: string }
+      - { name: x, label: X / Twitter (link), type: string }
+      - { name: contact_text_it, label: Testo della pagina Contatti (italiano), type: text }
+      - { name: contact_text_en, label: Testo della pagina Contatti (inglese), type: text }
+      - { name: contact_photo, label: Foto della pagina Contatti, type: image }

@@ -1,0 +1,2620 @@
+[
+  {
+    "id": "last-sacrament",
+    "category": "serie",
+    "title_it": "Last Sacrament",
+    "title_en": "Last Sacrament",
+    "place_it": "Moldavia, Balcani, Sicilia, Bosnia",
+    "place_en": "Moldova, Balkans, Sicily, Bosnia",
+    "year": "2025",
+    "text_it": "Il sacro dentro la vita di tutti i giorni: mani giunte, veli, icone, statue di santi in vetrina, tavolate dopo il rito. Uno sguardo sulla fede raccolto negli anni tra l'Est Europa, i Balcani e il Sud Italia.",
+    "text_en": "The sacred inside everyday life: folded hands, veils, icons, saints in shop windows, long tables after the rite. A look at faith gathered over the years across Eastern Europe, the Balkans and Southern Italy.",
+    "cover": "images/l/last-sacrament-26.webp",
+    "images": [
+      {
+        "src": "images/l/last-sacrament-01.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-02.webp",
+        "w": 1600,
+        "h": 1128,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-06.webp",
+        "w": 1600,
+        "h": 1324,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-07.webp",
+        "w": 1600,
+        "h": 1254,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-08.webp",
+        "w": 1000,
+        "h": 1303,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-10.webp",
+        "w": 960,
+        "h": 667,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-11.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-14.webp",
+        "w": 1600,
+        "h": 1170,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-15.webp",
+        "w": 1600,
+        "h": 1506,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-17.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-19.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-22.webp",
+        "w": 1600,
+        "h": 1229,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-24.webp",
+        "w": 1600,
+        "h": 1352,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-25.webp",
+        "w": 1400,
+        "h": 935,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-26.webp",
+        "w": 1600,
+        "h": 1115,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-27.webp",
+        "w": 1280,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-30.webp",
+        "w": 1576,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-31.webp",
+        "w": 1177,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "portraits",
+    "category": "serie",
+    "title_it": "Ritratti",
+    "title_en": "Portraits",
+    "place_it": "Europa, Africa, Asia",
+    "place_en": "Europe, Africa, Asia",
+    "year": "2025",
+    "text_it": "Una raccolta di ritratti nati in viaggio: sguardi frontali, persone nei loro luoghi, la dignità dei soggetti al centro dell'inquadratura.",
+    "text_en": "A collection of portraits made on the road: frontal gazes, people in their own places, the dignity of the subject at the centre of the frame.",
+    "cover": "images/l/portraits-26.webp",
+    "images": [
+      {
+        "src": "images/l/balkans-08.webp",
+        "w": 1600,
+        "h": 1246,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-01.webp",
+        "w": 1600,
+        "h": 1302,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-02.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-04.webp",
+        "w": 1300,
+        "h": 868,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-09.webp",
+        "w": 1414,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/balkans-00.webp",
+        "w": 1600,
+        "h": 1383,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/casablanca-00.webp",
+        "w": 1600,
+        "h": 1273,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-12.webp",
+        "w": 1000,
+        "h": 1033,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/balkans-12.webp",
+        "w": 1600,
+        "h": 1328,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/casablanca-09.webp",
+        "w": 1107,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-18.webp",
+        "w": 1400,
+        "h": 1138,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/balkans-05.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/casablanca-04.webp",
+        "w": 1166,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-21.webp",
+        "w": 1462,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-25.webp",
+        "w": 1000,
+        "h": 975,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-26.webp",
+        "w": 1195,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "nft-artist-portraits",
+    "category": "serie",
+    "title_it": "NFT Artist Portraits",
+    "title_en": "NFT Artist Portraits",
+    "place_it": "Italia e internazionale",
+    "place_en": "Italy & international",
+    "year": "2022",
+    "text_it": "Il progetto nasce per immortalare i protagonisti della nuova scena internazionale, esploratori del mondo crypto. Gli autori delle nuove forme d'arte digitali posano in luoghi e contesti che richiamano il loro lavoro: perché la visione artistica e personale è decisiva nella resa di un ritratto.",
+    "text_en": "The project was born to portray the protagonists of the new international scene, explorers of the crypto world. The authors of new digital art forms pose in places and contexts that recall their work, because artistic and personal vision is crucial in the rendering of a portrait.",
+    "cover": "images/l/nft-artist-portraits-10.webp",
+    "images": [
+      {
+        "src": "images/l/nft-artist-portraits-00.webp",
+        "w": 1199,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/nft-artist-portraits-01.webp",
+        "w": 1197,
+        "h": 1500,
+        "caption_it": "Andrea Bonaceto",
+        "caption_en": "Andrea Bonaceto"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-02.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "Fabio Giampietro",
+        "caption_en": "Fabio Giampietro"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-03.webp",
+        "w": 1600,
+        "h": 1138,
+        "caption_it": "Vittorio Bonapace",
+        "caption_en": "Vittorio Bonapace"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-05.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Skygolpe",
+        "caption_en": "Skygolpe"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-07.webp",
+        "w": 1120,
+        "h": 1600,
+        "caption_it": "Fabiano Speziari",
+        "caption_en": "Fabiano Speziari"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-09.webp",
+        "w": 1198,
+        "h": 1600,
+        "caption_it": "Mirko Viglino",
+        "caption_en": "Mirko Viglino"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-10.webp",
+        "w": 1226,
+        "h": 1600,
+        "caption_it": "Luca Pannoli",
+        "caption_en": "Luca Pannoli"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-11.webp",
+        "w": 1600,
+        "h": 1167,
+        "caption_it": "Mattia Cuttini",
+        "caption_en": "Mattia Cuttini"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-12.webp",
+        "w": 1500,
+        "h": 1125,
+        "caption_it": "Sigrid Coggins",
+        "caption_en": "Sigrid Coggins"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-14.webp",
+        "w": 1600,
+        "h": 1199,
+        "caption_it": "RN Slavin",
+        "caption_en": "RN Slavin"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-17.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Federico Garibaldi",
+        "caption_en": "Federico Garibaldi"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-18.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "Giovanni Motta",
+        "caption_en": "Giovanni Motta"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-20.webp",
+        "w": 1198,
+        "h": 1600,
+        "caption_it": "Giuseppe Veneziano",
+        "caption_en": "Giuseppe Veneziano"
+      },
+      {
+        "src": "images/l/nft-artist-portraits-22.webp",
+        "w": 1198,
+        "h": 1600,
+        "caption_it": "Alessandro Risuleo",
+        "caption_en": "Alessandro Risuleo"
+      }
+    ]
+  },
+  {
+    "id": "fulvio-rendhell",
+    "category": "serie",
+    "title_it": "Ritratti del Maestro Fulvio Rendhell",
+    "title_en": "Portraits of the Master Fulvio Rendhell",
+    "place_it": "Sermoneta",
+    "place_en": "Sermoneta, Italy",
+    "year": "2024",
+    "text_it": "Ritratti di Fulvio Rendhell, tra i più grandi occultisti al mondo: specchi, cappelli a cilindro, fumo e cerchi di luce.",
+    "text_en": "Portraits of Fulvio Rendhell, one of the greatest occultists in the world: mirrors, top hats, smoke and circles of light.",
+    "cover": "images/l/fulvio-rendhell-03.webp",
+    "images": [
+      {
+        "src": "images/l/fulvio-rendhell-00.webp",
+        "w": 1419,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/fulvio-rendhell-01.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/fulvio-rendhell-02.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "Il maestro Fulvio Rendhell con Georgiana, Sermoneta, 2024",
+        "caption_en": "Master Fulvio Rendhell with Georgiana, Sermoneta, Italy, 2024"
+      },
+      {
+        "src": "images/l/fulvio-rendhell-03.webp",
+        "w": 1600,
+        "h": 1504,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/fulvio-rendhell-04.webp",
+        "w": 1020,
+        "h": 1500,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "dummies",
+    "category": "serie",
+    "title_it": "Manichini",
+    "title_en": "Dummies",
+    "place_it": "",
+    "place_en": "",
+    "year": "2018",
+    "text_it": "Corpi senza vita nelle vetrine: busti, teste, sguardi vuoti. Il manichino come doppio dell'uomo, motivo ricorrente in tutta la sua opera.",
+    "text_en": "Lifeless bodies in shop windows: busts, heads, empty gazes. The mannequin as man's double, a recurring motif throughout her work.",
+    "cover": "images/l/dummies-06.webp",
+    "images": [
+      {
+        "src": "images/l/dummies-00.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/dummies-01.webp",
+        "w": 1385,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/dummies-02.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/dummies-03.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/dummies-04.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/dummies-05.webp",
+        "w": 1600,
+        "h": 1187,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/dummies-06.webp",
+        "w": 1000,
+        "h": 907,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "gazes-without-horizon",
+    "category": "serie",
+    "title_it": "Animali nel circo: sguardi senza orizzonte",
+    "title_en": "Animals in the Circus: Gazes without Horizon",
+    "place_it": "",
+    "place_en": "",
+    "year": "2022",
+    "text_it": "Giraffe dietro le sbarre, struzzi chiusi in un container, il tendone che si smonta. Sguardi che non trovano orizzonte.",
+    "text_en": "Giraffes behind bars, ostriches shut in a container, the big top coming down. Gazes that find no horizon.",
+    "cover": "images/l/gazes-without-horizon-02.webp",
+    "images": [
+      {
+        "src": "images/l/gazes-without-horizon-00.webp",
+        "w": 1600,
+        "h": 1206,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/gazes-without-horizon-01.webp",
+        "w": 1600,
+        "h": 1197,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/gazes-without-horizon-02.webp",
+        "w": 1600,
+        "h": 1490,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "noe-syndrome",
+    "category": "serie",
+    "title_it": "Human-Animal Noè Syndrome",
+    "title_en": "Human-Animal Noè Syndrome",
+    "place_it": "",
+    "place_en": "",
+    "year": "2025",
+    "text_it": "Il legame tra esseri umani e animali, in un ritratto doppio.",
+    "text_en": "The bond between humans and animals, in a double portrait.",
+    "cover": "images/l/noe-syndrome-00.webp",
+    "images": [
+      {
+        "src": "images/l/noe-syndrome-00.webp",
+        "w": 1600,
+        "h": 1193,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "aesthetics-of-nothingness",
+    "category": "serie",
+    "title_it": "L'estetica del nulla",
+    "title_en": "The Aesthetics of Nothingness",
+    "place_it": "Islanda, Sicilia, Italia",
+    "place_en": "Iceland, Sicily, Italy",
+    "year": "2025",
+    "text_it": "L'unica serie a colori: spazi vuoti, sedie abbandonate, insegne che si accendono per nessuno. La bellezza dell'assenza.",
+    "text_en": "Her only colour series: empty spaces, abandoned chairs, signs lighting up for no one. The beauty of absence.",
+    "cover": "images/l/aesthetics-of-nothingness-03.webp",
+    "images": [
+      {
+        "src": "images/l/aesthetics-of-nothingness-00.webp",
+        "w": 1600,
+        "h": 1201,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/aesthetics-of-nothingness-01.webp",
+        "w": 1600,
+        "h": 1063,
+        "caption_it": "Cortile a Reykjavik, Islanda, 2012",
+        "caption_en": "Reykjavik Courtyard, 2012, Iceland"
+      },
+      {
+        "src": "images/l/aesthetics-of-nothingness-02.webp",
+        "w": 1600,
+        "h": 1124,
+        "caption_it": "Ritratto d'interno, Catania, 2017",
+        "caption_en": "Interior Portrait, Catania, 2017"
+      },
+      {
+        "src": "images/l/aesthetics-of-nothingness-03.webp",
+        "w": 1600,
+        "h": 1156,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/aesthetics-of-nothingness-04.webp",
+        "w": 1600,
+        "h": 1050,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/aesthetics-of-nothingness-05.webp",
+        "w": 1600,
+        "h": 1161,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "fautographie",
+    "category": "serie",
+    "title_it": "Fautographie — dell'errore fotografico",
+    "title_en": "Fautographie — on the photographic error",
+    "place_it": "",
+    "place_en": "",
+    "year": "2025",
+    "text_it": "Mosso, sfocato, luce sbagliata: l'errore fotografico come linguaggio.",
+    "text_en": "Blur, motion, wrong light: the photographic error as a language.",
+    "cover": "images/l/bosnia-13.webp",
+    "images": [
+      {
+        "src": "images/l/fautographie-00.webp",
+        "w": 1600,
+        "h": 1150,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/bosnia-13.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "world-of-dreams",
+    "category": "serie",
+    "title_it": "Il mondo dei sogni",
+    "title_en": "The World of Dreams",
+    "place_it": "",
+    "place_en": "",
+    "year": "2022",
+    "text_it": "Visioni oniriche e surreali, tra figure in volo e paesaggi di neve.",
+    "text_en": "Dreamlike, surreal visions: flying figures and snowbound landscapes.",
+    "cover": "images/l/world-of-dreams-01.webp",
+    "images": [
+      {
+        "src": "images/l/world-of-dreams-00.webp",
+        "w": 1600,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/world-of-dreams-01.webp",
+        "w": 1600,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/world-of-dreams-02.webp",
+        "w": 1600,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/world-of-dreams-03.webp",
+        "w": 1600,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/world-of-dreams-04.webp",
+        "w": 1600,
+        "h": 800,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/world-of-dreams-05.webp",
+        "w": 1600,
+        "h": 800,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "man-and-time",
+    "category": "serie",
+    "title_it": "L'uomo e il tempo",
+    "title_en": "Man and Time",
+    "place_it": "",
+    "place_en": "",
+    "year": "2022",
+    "text_it": "Una figura sola davanti a una grande vetrata.",
+    "text_en": "A lone figure in front of a great window.",
+    "cover": "images/l/man-and-time-00.webp",
+    "images": [
+      {
+        "src": "images/l/man-and-time-00.webp",
+        "w": 1600,
+        "h": 1261,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "armenia",
+    "category": "impressioni",
+    "title_it": "Armenia",
+    "title_en": "Armenia",
+    "place_it": "Armenia",
+    "place_en": "Armenia",
+    "year": "2026",
+    "text_it": "Il lavoro più recente. Volti segnati, cortili polverosi, bolle di sapone e manichini nel paesaggio: il quotidiano armeno diventa un teatro sospeso tra ironia e malinconia.",
+    "text_en": "The most recent work. Weathered faces, dusty courtyards, soap bubbles and mannequins in the landscape: Armenian everyday life turns into a stage suspended between irony and melancholy.",
+    "cover": "images/l/armenia-09.webp",
+    "images": [
+      {
+        "src": "images/l/armenia-00.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-01.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-02.webp",
+        "w": 1600,
+        "h": 1222,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-03.webp",
+        "w": 1600,
+        "h": 1183,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-04.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-05.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-06.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-07.webp",
+        "w": 1600,
+        "h": 1181,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-08.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/armenia-09.webp",
+        "w": 1600,
+        "h": 1184,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "helsinki",
+    "category": "impressioni",
+    "title_it": "Helsinki",
+    "title_en": "Helsinki",
+    "place_it": "Helsinki, Finlandia",
+    "place_en": "Helsinki, Finland",
+    "year": "2025",
+    "text_it": "Geometrie nordiche, croci al neon, ruote panoramiche contro il cielo, giocattoli abbandonati con le loro lunghe ombre.",
+    "text_en": "Nordic geometries, neon crosses, Ferris wheels against the sky, abandoned toys and their long shadows.",
+    "cover": "images/l/helsinki-06.webp",
+    "images": [
+      {
+        "src": "images/l/helsinki-00.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-01.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-02.webp",
+        "w": 1600,
+        "h": 1193,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-03.webp",
+        "w": 1600,
+        "h": 1091,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-04.webp",
+        "w": 1600,
+        "h": 1112,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-05.webp",
+        "w": 1600,
+        "h": 1117,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-06.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-07.webp",
+        "w": 1600,
+        "h": 1213,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-08.webp",
+        "w": 1600,
+        "h": 1165,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-09.webp",
+        "w": 1326,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-10.webp",
+        "w": 1600,
+        "h": 1133,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-11.webp",
+        "w": 1600,
+        "h": 1150,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-12.webp",
+        "w": 1600,
+        "h": 1299,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/helsinki-13.webp",
+        "w": 1600,
+        "h": 1206,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "linz",
+    "category": "impressioni",
+    "title_it": "Linz",
+    "title_en": "Linz",
+    "place_it": "Linz, Austria",
+    "place_en": "Linz, Austria",
+    "year": "2025",
+    "text_it": "Maschere, valigette e luce dura: una breve serie teatrale e inquietante, tra ritratto e messa in scena.",
+    "text_en": "Masks, briefcases and hard light: a short, theatrical and unsettling series between portrait and staging.",
+    "cover": "images/l/linz-04.webp",
+    "images": [
+      {
+        "src": "images/l/linz-00.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/linz-01.webp",
+        "w": 1600,
+        "h": 1261,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/linz-02.webp",
+        "w": 1600,
+        "h": 1226,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/linz-03.webp",
+        "w": 1600,
+        "h": 1217,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/linz-04.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "hungary",
+    "category": "impressioni",
+    "title_it": "Ungheria",
+    "title_en": "Hungary",
+    "place_it": "Ungheria",
+    "place_en": "Hungary",
+    "year": "2025",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/hungary-00.webp",
+    "images": [
+      {
+        "src": "images/l/hungary-00.webp",
+        "w": 1536,
+        "h": 1108,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "bosnia",
+    "category": "impressioni",
+    "title_it": "Bosnia ed Erzegovina",
+    "title_en": "Bosnia and Herzegovina",
+    "place_it": "Sarajevo, Mostar, Zenica, Tuzla, Konjic",
+    "place_en": "Sarajevo, Mostar, Zenica, Tuzla, Konjic",
+    "year": "2024",
+    "text_it": "Trent'anni dopo l'assedio. Ritratti sul tram 3, cortili di scuola, ombre lungo i muri di Sarajevo, la città dell'acciaio di Zenica: un paese che porta addosso la sua storia e continua a vivere.",
+    "text_en": "Thirty years after the siege. Portraits on tram 3, school yards, shadows along the walls of Sarajevo, the steel city of Zenica: a country that carries its history and keeps on living.",
+    "cover": "images/l/bosnia-00.webp",
+    "images": [
+      {
+        "src": "images/l/bosnia-00.webp",
+        "w": 1600,
+        "h": 1203,
+        "caption_it": "Tram 3, ritratto, Sarajevo, 2024",
+        "caption_en": "Tram 3, Portrait, Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-01.webp",
+        "w": 1600,
+        "h": 1220,
+        "caption_it": "Ritratto di uomo, Konjic, Bosnia ed Erzegovina, 2024",
+        "caption_en": "Portrait of a man, Konjic, Bosnia ed Erzegovina, 2024"
+      },
+      {
+        "src": "images/l/bosnia-02.webp",
+        "w": 1200,
+        "h": 1600,
+        "caption_it": "Ritratto di Belma Šarić al pianoforte, Zenica, 2024",
+        "caption_en": "Portrait of Belma Šarić at the piano, Zenica, 2024"
+      },
+      {
+        "src": "images/l/bosnia-03.webp",
+        "w": 1600,
+        "h": 1173,
+        "caption_it": "Ritratto di bambino, Sarajevo, 2024",
+        "caption_en": "Portrait of child, Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-04.webp",
+        "w": 1600,
+        "h": 1202,
+        "caption_it": "Cornice sul cimitero, Sarajevo, 2024",
+        "caption_en": "Cemetry frame, Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-05.webp",
+        "w": 1600,
+        "h": 1107,
+        "caption_it": "Ombra di un uomo a Sarajevo, 2024",
+        "caption_en": "Shadow of a Man in Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-06.webp",
+        "w": 1600,
+        "h": 1219,
+        "caption_it": "Trent'anni dopo, l'assedio, Sarajevo, 2024",
+        "caption_en": "30 Years Later, The Siege, Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-07.webp",
+        "w": 1600,
+        "h": 1208,
+        "caption_it": "Cortile di una scuola, Tuzla, Bosnia ed Erzegovina, 2024",
+        "caption_en": "School yard, Tuzla, Bosnia and Herzegovina, 2024"
+      },
+      {
+        "src": "images/l/bosnia-08.webp",
+        "w": 1600,
+        "h": 1213,
+        "caption_it": "Il guardiano, Mostar, 2024",
+        "caption_en": "The Guardian, Mostar, 2024"
+      },
+      {
+        "src": "images/l/last-sacrament-14.webp",
+        "w": 1600,
+        "h": 1170,
+        "caption_it": "La bagnante velata, Konjic, Bosnia, 2024",
+        "caption_en": "The Veiled Bather, Konjic, Bosnia, 2024"
+      },
+      {
+        "src": "images/l/bosnia-10.webp",
+        "w": 1242,
+        "h": 1526,
+        "caption_it": "Donne di Sarajevo, 2024",
+        "caption_en": "Women of Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-11.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "L'uomo della città dell'acciaio, Zenica, Bosnia ed Erzegovina, 2024",
+        "caption_en": "Man of the steel city, Zenica, Bosnia ed Erzegovina, 2024"
+      },
+      {
+        "src": "images/l/bosnia-12.webp",
+        "w": 1600,
+        "h": 1143,
+        "caption_it": "Essere bambini a Sarajevo, 2024",
+        "caption_en": "Be children in Sarajevo, 2024"
+      },
+      {
+        "src": "images/l/bosnia-13.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "baltic",
+    "category": "impressioni",
+    "title_it": "Paesi Baltici",
+    "title_en": "Baltic countries",
+    "place_it": "Paesi Baltici",
+    "place_en": "Baltic countries",
+    "year": "2024",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/baltic-00.webp",
+    "images": [
+      {
+        "src": "images/l/baltic-00.webp",
+        "w": 1600,
+        "h": 1094,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "split",
+    "category": "impressioni",
+    "title_it": "Spalato",
+    "title_en": "Split",
+    "place_it": "Spalato, Croazia",
+    "place_en": "Split, Croatia",
+    "year": "2024",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/split-00.webp",
+    "images": [
+      {
+        "src": "images/l/split-00.webp",
+        "w": 1600,
+        "h": 1198,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "balkans",
+    "category": "impressioni",
+    "title_it": "Balcani",
+    "title_en": "Balkans",
+    "place_it": "Tetovo, Skopje, Prilep, Ohrid — Macedonia del Nord",
+    "place_en": "Tetovo, Skopje, Prilep, Ohrid — North Macedonia",
+    "year": "2023",
+    "text_it": "Luna park di periferia, giostre che girano nel buio, pugili ragazzini, il lago di Ohrid e la “città invisibile” di Prilep. La Macedonia del Nord come un film di Béla Tarr.",
+    "text_en": "Suburban fairgrounds, carousels spinning in the dark, teenage boxers, Lake Ohrid and the “invisible city” of Prilep. North Macedonia as a Béla Tarr film.",
+    "cover": "images/l/balkans-00.webp",
+    "images": [
+      {
+        "src": "images/l/balkans-00.webp",
+        "w": 1600,
+        "h": 1383,
+        "caption_it": "Il professore del luna park, Tetovo, Macedonia del Nord, 2023",
+        "caption_en": "The Luna Park's Professor, Tetovo, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-01.webp",
+        "w": 1600,
+        "h": 1233,
+        "caption_it": "Il custode della giostra, Tetovo, Macedonia del Nord, 2023",
+        "caption_en": "The keeper of the carousel, Tetovo, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/last-sacrament-11.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Uomo in preghiera nella moschea, Skopje, Macedonia del Nord, 2023",
+        "caption_en": "Man praying in the mosque, Skopje, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-03.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Tiro a segno al luna park, Tetovo, Macedonia del Nord, 2023",
+        "caption_en": "Target shooting at the amusement park, Tetovo, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-04.webp",
+        "w": 1600,
+        "h": 1205,
+        "caption_it": "L'uomo e la città invisibile, Prilep, Macedonia, 2023",
+        "caption_en": "The man and the invisible city, Prilep, Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-05.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Il giovane pugile del luna park, Tetovo, Macedonia del Nord, 2023",
+        "caption_en": "The young fairground boxer, Tetovo, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-06.webp",
+        "w": 1600,
+        "h": 1188,
+        "caption_it": "Bambina con palloncini, Skopje, Macedonia del Nord, 2023",
+        "caption_en": "Little girl with balloons, Skopje, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-07.webp",
+        "w": 1600,
+        "h": 1270,
+        "caption_it": "La città invisibile II, Prilep, Macedonia del Nord, 2023",
+        "caption_en": "The Invisible City II, Prilep, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-08.webp",
+        "w": 1600,
+        "h": 1246,
+        "caption_it": "Il vecchio guardiano, luna park, Tetovo, Macedonia del Nord, 2023",
+        "caption_en": "The old guardian, Luna Park, Tetovo, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-09.webp",
+        "w": 1600,
+        "h": 1172,
+        "caption_it": "L'uomo del fiume, Prilep, Macedonia, 2023",
+        "caption_en": "The man of the river, Prilep, Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-10.webp",
+        "w": 1600,
+        "h": 1106,
+        "caption_it": "Bagnanti, lago di Ohrid, Macedonia del Nord, 2023",
+        "caption_en": "Bathers, Lake Ohrid, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-11.webp",
+        "w": 1600,
+        "h": 1549,
+        "caption_it": "Luna park, Tetovo, Macedonia del Nord, 2023",
+        "caption_en": "Luna Park, Tetovo, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-12.webp",
+        "w": 1600,
+        "h": 1328,
+        "caption_it": "Il carrettiere, Macedonia del Nord, 2023",
+        "caption_en": "The cart driver, North Macedonia, 2023"
+      },
+      {
+        "src": "images/l/balkans-13.webp",
+        "w": 1600,
+        "h": 1298,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/balkans-14.webp",
+        "w": 1600,
+        "h": 1119,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/balkans-15.webp",
+        "w": 1600,
+        "h": 1122,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "bucarest",
+    "category": "impressioni",
+    "title_it": "Bucarest",
+    "title_en": "Bucharest",
+    "place_it": "Bucarest, Romania",
+    "place_en": "Bucharest, Romania",
+    "year": "2023",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/bucarest-02.webp",
+    "images": [
+      {
+        "src": "images/l/bucarest-00.webp",
+        "w": 1600,
+        "h": 1061,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/bucarest-01.webp",
+        "w": 1600,
+        "h": 1076,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/bucarest-02.webp",
+        "w": 1600,
+        "h": 1221,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "casablanca",
+    "category": "impressioni",
+    "title_it": "Casablanca",
+    "title_en": "Casablanca",
+    "place_it": "Casablanca, Marocco",
+    "place_en": "Casablanca, Morocco",
+    "year": "2022",
+    "text_it": "I mestieri della Medina: sarti, macellai, falegnami, ritratti nelle botteghe tra rocchetti di filo e manichini. Un racconto del lavoro e delle mani.",
+    "text_en": "The trades of the Medina: tailors, butchers, carpenters, portraits in workshops among spools of thread and mannequins. A story of work and of hands.",
+    "cover": "images/l/casablanca-04.webp",
+    "images": [
+      {
+        "src": "images/l/casablanca-00.webp",
+        "w": 1600,
+        "h": 1273,
+        "caption_it": "Il sarto, 2022",
+        "caption_en": "The tailor, 2022"
+      },
+      {
+        "src": "images/l/casablanca-01.webp",
+        "w": 1262,
+        "h": 1600,
+        "caption_it": "Medina, Casablanca, 2022",
+        "caption_en": "Medina, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-02.webp",
+        "w": 1112,
+        "h": 1600,
+        "caption_it": "Il sarto #2, Casablanca, 2022",
+        "caption_en": "The tailor #2, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-04.webp",
+        "w": 1166,
+        "h": 1600,
+        "caption_it": "Il sarto, Casablanca, 2022",
+        "caption_en": "The tailor, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-05.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Ragazzo con gallina, Casablanca, 2022",
+        "caption_en": "Boy and Chicken, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-06.webp",
+        "w": 1600,
+        "h": 1270,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-07.webp",
+        "w": 1600,
+        "h": 1254,
+        "caption_it": "Donna nella Medina, Casablanca, 2022",
+        "caption_en": "Woman in the Medina, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-08.webp",
+        "w": 1600,
+        "h": 1246,
+        "caption_it": "Il sarto, Casablanca, 2022",
+        "caption_en": "The tailor, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-09.webp",
+        "w": 1107,
+        "h": 1600,
+        "caption_it": "Il sarto, Casablanca, 2022",
+        "caption_en": "The tailor, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-10.webp",
+        "w": 1600,
+        "h": 1193,
+        "caption_it": "Il sarto, Casablanca, 2022",
+        "caption_en": "The tailor, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-11.webp",
+        "w": 1600,
+        "h": 1295,
+        "caption_it": "Il sarto, 2022",
+        "caption_en": "The Tailor, 2022"
+      },
+      {
+        "src": "images/l/casablanca-13.webp",
+        "w": 1155,
+        "h": 1600,
+        "caption_it": "Il macellaio, Casablanca, 2022",
+        "caption_en": "The butcher, Casablanca, 2022"
+      },
+      {
+        "src": "images/l/casablanca-14.webp",
+        "w": 1600,
+        "h": 1263,
+        "caption_it": "Il falegname di Casablanca, Marocco",
+        "caption_en": "The carpenter of Casablanca, Morocco"
+      },
+      {
+        "src": "images/l/casablanca-15.webp",
+        "w": 1500,
+        "h": 1125,
+        "caption_it": "Uomo con gallina, Medina, 2022",
+        "caption_en": "Man with hen, Medina, 2022"
+      }
+    ]
+  },
+  {
+    "id": "tirana",
+    "category": "impressioni",
+    "title_it": "Tirana",
+    "title_en": "Tirana",
+    "place_it": "Tirana, Albania",
+    "place_en": "Tirana, Albania",
+    "year": "2021",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/tirana-01.webp",
+    "images": [
+      {
+        "src": "images/l/tirana-00.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/tirana-01.webp",
+        "w": 1266,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/tirana-02.webp",
+        "w": 1600,
+        "h": 1152,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "new-york",
+    "category": "impressioni",
+    "title_it": "New York, Boston e New England",
+    "title_en": "New York, Boston and New England",
+    "place_it": "Stati Uniti",
+    "place_en": "United States",
+    "year": "2020",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/new-york-01.webp",
+    "images": [
+      {
+        "src": "images/l/new-york-00.webp",
+        "w": 1596,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/new-york-01.webp",
+        "w": 1600,
+        "h": 1183,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/new-york-02.webp",
+        "w": 1600,
+        "h": 1108,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/new-york-03.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/new-york-04.webp",
+        "w": 1400,
+        "h": 1577,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/new-york-05.webp",
+        "w": 1600,
+        "h": 1043,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/new-york-06.webp",
+        "w": 796,
+        "h": 1238,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "seychelles",
+    "category": "impressioni",
+    "title_it": "Seychelles",
+    "title_en": "Seychelles",
+    "place_it": "Seychelles",
+    "place_en": "Seychelles",
+    "year": "2020",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/seychelles-01.webp",
+    "images": [
+      {
+        "src": "images/l/seychelles-00.webp",
+        "w": 1600,
+        "h": 1085,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/seychelles-01.webp",
+        "w": 1600,
+        "h": 1065,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/seychelles-02.webp",
+        "w": 1600,
+        "h": 1095,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/seychelles-03.webp",
+        "w": 1600,
+        "h": 1077,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/seychelles-04.webp",
+        "w": 1600,
+        "h": 1070,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/seychelles-05.webp",
+        "w": 1600,
+        "h": 1148,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "paris",
+    "category": "impressioni",
+    "title_it": "Parigi",
+    "title_en": "Paris",
+    "place_it": "Parigi",
+    "place_en": "Paris",
+    "year": "2019",
+    "text_it": "Musei come teatri: il Louvre, il Musée d'Orsay e il suo orologio, i guardiani e i visitatori.",
+    "text_en": "Museums as theatres: the Louvre, the Musée d'Orsay and its clock, the guards and the visitors.",
+    "cover": "images/l/paris-01.webp",
+    "images": [
+      {
+        "src": "images/l/paris-00.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "Ragazza davanti a un dipinto, Louvre, Parigi, 2019",
+        "caption_en": "Girl in front of a painting, Louvre, Paris, 2019"
+      },
+      {
+        "src": "images/l/paris-01.webp",
+        "w": 1600,
+        "h": 1128,
+        "caption_it": "L'uomo e il tempo, Musée d'Orsay, Parigi, 2019",
+        "caption_en": "Man and time, Musée d'Orsay, Paris, 2019"
+      },
+      {
+        "src": "images/l/paris-02.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "Il guardiano del museo, Parigi, 2019",
+        "caption_en": "The guardian of the museum, Paris, 2019"
+      },
+      {
+        "src": "images/l/paris-03.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/paris-04.webp",
+        "w": 1600,
+        "h": 1225,
+        "caption_it": "L'uomo al Musée d'Orsay",
+        "caption_en": "The man at the Musée d'Orsay"
+      }
+    ]
+  },
+  {
+    "id": "moldavia",
+    "category": "impressioni",
+    "title_it": "Moldavia",
+    "title_en": "Moldova",
+    "place_it": "Moldavia",
+    "place_en": "Moldova",
+    "year": "2018",
+    "text_it": "Il reportage più ampio: donne velate, comunità, condomini sovietici, monumenti, interni domestici e riti. Da qui nasce anche l'opera “I figli di Butuceni”, esposta al Maggio Sermonetano.",
+    "text_en": "Her widest reportage: veiled women, communities, Soviet housing blocks, monuments, domestic interiors and rituals. It is also the origin of the artwork “I figli di Butuceni”, shown at the Maggio Sermonetano festival.",
+    "cover": "images/l/moldavia-21.webp",
+    "images": [
+      {
+        "src": "images/l/moldavia-02.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-05.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-07.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-09.webp",
+        "w": 1414,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-11.webp",
+        "w": 1400,
+        "h": 935,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-13.webp",
+        "w": 1300,
+        "h": 868,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-14.webp",
+        "w": 1300,
+        "h": 957,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-19.webp",
+        "w": 1303,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-21.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-25.webp",
+        "w": 1500,
+        "h": 1001,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-26.webp",
+        "w": 1400,
+        "h": 935,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-28.webp",
+        "w": 1500,
+        "h": 1050,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-29.webp",
+        "w": 1600,
+        "h": 1120,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-31.webp",
+        "w": 1600,
+        "h": 1124,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-36.webp",
+        "w": 1600,
+        "h": 1148,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-41.webp",
+        "w": 1600,
+        "h": 1070,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-17.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-27.webp",
+        "w": 1280,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-51.webp",
+        "w": 1600,
+        "h": 1119,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/moldavia-53.webp",
+        "w": 1530,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "cracovia",
+    "category": "impressioni",
+    "title_it": "Cracovia",
+    "title_en": "Kraków",
+    "place_it": "Cracovia, Nowa Huta",
+    "place_en": "Kraków, Nowa Huta",
+    "year": "2018",
+    "text_it": "Nowa Huta e Cracovia, binari del tram, ciminiere: materiale anche per la collettiva “Operation Marketing — Nowa Huta” (2017).",
+    "text_en": "Nowa Huta and Kraków, tram tracks, chimneys: material also shown in the group show “Operation Marketing — Nowa Huta” (2017).",
+    "cover": "images/l/cracovia-03.webp",
+    "images": [
+      {
+        "src": "images/l/cracovia-00.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-01.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-02.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-03.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-04.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-05.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-06.webp",
+        "w": 1600,
+        "h": 1158,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cracovia-07.webp",
+        "w": 1000,
+        "h": 698,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "belgrade",
+    "category": "impressioni",
+    "title_it": "Belgrado",
+    "title_en": "Belgrade",
+    "place_it": "Belgrado, Serbia",
+    "place_en": "Belgrade, Serbia",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/belgrade-07.webp",
+    "images": [
+      {
+        "src": "images/l/belgrade-00.webp",
+        "w": 1000,
+        "h": 668,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-25.webp",
+        "w": 1000,
+        "h": 975,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-05.webp",
+        "w": 1500,
+        "h": 1187,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-06.webp",
+        "w": 1500,
+        "h": 1007,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-07.webp",
+        "w": 1000,
+        "h": 668,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-08.webp",
+        "w": 1000,
+        "h": 1132,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-09.webp",
+        "w": 1000,
+        "h": 768,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-10.webp",
+        "w": 1000,
+        "h": 674,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-11.webp",
+        "w": 1000,
+        "h": 668,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-12.webp",
+        "w": 1000,
+        "h": 678,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-15.webp",
+        "w": 1280,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/belgrade-17.webp",
+        "w": 1600,
+        "h": 1132,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "transnistria",
+    "category": "impressioni",
+    "title_it": "Transnistria",
+    "title_en": "Transnistria",
+    "place_it": "Tiraspol",
+    "place_en": "Tiraspol",
+    "year": "2018",
+    "text_it": "Uno stato che non esiste sulle mappe: monumenti, carri armati, bagnanti sul fiume a Tiraspol.",
+    "text_en": "A state that doesn't exist on maps: monuments, tanks, bathers on the river in Tiraspol.",
+    "cover": "images/l/portraits-12.webp",
+    "images": [
+      {
+        "src": "images/l/portraits-12.webp",
+        "w": 1000,
+        "h": 1033,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-01.webp",
+        "w": 1300,
+        "h": 913,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-02.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-03.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-04.webp",
+        "w": 1600,
+        "h": 1188,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-05.webp",
+        "w": 1600,
+        "h": 1037,
+        "caption_it": "Bagnanti di Tiraspol",
+        "caption_en": "Bathers of Tiraspol"
+      },
+      {
+        "src": "images/l/transnistria-06.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-07.webp",
+        "w": 1000,
+        "h": 678,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-08.webp",
+        "w": 1600,
+        "h": 1124,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-09.webp",
+        "w": 1600,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/transnistria-10.webp",
+        "w": 1600,
+        "h": 1185,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "sofia",
+    "category": "impressioni",
+    "title_it": "Sofia",
+    "title_en": "Sofia",
+    "place_it": "Sofia, Bulgaria",
+    "place_en": "Sofia, Bulgaria",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/sofia-03.webp",
+    "images": [
+      {
+        "src": "images/l/sofia-00.webp",
+        "w": 1200,
+        "h": 801,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-04.webp",
+        "w": 1300,
+        "h": 868,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sofia-02.webp",
+        "w": 1200,
+        "h": 801,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sofia-03.webp",
+        "w": 1600,
+        "h": 1140,
+        "caption_it": "Ragazzo con lo skateboard, Sofia, Bulgaria, 2018",
+        "caption_en": "Sofia boy with Skateboard, Bulgaria, 2018"
+      },
+      {
+        "src": "images/l/sofia-04.webp",
+        "w": 1600,
+        "h": 1124,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "burgundy",
+    "category": "impressioni",
+    "title_it": "Borgogna",
+    "title_en": "Burgundy",
+    "place_it": "Borgogna, Francia",
+    "place_en": "Burgundy, France",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/portraits-21.webp",
+    "images": [
+      {
+        "src": "images/l/portraits-21.webp",
+        "w": 1462,
+        "h": 1600,
+        "caption_it": "Bambina con fisarmonica",
+        "caption_en": "Girl with accordion"
+      },
+      {
+        "src": "images/l/burgundy-01.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Campi, Borgogna",
+        "caption_en": "Fields, Burgundy"
+      },
+      {
+        "src": "images/l/burgundy-02.webp",
+        "w": 1600,
+        "h": 1168,
+        "caption_it": "Silos, Borgogna",
+        "caption_en": "Silos, Burgundy"
+      },
+      {
+        "src": "images/l/portraits-02.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "Il rigattiere, Borgogna",
+        "caption_en": "The junk dealer, Burgundy"
+      }
+    ]
+  },
+  {
+    "id": "lucca",
+    "category": "impressioni",
+    "title_it": "Lucca",
+    "title_en": "Lucca",
+    "place_it": "Lucca",
+    "place_en": "Lucca",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/last-sacrament-15.webp",
+    "images": [
+      {
+        "src": "images/l/lucca-00.webp",
+        "w": 961,
+        "h": 961,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-15.webp",
+        "w": 1600,
+        "h": 1506,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/lucca-02.webp",
+        "w": 810,
+        "h": 1440,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-08.webp",
+        "w": 1000,
+        "h": 1303,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "prato",
+    "category": "impressioni",
+    "title_it": "Prato",
+    "title_en": "Prato",
+    "place_it": "Prato",
+    "place_en": "Prato",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/prato-01.webp",
+    "images": [
+      {
+        "src": "images/l/prato-00.webp",
+        "w": 1419,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/prato-01.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/prato-02.webp",
+        "w": 1111,
+        "h": 741,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/prato-03.webp",
+        "w": 1498,
+        "h": 1000,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/prato-05.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "roma-pride",
+    "category": "impressioni",
+    "title_it": "Roma Pride",
+    "title_en": "Rome Pride",
+    "place_it": "Roma",
+    "place_en": "Rome",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/roma-pride-01.webp",
+    "images": [
+      {
+        "src": "images/l/roma-pride-00.webp",
+        "w": 1163,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/roma-pride-01.webp",
+        "w": 1226,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/roma-pride-02.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "scotland",
+    "category": "impressioni",
+    "title_it": "Scozia",
+    "title_en": "Scotland",
+    "place_it": "Scozia",
+    "place_en": "Scotland",
+    "year": "2018",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/scotland-01.webp",
+    "images": [
+      {
+        "src": "images/l/scotland-00.webp",
+        "w": 1024,
+        "h": 681,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/scotland-01.webp",
+        "w": 960,
+        "h": 673,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "sicilia",
+    "category": "impressioni",
+    "title_it": "Sicilia",
+    "title_en": "Sicily",
+    "place_it": "Catania",
+    "place_en": "Catania",
+    "year": "2017",
+    "text_it": "Catania, 2017: Madonne nelle edicole votive, botteghe, ritratti di strada. Il sacro e il profano del Sud.",
+    "text_en": "Catania, 2017: Madonnas in roadside shrines, small shops, street portraits. The sacred and the profane of the South.",
+    "cover": "images/l/last-sacrament-31.webp",
+    "images": [
+      {
+        "src": "images/l/last-sacrament-10.webp",
+        "w": 960,
+        "h": 667,
+        "caption_it": "Catania, 2017",
+        "caption_en": "Catania, 2017"
+      },
+      {
+        "src": "images/l/sicilia-01.webp",
+        "w": 1124,
+        "h": 1600,
+        "caption_it": "Catania, 2017",
+        "caption_en": "Catania, 2017"
+      },
+      {
+        "src": "images/l/sicilia-02.webp",
+        "w": 1600,
+        "h": 1254,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sicilia-03.webp",
+        "w": 1600,
+        "h": 1274,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/last-sacrament-31.webp",
+        "w": 1177,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sicilia-05.webp",
+        "w": 1600,
+        "h": 1312,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sicilia-06.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sicilia-07.webp",
+        "w": 1600,
+        "h": 1208,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/sicilia-08.webp",
+        "w": 1600,
+        "h": 1229,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "vietnam",
+    "category": "impressioni",
+    "title_it": "Vietnam",
+    "title_en": "Vietnam",
+    "place_it": "Vietnam",
+    "place_en": "Vietnam",
+    "year": "2017",
+    "text_it": "Volti, case e risaie: parte di questo lavoro è pubblicata in “Vietnam: un paese, 22 autori” (2017), con la ONG Bambini nel Deserto.",
+    "text_en": "Faces, homes and rice fields: part of this work is published in “Vietnam: a country, 22 authors” (2017), with the NGO Bambini nel Deserto.",
+    "cover": "images/l/portraits-18.webp",
+    "images": [
+      {
+        "src": "images/l/vietnam-01.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-02.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-03.webp",
+        "w": 1438,
+        "h": 960,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-04.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-05.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-06.webp",
+        "w": 1600,
+        "h": 1069,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/portraits-18.webp",
+        "w": 1400,
+        "h": 1138,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-09.webp",
+        "w": 1600,
+        "h": 1173,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-11.webp",
+        "w": 1138,
+        "h": 810,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-12.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-13.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/vietnam-14.webp",
+        "w": 1600,
+        "h": 1111,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "berlin",
+    "category": "impressioni",
+    "title_it": "Berlino",
+    "title_en": "Berlin",
+    "place_it": "Berlino",
+    "place_en": "Berlin",
+    "year": "2016",
+    "text_it": "Berlino Est e il Muro nel 2016: passanti, vetrine, un orso polare in mezzo alla strada.",
+    "text_en": "East Berlin and the Wall in 2016: passers-by, shop windows, a polar bear in the middle of the street.",
+    "cover": "images/l/berlin-10.webp",
+    "images": [
+      {
+        "src": "images/l/berlin-00.webp",
+        "w": 1600,
+        "h": 1066,
+        "caption_it": "Berlino Est, 2016",
+        "caption_en": "Berlin Est, 2016"
+      },
+      {
+        "src": "images/l/berlin-01.webp",
+        "w": 1000,
+        "h": 667,
+        "caption_it": "Il Muro, Berlino, 2016",
+        "caption_en": "The Wall, Berlin, 2016"
+      },
+      {
+        "src": "images/l/berlin-02.webp",
+        "w": 1000,
+        "h": 798,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-03.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-04.webp",
+        "w": 1600,
+        "h": 1148,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-05.webp",
+        "w": 1000,
+        "h": 856,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-06.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-07.webp",
+        "w": 1600,
+        "h": 1184,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-08.webp",
+        "w": 1600,
+        "h": 1179,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-09.webp",
+        "w": 1600,
+        "h": 1139,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-10.webp",
+        "w": 1600,
+        "h": 1211,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-11.webp",
+        "w": 1137,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/berlin-12.webp",
+        "w": 1600,
+        "h": 1189,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "cuba",
+    "category": "impressioni",
+    "title_it": "Cuba",
+    "title_en": "Cuba",
+    "place_it": "Cuba",
+    "place_en": "Cuba",
+    "year": "2014",
+    "text_it": "Dal viaggio dell'estate 2014 nasce la mostra personale “110 vs 220”, sostenuta dall'Ambasciata della Repubblica di Cuba.",
+    "text_en": "The summer 2014 trip became the solo show “110 vs 220”, supported by the Embassy of the Republic of Cuba.",
+    "cover": "images/l/cuba-00.webp",
+    "images": [
+      {
+        "src": "images/l/cuba-00.webp",
+        "w": 1172,
+        "h": 1600,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cuba-01.webp",
+        "w": 1600,
+        "h": 1099,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cuba-02.webp",
+        "w": 1600,
+        "h": 1068,
+        "caption_it": "",
+        "caption_en": ""
+      },
+      {
+        "src": "images/l/cuba-03.webp",
+        "w": 1600,
+        "h": 1223,
+        "caption_it": "",
+        "caption_en": ""
+      }
+    ]
+  },
+  {
+    "id": "praga",
+    "category": "impressioni",
+    "title_it": "Praga",
+    "title_en": "Prague",
+    "place_it": "Praga",
+    "place_en": "Prague",
+    "year": "2010",
+    "text_it": "Taccuino di viaggio in bianco e nero: persone, strade e luoghi dimenticati, raccontati con lo sguardo del reportage.",
+    "text_en": "A black and white travel notebook: people, streets and forgotten places, told through the eye of reportage.",
+    "cover": "images/l/praga-01.webp",
+    "images": [
+      {
+        "src": "images/l/praga-00.webp",
+        "w": 1600,
+        "h": 1190,
+        "caption_it": "Praga, 2010",
+        "caption_en": "Praga, 2010"
+      },
+      {
+        "src": "images/l/praga-01.webp",
+        "w": 1279,
+        "h": 1600,
+        "caption_it": "Praga, 2010",
+        "caption_en": "Praga, 2010"
+      }
+    ]
+  }
+]

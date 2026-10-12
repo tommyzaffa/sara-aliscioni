@@ -1,0 +1,65 @@
+{
+  "interval_seconds": 5,
+  "slides": [
+    {
+      "src": "images/hero/linz-04.webp",
+      "caption_it": "Impressioni da Linz, 2025",
+      "caption_en": "Impressions from Linz, 2025",
+      "gallery": "linz"
+    },
+    {
+      "src": "images/hero/balkans-00.webp",
+      "caption_it": "Il professore del luna park, Tetovo, Macedonia del Nord, 2023",
+      "caption_en": "The Luna Park's Professor, Tetovo, North Macedonia, 2023",
+      "gallery": "balkans"
+    },
+    {
+      "src": "images/hero/man-and-time-00.webp",
+      "caption_it": "L'uomo e il tempo, 2022",
+      "caption_en": "Man and Time, 2022",
+      "gallery": "man-and-time"
+    },
+    {
+      "src": "images/hero/armenia-09.webp",
+      "caption_it": "Impressioni dall'Armenia, 2026",
+      "caption_en": "Impressions from Armenia, 2026",
+      "gallery": "armenia"
+    },
+    {
+      "src": "images/hero/paris-01.webp",
+      "caption_it": "L'uomo e il tempo, Musée d'Orsay, Parigi, 2019",
+      "caption_en": "Man and time, Musée d'Orsay, Paris, 2019",
+      "gallery": "paris"
+    },
+    {
+      "src": "images/hero/helsinki-06.webp",
+      "caption_it": "Impressioni da Helsinki, 2025",
+      "caption_en": "Impressions from Helsinki, 2025",
+      "gallery": "helsinki"
+    },
+    {
+      "src": "images/hero/bosnia-06.webp",
+      "caption_it": "Trent'anni dopo, l'assedio, Sarajevo, 2024",
+      "caption_en": "30 Years Later, The Siege, Sarajevo, 2024",
+      "gallery": "bosnia"
+    },
+    {
+      "src": "images/hero/last-sacrament-26.webp",
+      "caption_it": "Last Sacrament, 2025",
+      "caption_en": "Last Sacrament, 2025",
+      "gallery": "last-sacrament"
+    },
+    {
+      "src": "images/hero/noe-syndrome-00.webp",
+      "caption_it": "Human-Animal Noè Syndrome, 2025",
+      "caption_en": "Human-Animal Noè Syndrome, 2025",
+      "gallery": "noe-syndrome"
+    },
+    {
+      "src": "images/hero/praga-01.webp",
+      "caption_it": "Praga, 2010",
+      "caption_en": "Praga, 2010",
+      "gallery": "praga"
+    }
+  ]
+}

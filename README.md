@@ -1,23 +1,32 @@
-# Sara Aliscioni — portfolio
+# Sara Aliscioni — sito
 
-Sito vetrina bilingue (IT/EN) per la fotografa romana Sara Aliscioni: reportage e street photography in bianco e nero.
+Sito statico a sezioni, bilingue (IT/EN), in bianco e nero. Nessun build, nessuna libreria esterna.
 
-Statico, nessun build: HTML + CSS + JS. Librerie da CDN: GSAP 3.12.5 (+ ScrollTrigger) e Lenis 1.1.13.
+- **Pagine:** `index.html` (home con foto a rotazione), `gallerie.html?cat=serie|impressioni`, `galleria.html?g=<id>`, `bio.html`, `mostre.html`, `pubblicazioni.html`, `news.html`, `blog.html`, `articolo.html?p=<id>`, `contatti.html`
+- **Contenuti:** tutti in `content/*.json` (home, gallerie, news, blog, bio, curriculum, contatti). Le pagine li leggono all'apertura.
+- **Codice:** `css/style.css`, `js/app.js`. Header e footer sono generati da `tools/build_pages.py` (`python3 tools/build_pages.py` dopo aver cambiato il template).
+- **Immagini:** `images/l` (1600 px), `images/s` (720 px), `images/hero` (home, 1920 px), `images/uploads` (caricate dal CMS).
+- **Font:** titoli Archivo Black, testi Sofia Pro. Sofia Pro è a licenza (Adobe Fonts): finché non c'è un kit si usa Mulish, molto simile. Per attivarlo basta incollare il `<link>` del kit Adobe Fonts nel template di `tools/build_pages.py` e rigenerare le pagine.
 
-## Struttura
+## Gestione dei contenuti (senza toccare il codice)
 
-- `index.html` — pagina unica (hero, dichiarazione, lavori scelti, fotogrammi, archivio, news, bio, curriculum, contatti)
-- `css/style.css` — stile
-- `js/content.js` — testi IT/EN, curriculum, selezioni (hero, fotogrammi)
-- `js/projects.js` — 40 progetti con foto e didascalie (generato dal portfolio Behance)
-- `js/main.js` — animazioni, visualizzatore progetti (`#/p/<progetto>`), lightbox, cambio lingua
-- `images/s` (720px), `images/l` (1600px), `images/hero` (1920px) — WebP
+Il sito è predisposto per [Pages CMS](https://app.pagescms.org), gratuito: un pannello con moduli per modificare gallerie, news, blog, bio, mostre e contatti, e caricare foto. La configurazione è in `.pages.yml`.
 
-## Modifiche frequenti
+1. Sara crea un account GitHub gratuito.
+2. Il proprietario del repository la aggiunge come collaboratrice (Settings → Collaborators), oppure le trasferisce il repository.
+3. Su app.pagescms.org si entra con GitHub, si installa l'app Pages CMS su questo repository e lo si apre.
+4. Ogni salvataggio aggiorna il sito in circa un minuto.
 
-- **Testi / traduzioni:** `js/content.js` → `i18n.it` e `i18n.en`
-- **Lavori in evidenza:** campo `featured` in `js/projects.js`
-- **Indicizzazione:** togliere `<meta name="robots" content="noindex, nofollow">` da `index.html` quando il sito è approvato
+Consiglio per le foto caricate: JPG o WebP, lato lungo massimo 2000 px.
+
+## Dominio (es. saraaliscioni.com)
+
+1. Acquistare il dominio da un registrar (Cloudflare, Namecheap, OVH, Aruba…).
+2. Nel DNS del dominio:
+   - record `A` per `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - record `CNAME` per `www` → `tommyzaffa.github.io`
+3. Su GitHub: Settings → Pages → Custom domain → `www.saraaliscioni.com`, poi spuntare "Enforce HTTPS".
+4. Quando il sito è approvato: togliere `<meta name="robots" content="noindex, nofollow">` dal template in `tools/build_pages.py`, aggiornare l'URL di `og:image` e rigenerare le pagine.
 
 Anteprima locale: `python3 -m http.server` nella cartella, poi http://localhost:8000
 

@@ -1,0 +1,62 @@
+{
+  "portrait": "images/sara-ritratto.webp",
+  "lead_it": "Si dedica alla fotografia e alla calligrafia fotografica dal 2006.",
+  "lead_en": "She has dedicated herself to photography and photographic calligraphy since 2006.",
+  "text_it": "La scelta fotografica, orientata al reportage e alla street photography, si esprime in una calligrafia rigorosamente in bianco e nero.\n\nIspirata al linguaggio del regista ungherese Béla Tarr, Sara Aliscioni propone immagini fatte di simbolismo, dramma e poesia: un'interpretazione oggettiva e insieme sentimentale, che racconta la dura realtà dell'uomo nei suoi contesti familiari e quotidiani. Il filo conduttore è sempre la ricerca della bellezza, anche quando ciò che circonda il soggetto è decadente, oscuro e dimenticato.\n\nLa matrice artistica le viene dal padre, musicista e compositore, che la porta a esplorare il teatro, a cui si dedica per anni sia come interprete sia come fotografa di scena, la musica, con lo studio del solfeggio classico e del basso, e il cinema, grazie al Centro Sperimentale di Cinematografia dove il padre lavorava come tecnico del suono.\n\nOltre a corsi di tecnica fotografica e workshop di reportage di viaggio, segue la formazione del MoMA sulla fotografia come mezzo di espressione artistica, di esplorazione della realtà e di critica della cultura. Spinta dall'interesse per la storia, studia con la University of London & Royal Holloway l'uso delle immagini e dei film e la loro interpretazione storica nel Novecento.\n\nHa curato numerosi backstage fotografici, l'ultimo al Museo MACRO di Roma, e dal 2022 pubblica fotografia NFT su ninfa.io e KnownOrigin. Ha maturato il suo stile anche grazie al confronto quotidiano con l'artista Alessandro Bavari, con cui firma il libro «Kill the Covid!». Dal 2025 insegna Fotografia di scena al CSF Adams.",
+  "text_en": "Her photographic choice, oriented towards reportage and street photography, is expressed in a strictly black and white calligraphy.\n\nInspired by the language of Hungarian filmmaker Béla Tarr, Sara Aliscioni offers images made of symbolism, drama and poetry: an objective yet sentimental interpretation describing the harsh reality of man in familiar, everyday contexts. The common thread is always the search for beauty, even when what surrounds the subject is decadent, dark and forgotten.\n\nHer artistic matrix comes from her father, a musician and composer, which led her to explore theatre, where she worked for years both as a performer and as a stage photographer, music, studying classical solfège and bass, and cinema, through the Centro Sperimentale di Cinematografia where her father worked as a sound engineer.\n\nAlongside courses in photographic technique and travel reportage workshops, she followed MoMA's training on photography as a means of artistic expression, of exploring reality and of cultural critique. Driven by an interest in history, she studied with the University of London & Royal Holloway the use of images and films and their historical interpretation in the twentieth century.\n\nShe has curated several photographic backstages, most recently at the MACRO Museum in Rome, and since 2022 has released NFT photography on ninfa.io and KnownOrigin. Her style also matured through daily exchange with the artist Alessandro Bavari, co-author of the book “Kill the Covid!”. Since 2025 she has taught stage photography at CSF Adams.",
+  "facts": [
+    {
+      "label_it": "Base",
+      "label_en": "Based in",
+      "value_it": "Roma",
+      "value_en": "Rome"
+    },
+    {
+      "label_it": "Dal",
+      "label_en": "Since",
+      "value_it": "2006",
+      "value_en": "2006"
+    },
+    {
+      "label_it": "Linguaggio",
+      "label_en": "Language",
+      "value_it": "Bianco e nero",
+      "value_en": "Black & white"
+    },
+    {
+      "label_it": "Insegna",
+      "label_en": "Teaches",
+      "value_it": "Fotografia di scena, CSF Adams",
+      "value_en": "Stage photography, CSF Adams"
+    }
+  ],
+  "education": [
+    {
+      "year": "2025",
+      "text_it": "Spazio Nicolosi — «AI Creatività: Midjourney», workshop a cura di Alessandro Bavari",
+      "text_en": "Spazio Nicolosi — “AI Creativity: Midjourney”, workshop led by Alessandro Bavari"
+    },
+    {
+      "year": "2024–25",
+      "text_it": "University of Copenhagen — Scandinavian Film and Television",
+      "text_en": "University of Copenhagen — Scandinavian Film and Television"
+    },
+    {
+      "year": "2022",
+      "text_it": "University of London & Royal Holloway — immagini, film e interpretazione storica del Novecento",
+      "text_en": "University of London & Royal Holloway — images, film and historical interpretation of the 20th century"
+    },
+    {
+      "year": "—",
+      "text_it": "MoMA — la fotografia come espressione artistica, documentazione della società e critica della cultura",
+      "text_en": "MoMA — photography as artistic expression, documentation of society and cultural critique"
+    },
+    {
+      "year": "2007",
+      "text_it": "Sapienza Università di Roma — Laurea in Economia",
+      "text_en": "Sapienza University of Rome — Degree in Economics"
+    }
+  ],
+  "languages_it": "Italiano, inglese, francese",
+  "languages_en": "Italian, English, French"
+}
