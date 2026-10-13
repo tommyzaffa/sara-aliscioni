@@ -1,6 +1,13 @@
 {
   "solo": [
     {
+      "year": "2026",
+      "title_it": "«Uomo-Animale»",
+      "title_en": "“Uomo-Animale”",
+      "place_it": "Festival di fotografia Arturo Ghergo, XI edizione — Associazione Effetto Ghergo, Montefano (MC)",
+      "place_en": "Arturo Ghergo Photography Festival, 11th edition — Associazione Effetto Ghergo, Montefano (Macerata)"
+    },
+    {
       "year": "2022",
       "title_it": "«I figli di Butuceni»",
       "title_en": "“I figli di Butuceni”",
@@ -195,6 +202,13 @@
     }
   ],
   "publications": [
+    {
+      "year": "2026",
+      "title_it": "«Riti & Miti»",
+      "title_en": "“Riti & Miti”",
+      "place_it": "Volume speciale di CITIES dedicato alle pratiche rituali — Cities Books / Italian Street Photography",
+      "place_en": "CITIES special volume on ritual practices — Cities Books / Italian Street Photography"
+    },
     {
       "year": "2024",
       "title_it": "«Kill the Covid!»",
