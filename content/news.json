@@ -1,93 +1,992 @@
 [
   {
+    "id": "un-mare-di-novecento",
+    "date": "2026-10-28",
+    "when": "October 2026",
+    "title": "Meta-Est at Un mare di Novecento",
+    "details": "MADXI Museo Contemporaneo, Latina — projection of Meta-Est and book presentation, 28 October 2026",
+    "icon": {
+      "src": "images/news/un-mare-di-novecento/icon.webp",
+      "w": 1080,
+      "h": 1307,
+      "thumb": "images/news/un-mare-di-novecento/icon-t.webp"
+    },
+    "text": "Un mare di Novecento (A Sea of the Twentieth Century) is a distributed exhibition dedicated to the arts, visions and transformations of the twentieth-century foundation towns. Across several exhibition venues, it brings art, history, architecture and the memory of these territories into dialogue.\n\nWithin this context, Sara Aliscioni’s video Meta-Est turns its gaze towards Eastern Europe, a region deeply marked by the political and social transformations of the last century. The work connects places, memories and identities, observing the traces that history continues to leave on the present. Rather than reconstructing the past in a documentary form, it explores the territory and its transformations through an observational approach. Presented as part of the exhibition, Meta-Est enters into dialogue with the history of Latina and the memory of migration from Eastern Europe, broadening the reflection on borders, displacement and the identities that have helped shape the twentieth century.",
+    "highlight": null,
+    "sections": [
+      {
+        "title": "Posters",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/un-mare-di-novecento/poster-1.webp",
+            "w": 1080,
+            "h": 1350,
+            "thumb": "images/news/un-mare-di-novecento/poster-1-t.webp"
+          },
+          {
+            "src": "images/news/un-mare-di-novecento/poster-2.webp",
+            "w": 1395,
+            "h": 1400,
+            "thumb": "images/news/un-mare-di-novecento/poster-2-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "The event — MADXI, Latina",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/un-mare-di-novecento/001.webp",
+            "w": 720,
+            "h": 960,
+            "thumb": "images/news/un-mare-di-novecento/001-t.webp"
+          },
+          {
+            "src": "images/news/un-mare-di-novecento/002.webp",
+            "w": 720,
+            "h": 1600,
+            "thumb": "images/news/un-mare-di-novecento/002-t.webp"
+          },
+          {
+            "src": "images/news/un-mare-di-novecento/003.webp",
+            "w": 1600,
+            "h": 900,
+            "thumb": "images/news/un-mare-di-novecento/003-t.webp"
+          },
+          {
+            "src": "images/news/un-mare-di-novecento/004.webp",
+            "w": 720,
+            "h": 540,
+            "thumb": "images/news/un-mare-di-novecento/004-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Press",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/un-mare-di-novecento/press-1.webp",
+            "w": 800,
+            "h": 962,
+            "thumb": "images/news/un-mare-di-novecento/press-1-t.webp"
+          },
+          {
+            "src": "images/news/un-mare-di-novecento/press-2.webp",
+            "w": 800,
+            "h": 995,
+            "thumb": "images/news/un-mare-di-novecento/press-2-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": [
+      {
+        "label": "Comune di Latina — Un mare di Novecento",
+        "url": "https://www.comune.latina.it/eventi/-Un-mare-di-Novecento.-Arti--visioni-e-trasformazioni-delle-citt--di-fondazione----Vernissage.html"
+      },
+      {
+        "label": "Corriere Pontino",
+        "url": "https://www.corrierepontino.it/un-mare-di-novecento-prende-il-via-la-prima-grande-mostra-diffusa-tra-le-citta-di-fondazione-dellagro-romano-e-pontino/"
+      }
+    ]
+  },
+  {
+    "id": "riti-e-miti",
     "date": "2026-10-17",
-    "when_it": "17 ottobre 2026",
-    "when_en": "17 October 2026",
-    "title_it": "«Riti & Miti», volume speciale di CITIES",
-    "title_en": "“Riti & Miti”, a CITIES special volume",
-    "place_it": "Presentazione a Officine Fotografiche, Roma — RomaèFestival",
-    "place_en": "Presentation at Officine Fotografiche, Rome — RomaèFestival",
-    "text_it": "Le fotografie di Sara Aliscioni sono pubblicate in «Riti & Miti», il nuovo volume speciale di CITIES (Cities Books) dedicato alle pratiche rituali, promosso da Italian Street Photography.\n\nIl libro viene presentato da Gianluca De Dominici sabato 17 ottobre 2026 alle 17:00, insieme a Cities16, durante il RomaèFestival (16–18 ottobre).",
-    "text_en": "Sara Aliscioni's photographs are published in “Riti & Miti”, the new CITIES special volume (Cities Books) devoted to ritual practices, promoted by Italian Street Photography.\n\nThe book is presented by Gianluca De Dominici on Saturday 17 October 2026 at 5 pm, together with Cities16, during RomaèFestival (16–18 October).",
-    "image": "",
-    "link": "https://www.italianstreetphotography.com/news/presentazioni-roma%C3%A8festival"
+    "when": "October 2026",
+    "title": "Riti e Miti — CITIES special volume",
+    "details": "Book presentation at Officine Fotografiche, Rome — 17 October 2026, during RomaèFestival",
+    "icon": {
+      "src": "images/news/riti-e-miti/icon.webp",
+      "w": 800,
+      "h": 1000,
+      "thumb": "images/news/riti-e-miti/icon-t.webp"
+    },
+    "text": "Rites & Myths is a special editorial project by CITIES, dedicated to ritual practices, religious traditions and symbolic and metaphysical worldviews, explored through street photography and documentary imagery.\n\nThe publication examines the relationship between rites and myths, from cultural and traditional expressions to beliefs and icons of the past and present, through the perspectives of 25 photographers.\n\nSara Aliscioni is among the selected contributing photographers featured in the publication, presenting her photographic work alongside the visual research of the other participants.",
+    "highlight": null,
+    "sections": [
+      {
+        "title": "Presentation at Officine Fotografiche, Rome",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/riti-e-miti/001.webp",
+            "w": 1448,
+            "h": 1086,
+            "thumb": "images/news/riti-e-miti/001-t.webp"
+          },
+          {
+            "src": "images/news/riti-e-miti/002.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/riti-e-miti/002-t.webp"
+          },
+          {
+            "src": "images/news/riti-e-miti/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/riti-e-miti/003-t.webp"
+          },
+          {
+            "src": "images/news/riti-e-miti/004.webp",
+            "w": 1448,
+            "h": 1086,
+            "thumb": "images/news/riti-e-miti/004-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": [
+      {
+        "label": "Italian Street Photography — Cities special: Riti & Miti",
+        "url": "https://www.italianstreetphotography.com/news/speciale-cities-riti-miti-arrivo"
+      },
+      {
+        "label": "Cities Books",
+        "url": "https://www.italianstreetphotography.com/cities-books"
+      }
+    ]
   },
   {
+    "id": "human-animal",
     "date": "2026-10-03",
-    "when_it": "3 ottobre – 6 dicembre 2026",
-    "when_en": "3 October – 6 December 2026",
-    "title_it": "«Uomo-Animale», mostra personale",
-    "title_en": "“Uomo-Animale”, solo exhibition",
-    "place_it": "Associazione Effetto Ghergo, Montefano (MC) — Festival di fotografia Arturo Ghergo",
-    "place_en": "Associazione Effetto Ghergo, Montefano (Macerata) — Arturo Ghergo Photography Festival",
-    "text_it": "Mostra collaterale dell'XI edizione del Festival di fotografia Arturo Ghergo. Il percorso indaga il confine incerto tra identità umana e dimensione animale: attraverso immagini dalla forte tensione simbolica ed emotiva, il progetto mette in discussione la presunta separazione tra l'uomo e le altre forme viventi.\n\nAperta il sabato e la domenica, 10:00–12:30 e 17:00–19:00, fino al 6 dicembre 2026.",
-    "text_en": "A collateral exhibition of the 11th Arturo Ghergo Photography Festival. The project explores the uncertain boundary between human identity and the animal dimension: through images of strong symbolic and emotional tension, it questions the supposed separation between humans and other living beings.\n\nOpen Saturdays and Sundays, 10:00–12:30 and 17:00–19:00, until 6 December 2026.",
-    "image": "images/l/noe-syndrome-00.webp",
-    "link": "https://marcheinfinite.com/2026/09/27/festival-arturo-ghergo-2026-guido-harari-protagonista-dellxi-edizione-tra-mostre-premi-e-letture-portfolio-a-montefano-dal-2-al-4-ottobre/"
+    "when": "October 2026",
+    "title": "Human/Animal — solo exhibition",
+    "details": "Uomo-Animale · Associazione Effetto Ghergo, Montefano (MC) — collateral exhibition of the XI Festival di fotografia Arturo Ghergo · 3 October – 6 December 2026, Saturdays and Sundays",
+    "icon": {
+      "src": "images/news/human-animal/icon.webp",
+      "w": 1400,
+      "h": 1048,
+      "thumb": "images/news/human-animal/icon-t.webp"
+    },
+    "text": "Human/Animal is a photographic project by Sara Aliscioni that explores the relationship between humans and animals without imposing a single reading or an explicitly critical stance.\n\nThe work resists the dimension of denunciation and instead occupies an unstable space, where what is observed is never fully fixed. The series emerges from a precise shift: not what this relationship represents, but how it is lived by those who undergo it and move through it without having chosen it. The animal is at the centre — not as a symbol, but as a presence.\n\nThe animals portrayed inhabit different conditions: they are cared for, confined, displayed, used. They can function as emotional refuge, projection, aesthetic element, or response to an inner void. In other cases, they exist within systems that determine their entire life cycle.\n\nThese conditions are not separated. They coexist.\n\nWithin these relationships, love also exists — real, concrete, everyday love. It appears in repeated gestures, in care, in constant proximity. In attention to the smallest details, in the recognition of the animal’s individuality. It is neither simulated nor accessory; it is an integral part of the bond. Yet it does not cancel the structure in which it is produced. From the animal’s perspective, the relationship is not a concept. It is a given. It recognizes a recurring presence: the one who feeds, who touches, who defines space. Their absence interrupts a rhythm; their presence restores it. This can produce a form of calm, of reassurance, but at the same time it builds a dependency that is not chosen.\n\nThe animal does not possess its own time and space: it moves within limits defined by others, gradually traversing them until they become familiar. Habit replaces possibility. It is not possible to determine whether there is adherence; what is evident is adaptation. Some behaviours may be read as affection, others as mere tolerance.\n\nIn both cases, the asymmetry remains intact: one party defines the conditions, the other accepts them. It is at this point that the relationship fractures: care does not oppose control — it contains it. Love does not eliminate possession; it passes through it. Protection implies a reduction of the field of existence, and closeness implies continuous dependency.\n\nWhat could be defined as the “Noah Syndrome”— the human need to protect, save, and hold onto—translates, on the animal’s side, into a condition from which no exit is foreseen. A form of permanence that can be read, without confirmation, as forced adaptation. A possible “Stockholm Syndrome” without declaration, without consciousness, without language. A question remains that cannot be verified: if the animal could choose, would it alter this condition? It is not known in which direction. In these portraits, the human figure does not dominate; it is present, but not central. The animal occupies the image with equal intensity, at times with greater force. In its gaze there is no request, nor any readable complicity. It does not confirm the relationship. It exposes it.\n\nA minimal but persistent fracture emerges: the observer is included. The human defines itself as caretaker, as a necessary figure.\n\nBut it is also the one who establishes the ultimate boundary of the animal’s existence. This ambivalence is not stated, but remains implicit in every image. The project takes no position.\n\nPhotography intervenes as an act of arresting space and time, without altering the condition and without either releasing or confining. It removes these presences from immediate disappearance without changing their structure. It renders them visible for what they are: lives existing within a system that contains them.\n\nA non-verifiable yet unavoidable possibility remains to be asked: if the animal could break away, would it? And if it did, would the human be willing not to prevent it?\n\nThe question cannot be resolved. And it is not resolved.\nSara Aliscioni",
+    "highlight": {
+      "title": "Endorsement",
+      "quote": "In her photographs, Sara Aliscioni reveals the complex relationship between humans and animals. One that is not easily translated into words, but exists through her images. The question of what separates the animal from the human pervades these provocative photographs.",
+      "author": "Roger Ballen",
+      "images": [
+        {
+          "src": "images/news/human-animal/ballen-1.webp",
+          "w": 1800,
+          "h": 1350,
+          "thumb": "images/news/human-animal/ballen-1-t.webp"
+        },
+        {
+          "src": "images/news/human-animal/ballen-2.webp",
+          "w": 800,
+          "h": 1066,
+          "thumb": "images/news/human-animal/ballen-2-t.webp"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "The exhibition — Montefano",
+        "text": "",
+        "poster": {
+          "src": "images/news/human-animal/poster.webp",
+          "w": 1120,
+          "h": 1400,
+          "thumb": "images/news/human-animal/poster-t.webp"
+        },
+        "images": [
+          {
+            "src": "images/news/human-animal/event-01.webp",
+            "w": 1200,
+            "h": 1600,
+            "thumb": "images/news/human-animal/event-01-t.webp",
+            "caption": "With Guido Harari"
+          },
+          {
+            "src": "images/news/human-animal/event-02.webp",
+            "w": 1314,
+            "h": 1103,
+            "thumb": "images/news/human-animal/event-02-t.webp"
+          },
+          {
+            "src": "images/news/human-animal/event-03.webp",
+            "w": 1200,
+            "h": 1600,
+            "thumb": "images/news/human-animal/event-03-t.webp"
+          },
+          {
+            "src": "images/news/human-animal/event-04.webp",
+            "w": 1200,
+            "h": 1600,
+            "thumb": "images/news/human-animal/event-04-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": [
+      {
+        "label": "Marche Infinite",
+        "url": "https://marcheinfinite.com/2026/09/27/festival-arturo-ghergo-2026-guido-harari-protagonista-dellxi-edizione-tra-mostre-premi-e-letture-portfolio-a-montefano-dal-2-al-4-ottobre/"
+      },
+      {
+        "label": "L’Eco — XI edizione Festival di fotografia Arturo Ghergo",
+        "url": "https://www.ecomarchenews.com/xi-edizione-festival-di-fotografia-arturo-ghergo/"
+      },
+      {
+        "label": "Radio City Light",
+        "url": "https://www.radiocitylight.com/uomo-animale-sara-aliscioni-e-le-ambiguita-dellaffetto-al-museo-ghergo-di-montefano/"
+      },
+      {
+        "label": "FIAF Marche",
+        "url": "https://fiaf.net/marche/mostre-uomo-animale-sara-aliscioni-festival-arturo-ghergo/"
+      }
+    ]
   },
   {
-    "date": "2026-10-09",
-    "when_it": "9–28 ottobre 2026",
-    "when_en": "9–28 October 2026",
-    "title_it": "«Meta-Est» a Un mare di Novecento",
-    "title_en": "“Meta-Est” at Un mare di Novecento",
-    "place_it": "MADXI Museo Contemporaneo, Latina",
-    "place_en": "MADXI Museo Contemporaneo, Latina",
-    "text_it": "Il video di Sara Aliscioni è proiettato al MADXI Museo Contemporaneo di Latina nella mostra diffusa «Un mare di Novecento. Arti, visioni e trasformazioni delle città di fondazione», insieme ai progetti video dedicati agli esuli dell'Est europeo passati dal campo profughi «Rossi Longhi». Dal 9 al 28 ottobre 2026.",
-    "text_en": "Sara Aliscioni's video is screened at MADXI Museo Contemporaneo in Latina as part of the exhibition “Un mare di Novecento. Arts, visions and transformations of the foundation cities”, alongside video projects about the Eastern European exiles who passed through the “Rossi Longhi” refugee camp. 9–28 October 2026.",
-    "image": "",
-    "link": ""
+    "id": "il-silenzio-delle-dee",
+    "date": "2026-03-08",
+    "when": "March 2026",
+    "title": "Il silenzio delle Dee",
+    "details": "Church of San Michele Arcangelo, Sermoneta — 8 March – 26 April 2026",
+    "icon": {
+      "src": "images/news/il-silenzio-delle-dee/icon.webp",
+      "w": 519,
+      "h": 720,
+      "thumb": "images/news/il-silenzio-delle-dee/icon-t.webp"
+    },
+    "text": "The Silence of the Goddesses is a group exhibition featuring women artists, hosted at the Church of San Michele Arcangelo in Sermoneta and inaugurated on 8 March, International Women's Day. Curated by Enza Messini and Marcella Magaletti, the exhibition offers a reinterpretation of ancient myths through the perspectives of contemporary women artists, giving a voice back to goddesses, nymphs and heroines whose stories have often been marked by violence, oppression and imposed desire.\n\nThe project invites reflection on how mythological narratives have transformed experiences of abuse and coercion into stories presented as fate or passion, connecting the legacy of ancient myths with issues that remain relevant today.\n\nSara Aliscioni is among the participating artists and contributors, alongside fourteen other women artists. The exhibition is also a tribute to Lydia Palumbo Scalzi, a respected art gallery owner from Latina.",
+    "highlight": null,
+    "sections": [
+      {
+        "title": "The exhibition",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/il-silenzio-delle-dee/001.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/il-silenzio-delle-dee/001-t.webp"
+          },
+          {
+            "src": "images/news/il-silenzio-delle-dee/002.webp",
+            "w": 1800,
+            "h": 1666,
+            "thumb": "images/news/il-silenzio-delle-dee/002-t.webp"
+          },
+          {
+            "src": "images/news/il-silenzio-delle-dee/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/il-silenzio-delle-dee/003-t.webp"
+          },
+          {
+            "src": "images/news/il-silenzio-delle-dee/004.webp",
+            "w": 1045,
+            "h": 1771,
+            "thumb": "images/news/il-silenzio-delle-dee/004-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": [
+      {
+        "label": "LatinaToday",
+        "url": "https://www.latinatoday.it/eventi/il-silenzio-delle-dee-sermoneta.html"
+      }
+    ]
   },
   {
-    "date": "2026-06-01",
-    "when_it": "2026",
-    "when_en": "2026",
-    "title_it": "«Il silenzio delle Dee»",
-    "title_en": "“Il silenzio delle Dee”",
-    "place_it": "Chiesa di San Michele Arcangelo, Sermoneta",
-    "place_en": "Church of San Michele Arcangelo, Sermoneta",
-    "text_it": "Mostra collettiva al femminile che rilegge le figure delle dee e delle eroine dei miti antichi.",
-    "text_en": "An all-women group exhibition that reinterprets the goddesses and heroines of ancient myths.",
-    "image": "",
-    "link": ""
+    "id": "condividere-scattando",
+    "date": "2026-01-23",
+    "when": "January 2026",
+    "title": "Condividere… Scattando — finalist",
+    "details": "Maison des Arts, Fondazione Pescarabruzzo, Pescara — 23 January – 22 February 2026",
+    "icon": {
+      "src": "images/news/condividere-scattando/icon.webp",
+      "w": 1000,
+      "h": 1200,
+      "thumb": "images/news/condividere-scattando/icon-t.webp"
+    },
+    "text": "The IX edition of the photography competition Condividere… Scattando 2025, promoted by the Pescarabruzzo Foundation, focuses on environmental sustainability and social integration. Through photography, the competition invites participants to observe and document the relationship between individuals, communities and the environment, encouraging reflection on the values of sharing and collective responsibility.\n\nAliscioni’s work was selected as a finalist, becoming part of an exhibition project dedicated to these themes.",
+    "highlight": {
+      "title": "Finalist photograph",
+      "quote": "",
+      "author": "",
+      "images": [
+        {
+          "src": "images/news/condividere-scattando/finalist.webp",
+          "w": 1800,
+          "h": 1373,
+          "thumb": "images/news/condividere-scattando/finalist-t.webp"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "The exhibition",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/condividere-scattando/001.webp",
+            "w": 1600,
+            "h": 1200,
+            "thumb": "images/news/condividere-scattando/001-t.webp"
+          },
+          {
+            "src": "images/news/condividere-scattando/002.webp",
+            "w": 1600,
+            "h": 1200,
+            "thumb": "images/news/condividere-scattando/002-t.webp"
+          },
+          {
+            "src": "images/news/condividere-scattando/003.webp",
+            "w": 1600,
+            "h": 1200,
+            "thumb": "images/news/condividere-scattando/003-t.webp"
+          },
+          {
+            "src": "images/news/condividere-scattando/004.webp",
+            "w": 720,
+            "h": 1276,
+            "thumb": "images/news/condividere-scattando/004-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": []
   },
   {
-    "date": "2026-03-01",
-    "when_it": "2026",
-    "when_en": "2026",
-    "title_it": "«Condividere Scattando»",
-    "title_en": "“Condividere Scattando”",
-    "place_it": "Maison des Arts, Pescara",
-    "place_en": "Maison des Arts, Pescara",
-    "text_it": "Partecipazione alla mostra collettiva di fotografia.",
-    "text_en": "Participation in the group photography exhibition.",
-    "image": "",
-    "link": ""
+    "id": "artefatti",
+    "date": "2025-12-01",
+    "when": "2025 – 2026",
+    "title": "Artefatti (Artifacts)",
+    "details": "Animated short film by Alessandro Bavari and Sara Aliscioni · 2025 · 18:11 min · First Prize for Best Animated Short Film, Rome Creative Contest 2025",
+    "icon": {
+      "src": "images/news/artefatti/icon.webp",
+      "w": 725,
+      "h": 1024,
+      "thumb": "images/news/artefatti/icon-t.webp"
+    },
+    "text": "For now, the work is only visible with a password exclusively for industry professionals: curators, festivals, art critics, etc. For info, please [contact us here](contact.html).\n\nYear: 2025\nDuration: min 18:11\nFormat: HD (1920 x 1080)\n\nArtifacts by Alessandro Bavari and Sara Aliscioni, is a metaphysical meditation on identity, on the illusion of visibility as the sole form of existence, and on the fragile boundary between being and appearing. It is an aesthetic and visionary journey into the heart of a world where everything is born of light and, without the gaze of others, everything vanishes.\n\nWithin the rarefied black and white of a dreamlike diorama, surreal figures move: metallic beings, glossy masks, fragmented bodies, and artificial geometries. These are the Artefacts—hedonistic and narcissistic characters, without roots or memory, children of the present and of light. They materialize in a blaze of brilliance and exist only so long as they are seen, admired, desired. Their stage is a theater of appearances, where to exist is to be looked at. Fed by the eyes of others, by surface and vanity, these ephemeral beings possess no authentic self—only the reflected image that keeps them alive.\n\nAlongside them move the Anonymous: dim beings, devoid of grace and meaning, without will or inner light. Finally, the Invisibles emerge—rare creatures who do not shine with reflected light but carry within themselves an authentic one: spectral shrouds, subtle traces of a soul that has felt and known compassion.\n\nSara Aliscioni’s text and Alessandro Bavari’s video construct a symbolic and archetypal universe, suspended between the sacred and the post-human, where everything unfolds in an eternal, timeless present. The entire narrative framework moves across a stage that recalls the rarefied solemnity of metaphysical painting, modernist currents, and the reflections on hyperreality and the simulacrum articulated by Jean Baudrillard, who argued that the sign precedes and produces the real rather than deriving from it, allowing reality to survive only as an effect of the image that stages it.",
+    "highlight": null,
+    "sections": [
+      {
+        "title": "Rome Creative Contest — December 2025",
+        "text": "The Roma Creative Contest – International Short Film Festival is an international festival dedicated to short films, promoting works by Italian and international filmmakers and showcasing experimentation and new forms of audiovisual expression.\n\nThe animated short film Artefatti, created by Alessandro Bavari and Sara Aliscioni, won First Prize for Best Animated Short Film at the 2025 edition of the festival.\n\nThe work offers a metaphysical reflection on identity and the illusion of visibility as the only form of existence, exploring the fragile boundary between being and appearing through a visionary black-and-white visual universe.",
+        "poster": {
+          "src": "images/news/artefatti/roma-poster.webp",
+          "w": 1120,
+          "h": 1400,
+          "thumb": "images/news/artefatti/roma-poster-t.webp"
+        },
+        "images": [
+          {
+            "src": "images/news/artefatti/roma-prize.webp",
+            "w": 1350,
+            "h": 1800,
+            "thumb": "images/news/artefatti/roma-prize-t.webp",
+            "caption": "First Prize"
+          },
+          {
+            "src": "images/news/artefatti-roma/001.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-roma/001-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-roma/002.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-roma/002-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-roma/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-roma/003-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Opline Prize International #18 — Sorbonne, Paris, 2026",
+        "text": "At the Sorbonne in Paris, Alessandro Bavari and Sara Aliscioni present ARTIFACTS, a visionary audiovisual work exploring identity, appearance and the fragile boundary between being and seeming to exist.\n\nThrough Alessandro Bavari's experimental video art and Sara Aliscioni's evocative writing, the project creates a surreal, metaphysical universe populated by enigmatic figures, artificial forms and symbolic presences. It questions the contemporary obsession with visibility, image and recognition, reflecting on a world in which existence increasingly depends on the gaze of others.\n\nAn internationally acclaimed Italian-French visual artist, Alessandro Bavari is renowned for his pioneering research at the intersection of photography, painting, digital technologies and experimental animation. Winner of the prestigious Golden Nica at Prix Ars Electronica in 2011, he has continually explored new artistic languages, including the creative possibilities of artificial intelligence.\n\nTogether, Bavari and Aliscioni offer a compelling reflection on contemporary identity, the human condition and the relationship between technology, perception and inner truth. ARTIFACTS invites viewers to look beyond appearances and rediscover the invisible dimension of existence.",
+        "poster": {
+          "src": "images/news/artefatti/paris-poster.webp",
+          "w": 466,
+          "h": 498,
+          "thumb": "images/news/artefatti/paris-poster-t.webp"
+        },
+        "images": [
+          {
+            "src": "images/news/artefatti-paris/001.webp",
+            "w": 1350,
+            "h": 1800,
+            "thumb": "images/news/artefatti-paris/001-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-paris/002.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-paris/002-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-paris/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-paris/003-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Merge Film Festival — Massagno (Lugano), October 2026",
+        "text": "The Merge Film Festival, held from 1 to 4 October 2026 in Massagno, Switzerland, is the first Swiss festival dedicated to artificial intelligence applied to cinema and the visual arts. The festival explores the meeting point between creativity, technology and new audiovisual languages through screenings, talks and in-depth sessions.\n\nAs part of the festival, Artefatti, a short film by Alessandro Bavari and Sara Aliscioni, was presented within a wider exploration of the new expressive possibilities of the image and of contemporary cinema.\n\nThe festival took place at Cinema Lux in Massagno, in the Lugano area, and included a screening followed by a talk with Alessandro Bavari.",
+        "poster": {
+          "src": "images/news/artefatti/merge-poster.webp",
+          "w": 1254,
+          "h": 1254,
+          "thumb": "images/news/artefatti/merge-poster-t.webp"
+        },
+        "images": [
+          {
+            "src": "images/news/artefatti-merge/001.webp",
+            "w": 1254,
+            "h": 1254,
+            "thumb": "images/news/artefatti-merge/001-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/002.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/002-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/003-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/004.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/004-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/005.webp",
+            "w": 1080,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/005-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/006.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/006-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/007.webp",
+            "w": 1080,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/007-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-merge/008.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/artefatti-merge/008-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Patchlab Digital Art Festival — Kraków, October 2026",
+        "text": "The Patchlab Digital Art Festival is an international festival dedicated to digital art and new forms of audiovisual expression. It explores the relationship between art, technology and innovation through installations, video art, performances and multimedia projects. As part of the festival, Artefatti, a short film by Alessandro Bavari and Sara Aliscioni, was screened. The work explores the themes of identity and the boundaries between being and appearing, through a visionary black-and-white visual universe.\n\nThe film was presented in the Dream Sim section, dedicated to artistic experiences and digital visions.",
+        "poster": {
+          "src": "images/news/artefatti/krakow-poster.webp",
+          "w": 1200,
+          "h": 900,
+          "thumb": "images/news/artefatti/krakow-poster-t.webp"
+        },
+        "images": [
+          {
+            "src": "images/news/artefatti-krakow/001.webp",
+            "w": 860,
+            "h": 1084,
+            "thumb": "images/news/artefatti-krakow/001-t.webp"
+          },
+          {
+            "src": "images/news/artefatti-krakow/002.webp",
+            "w": 895,
+            "h": 1083,
+            "thumb": "images/news/artefatti-krakow/002-t.webp"
+          }
+        ],
+        "links": [
+          {
+            "label": "Patchlab — Alessandro Bavari & Sara Aliscioni",
+            "url": "https://en.patchlab.pl/artists/alessandro-bavari-sara-aliscioni/"
+          }
+        ]
+      }
+    ],
+    "video": null,
+    "links": [
+      {
+        "label": "Rome Creative Contest — Artefatti",
+        "url": "https://romacreativecontest.com/selezione-animazione-2025/artefatti/"
+      },
+      {
+        "label": "Patchlab Digital Art Festival",
+        "url": "https://en.patchlab.pl/artists/alessandro-bavari-sara-aliscioni/"
+      }
+    ]
   },
   {
-    "date": "2025-11-01",
-    "when_it": "2025",
-    "when_en": "2025",
-    "title_it": "«Artefatti», primo premio",
-    "title_en": "“Artefatti”, first prize",
-    "place_it": "Rome Creative Contest",
-    "place_en": "Rome Creative Contest",
-    "text_it": "Con Alessandro Bavari, primo premio all'International Short Film Festival del Rome Creative Contest 2025. Nello stesso anno, finalista al Concorso internazionale Città di Latina con la mostra «Energia» al Museo Cambellotti.",
-    "text_en": "With Alessandro Bavari, first prize at the International Short Film Festival of the Rome Creative Contest 2025. The same year she was a finalist at the Città di Latina international competition with the exhibition “Energia” at Museo Cambellotti.",
-    "image": "",
-    "link": ""
-  },
-  {
+    "id": "kill-the-covid",
     "date": "2024-06-01",
-    "when_it": "2024",
-    "when_en": "2024",
-    "title_it": "Kill the Covid!",
-    "title_en": "Kill the Covid!",
-    "place_it": "Libro, con Alessandro Bavari",
-    "place_en": "Book, with Alessandro Bavari",
-    "text_it": "Una saga horror e rurale a cura di Alessandro Bavari e Sara Aliscioni: un mockumentary fotografico ambientato nelle campagne italiane, fedele al loro stile visionario e provocatorio.",
-    "text_en": "A rural horror saga by Alessandro Bavari and Sara Aliscioni: a photographic mockumentary set in the Italian countryside, true to their visionary and provocative style.",
-    "image": "images/l/kill-the-covid.webp",
-    "link": "https://www.alessandrobavari.com/kill-the-covid"
+    "when": "2024",
+    "title": "Kill the Covid!",
+    "details": "A horror/rural saga by Alessandro Bavari and Sara Aliscioni — book presentations in 2024",
+    "icon": {
+      "src": "images/news/kill-the-covid/icon.webp",
+      "w": 824,
+      "h": 768,
+      "thumb": "images/news/kill-the-covid/icon-t.webp"
+    },
+    "text": "In Italian and English version.\n\n### The book\n\nNarrative and photographic mockumentary. 120 pages for over 250 images. Price 50 euros plus shipping costs. First limited edition of 500 copies, each copy is numbered and signed by the authors. For reservations and information contact info@alessandrobavari.com\n\nThe project KILL THE COVID!, set in Italy in the Marche region, to Bura, one of the heterogeneous countryside districts, was born from the idea of Alessandro Bavari and Sara Aliscioni. Photographers by profession and by artistic choice, Alessandro together with Sara, tell us, through images and texts, an entirely rural saga of killing Covid, invisible to the human eye but tangible in this work.\n\nThe Covid-19, world famous number one enemy, now represented as an anthropomorphic monster with animalistic behaviors, as a mythological creature belonging to unknown countries, described with a grotesque, ridiculous and clumsy appearance unable to defend itself from it’s own hunters.\n\nAt the gates of the city of Tolentino, the villagers have absorbed the local’s popular legends narrated from generation to generation: many of these stories arise from oral traditions and historical memory of the dialect. Inherited from the tales of the elders, belonging to previous generations, the legendary trace the imaginary of the inhabitants of a century ago or, rather, those fantasies on the edge of reality.\n\nThe vehemence of popular culture combined with the collective imagination and the narrative skeleton, gives the volume a chimerical imprint made even more atavistic by photographic images. Get accustomed to the tales of witches, werewolf, sounding pots, mysterious figures wandering in abandoned houses, lit bonfires, evil eyes and hexes, silhouettes appearing in the night near the Devil’s bridge, fearless, merciless autochthonous confront, fight capture, mistreat, mock and kill the Covid by showing the trophy and what remains of its limbs. A sort of secret movement fighting to defeat the new monster with what you have: hoes, shovels, pitchforks, sticks, chainsaws, axes, punches and kicks.\n\nWe cannot fail to also consider the history of the people from Marche which originates far from the Piceni, or warriors people from Middle Italy: “Their name picus derives from the animal sacred to the divinity Mars, the woodpecker. This bird, in fact, under his guidance, indicated the path to the founders of the Piceno people who arrived in the Marche starting from Sabina”.\n\nNew forged warriors face the enemy, espouse the cause, and devote themselves to practice by proudly displaying their trophy.\n\n### The popular saga of 19 shots\n\nA story with a harsh, rough, grotesque and rural artistic solution, Kill the Covid! wants to represent the defeat of the virus at the hands of the inhabitants of the Bura, therefore in metaphorical terms at the hands of man. Nineteen photographic representations like the namesake of the virus, in 19 different guises.\n\nThis collection is placed in the mysterious dimension of local legends made of stories, of perceptions outside the real and ordinary conception, of monstrous apparitions such as Covid.\n\nThe events of usual life transformed by the imagination of the locals, have given life over the centuries to mythological stories shaped by the hands of the same. Jealously preserved in their memories, these have been returned amalgamated with the imagination induced by the unconscious.\n\nIn the Marche plot of evil eyes, hexes and sorcerers, witches and ghosts, the written texts, together with the visual and photographic narration, refer at the same time, to the ancient and the modern in an intense and rural setting characterized by the countryside of the district, the fields of sunflowers, woods, and the old farmhouses surrounded by the countryside courtyard.\n\nThose who remain are the custodians of those magical formulas, handed down from generation to generation, capable of exorcising every curse.\n\nCollectively accepted, beliefs in the power of rituals and words that evoke something or someone made it possible for the virus to materialize into a visible and tangible monster.\n\nHowever, the alchemy between what has been remembered and what has been decoded has given shape to a macroscopic archetype of Covid with both human and animal features, with a grotesque and clumsy appearance, whose only gift is a congenital and obstinate stupidity.\n\nA saga that tells the inhabitants’ revenge, persecuted for a long time by legendary figures, invisible but present in their minds, recalled by the holders of memories where the monster is now tangible, hunted and killed.\n\nQuel ch’s’fa d’nott, s’arsa de giorn.\n\n“What was done at night you know during the day” which is why the inhabitants hunt, capture, shoot down, kill, retrieve and display the trophy at night, in the light of the flash and the full moon.\n\n### Why Kill the Covid!\n\nThe project was born during the contingency of Covid, the virus of the same name that has affected the whole world without distinction. The two authors, adopting a sarcastic key, through their visionary creativity, return to the public the representation of evil, in an unreal, imaginative, grotesque, crude and cynical guise with the aim of exorcising it.\n\nKILL THE COVID!, with its ineluctable, biting and sarcastic story and its photographic vision, also has the ambition to give a warning so that man understands the importance of maintaining the balance of nature which, in its sovereignty, takes back what belongs even without mercy. Man can be cruel but nature can be more so.\n\nIt is therefore necessary to start afresh from the system, from its management and from responsible behavior towards a fair, sustainable future, respectful of nature, animals and man.\n\nThe people of the Marches, with their vocation for the territory and the preservation of traditions, represent an example and this place is the perfect setting chosen by the authors.",
+    "highlight": null,
+    "sections": [
+      {
+        "title": "From the book — pages",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-pages/001.webp",
+            "w": 1280,
+            "h": 1193,
+            "thumb": "images/news/ktc-pages/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-pages/002.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-pages/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-pages/003.webp",
+            "w": 1300,
+            "h": 1213,
+            "thumb": "images/news/ktc-pages/003-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "From the book — photographs",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-photos/001.webp",
+            "w": 1500,
+            "h": 1000,
+            "thumb": "images/news/ktc-photos/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-photos/002.webp",
+            "w": 1500,
+            "h": 1061,
+            "thumb": "images/news/ktc-photos/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-photos/003.webp",
+            "w": 886,
+            "h": 886,
+            "thumb": "images/news/ktc-photos/003-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Backstage",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-backstage/001.webp",
+            "w": 1639,
+            "h": 1800,
+            "thumb": "images/news/ktc-backstage/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-backstage/002.webp",
+            "w": 1751,
+            "h": 1800,
+            "thumb": "images/news/ktc-backstage/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-backstage/003.webp",
+            "w": 1800,
+            "h": 1548,
+            "thumb": "images/news/ktc-backstage/003-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Presentation — Teatro La Rondinella, Montefano",
+        "text": "Kill the Covid! is a photographic and multimedia reportage set in the countryside of the Marche region, specifically in Contrada Bura, Tolentino. Blending local legends, science fiction and extreme horror, the project tells the story of the defeat of the virus, portrayed as an embodiment of evil, through the actions of the local inhabitants.\n\nThe work was presented at Teatro La Rondinella in Montefano through an event combining photography, video, storytelling and live readings of testimonies.\n\nSara Aliscioni was responsible for the narrative and the photographs of the witnesses, while Alessandro Bavari created the black-and-white photographic reportage, shot at night. The preface was written by Marcello Faletra.",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-montefano/001.webp",
+            "w": 1600,
+            "h": 1200,
+            "thumb": "images/news/ktc-montefano/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-montefano/002.webp",
+            "w": 1350,
+            "h": 1800,
+            "thumb": "images/news/ktc-montefano/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-montefano/003.webp",
+            "w": 1080,
+            "h": 1080,
+            "thumb": "images/news/ktc-montefano/003-t.webp"
+          },
+          {
+            "src": "images/news/ktc-montefano/004.webp",
+            "w": 1800,
+            "h": 1012,
+            "thumb": "images/news/ktc-montefano/004-t.webp"
+          },
+          {
+            "src": "images/news/ktc-montefano/005.webp",
+            "w": 1080,
+            "h": 1543,
+            "thumb": "images/news/ktc-montefano/005-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Presentation — Adams Experimental Photography Centre, Rome",
+        "text": "Kill the Covid! is a book created by Alessandro Bavari and Sara Aliscioni, published in 2024. Described by its authors as a rural horror photographic mockumentary, it is set in Italy and constructs a visionary and provocative visual universe in which photography, imagination and cinematic influences intertwine to recount the experience of the pandemic through a surreal and grotesque perspective.\n\nThe project was presented at the Adams Experimental Photography Centre in Rome, an institution dedicated to photographic education and culture.",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-roma/001.webp",
+            "w": 738,
+            "h": 1640,
+            "thumb": "images/news/ktc-roma/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-roma/002.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-roma/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-roma/003.webp",
+            "w": 810,
+            "h": 1800,
+            "thumb": "images/news/ktc-roma/003-t.webp"
+          },
+          {
+            "src": "images/news/ktc-roma/004.webp",
+            "w": 1080,
+            "h": 1080,
+            "thumb": "images/news/ktc-roma/004-t.webp"
+          },
+          {
+            "src": "images/news/ktc-roma/005.webp",
+            "w": 1074,
+            "h": 1104,
+            "thumb": "images/news/ktc-roma/005-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Presentation — Circolo dei Lettori, Turin",
+        "text": "Kill the Covid! is an artistic project created by Alessandro Bavari and Sara Aliscioni, conceived during the pandemic and focused on reflecting on the collective experience of Covid-19 through visual and artistic expression.\n\nThe project was presented at the Circolo dei Lettori in Turin, with Donato Sansone as presenter and moderator, during an event dedicated to the work and its artistic research.",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-torino/001.webp",
+            "w": 1050,
+            "h": 1500,
+            "thumb": "images/news/ktc-torino/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/002.webp",
+            "w": 1024,
+            "h": 768,
+            "thumb": "images/news/ktc-torino/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-torino/003-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/004.webp",
+            "w": 853,
+            "h": 1280,
+            "thumb": "images/news/ktc-torino/004-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/005.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-torino/005-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/006.webp",
+            "w": 1350,
+            "h": 1800,
+            "thumb": "images/news/ktc-torino/006-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/007.webp",
+            "w": 1800,
+            "h": 684,
+            "thumb": "images/news/ktc-torino/007-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino/008.webp",
+            "w": 1800,
+            "h": 1800,
+            "thumb": "images/news/ktc-torino/008-t.webp"
+          },
+          {
+            "src": "images/news/ktc-torino-camera/001.webp",
+            "w": 1448,
+            "h": 1086,
+            "thumb": "images/news/ktc-torino-camera/001-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Presentation — La Bura, Tolentino",
+        "text": "Kill the Covid! is a book by Alessandro Bavari and Sara Aliscioni, conceived during the pandemic and developed through a visual and artistic narrative inspired by the experience of that period.\n\nThe book was presented at La Bura di Tolentino, the very place in which its story is set, creating a direct connection between the work, its setting and the territory that inspired it.",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-tolentino/001.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-tolentino/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/002.webp",
+            "w": 972,
+            "h": 729,
+            "thumb": "images/news/ktc-tolentino/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/003.webp",
+            "w": 1350,
+            "h": 1800,
+            "thumb": "images/news/ktc-tolentino/003-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/004.webp",
+            "w": 1050,
+            "h": 1500,
+            "thumb": "images/news/ktc-tolentino/004-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/005.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-tolentino/005-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/006.webp",
+            "w": 1200,
+            "h": 1600,
+            "thumb": "images/news/ktc-tolentino/006-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/007.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-tolentino/007-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/008.webp",
+            "w": 1600,
+            "h": 1200,
+            "thumb": "images/news/ktc-tolentino/008-t.webp"
+          },
+          {
+            "src": "images/news/ktc-tolentino/009.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-tolentino/009-t.webp"
+          }
+        ],
+        "links": []
+      },
+      {
+        "title": "Presentation — MADXI Museum, Latina",
+        "text": "Kill the Covid! is a photographic and multimedia project by Alessandro Bavari and Sara Aliscioni, conceived during the pandemic. Blending photography, storytelling and visual experimentation, the work explores the experience of Covid-19 through a surreal, grotesque and visionary narrative, drawing inspiration from local legends and rural imagery.\n\nThe book was presented at MADXI – Museo Contemporaneo di Arte e Design di Latina, as part of the Leggiamo la Città cultural programme, offering an opportunity to explore the project and its relationship with the territory, memory and collective experience.",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/ktc-latina/001.webp",
+            "w": 720,
+            "h": 960,
+            "thumb": "images/news/ktc-latina/001-t.webp"
+          },
+          {
+            "src": "images/news/ktc-latina/002.webp",
+            "w": 720,
+            "h": 540,
+            "thumb": "images/news/ktc-latina/002-t.webp"
+          },
+          {
+            "src": "images/news/ktc-latina/003.webp",
+            "w": 811,
+            "h": 1800,
+            "thumb": "images/news/ktc-latina/003-t.webp"
+          },
+          {
+            "src": "images/news/ktc-latina/004.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/ktc-latina/004-t.webp"
+          },
+          {
+            "src": "images/news/ktc-latina/005.webp",
+            "w": 720,
+            "h": 1029,
+            "thumb": "images/news/ktc-latina/005-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": []
+  },
+  {
+    "id": "nft-artist-portraits",
+    "date": "2023-05-01",
+    "when": "2023",
+    "title": "NFT Artist Portraits — the book",
+    "details": "A photographic project by Sara Aliscioni",
+    "icon": {
+      "src": "images/news/nft-artist-portraits/icon.webp",
+      "w": 1255,
+      "h": 1257,
+      "thumb": "images/news/nft-artist-portraits/icon-t.webp"
+    },
+    "text": "The importance of an artist's personal vision in the creation of a portrait becomes particularly evident when crypto-artists are photographed within environments that reflect and relate to their work.\n\nThe NFT Artist Portraits project stems from Sara Aliscioni's vision of capturing the key figures of the emerging international art scene, pioneers and explorers of the crypto world. The photographs portray artists working with new forms of art, involving either the digitisation of physical artworks or the creation of entirely digital pieces.\n\nItalian and international artists have posed in a variety of locations and settings. Rome, Milan, Venice, Turin, Pisa, Imperia, Latina and Casablanca are among the cities that provide the backdrop for these portraits.\n\nThe photographic approach, characterised by a distinctive black-and-white visual language, presents images shaped by the photographer's knowledge of both the artists and their work. Each portrait is conceived through a personal interpretation, drawing inspiration from the encounter with the subjects and their artistic practice.\n\nPortraiture has always played a crucial role in photography, which, despite its many transformations, has remained closely associated with the representation of people. Walter Benjamin once wrote:\n\n“The renunciation of the human figure is the most difficult thing for photography.” In the twentieth century, with the rise of Pop Art, Andy Warhol, through his self-portraits and portraits of figures such as Marilyn Monroe, Jean-Michel Basquiat and Man Ray, transformed the faces of these protagonists into icons, establishing their central place in contemporary visual culture.\n\nWithin a refined and carefully composed visual environment, shaped by a distinctly personal approach, Sara presents a portfolio of artists who have posed for her camera. Through their portraits, they reveal aspects of themselves and their artistic language, framed by settings that echo and reflect their work.\n\nThe project's main aim is to document some of the pioneers of the new frontier of interconnected virtual and physical worlds, such as NFTs, offering a form of immortality that humanity has always sought.\n\nThese emerging figures, who are shaping a new way of making art through Crypto Art, become the protagonists of an original collection, their artistic visions reinterpreted through the photographic perspective of Sara Aliscioni. Through their faces, gestures and attitudes, the project documents a new chapter in contemporary art.",
+    "highlight": null,
+    "sections": [],
+    "video": {
+      "src": "media/nft-artist-portraits.mp4",
+      "poster": "images/news/nft-artist-portraits/icon.webp",
+      "title": "Book presentation video"
+    },
+    "links": []
+  },
+  {
+    "id": "coaxial-sharing-of-the-big-deception",
+    "date": "2021-01-01",
+    "when": "2021",
+    "title": "Coaxial Sharing of the Big Deception",
+    "details": "Video by Alessandro Bavari, lyrics by Sara Aliscioni — Decentral Art Pavilion, NFT Art Exhibition, Venice Biennale, 23 April – 20 June 2022",
+    "icon": {
+      "src": "images/news/coaxial/001.webp",
+      "w": 1600,
+      "h": 900,
+      "thumb": "images/news/coaxial/001-t.webp"
+    },
+    "text": "COAXIAL SHARING OF THE BIG DECEPTION — On the Fifth Estate.\n\nDuration: 01:05 min.\nYear: 2022\nFormat: HD (1920 x 1080)\n\nMusic, sounds and mixdown: Sirio Grimaldi aka Sirio Gry J\nLyrics: Sara Aliscioni\nVoice: Dirk Riegert\nMastering: Ken Karter at Decode Studio\nActor: Umberto Trombin\n\nThis work, exhibited from the 23rd of April to the 20th of June 2022 at the Decentral Art Pavilion — NFT Art Exhibition, Venice Biennale, is the second of a series of 6 videos, intended as the natural continuation of Metachaos, a video made in 2011.\n\nViewing is recommended in the dark in full screen with a good pair of headphones. NFT acquired on SuperRare Marketplace.\n\n### Lyrics\n\n*Menschenvolk!\nIhr seht mich!\nIhr hört mich!\nIch bin der Architekt all eurer Taten und Gedanken!\nFolgt mir!\nIch kenne euren Rachedurst\nEure Ängste und Schwächen\nUnd eure Pein!\nIch werde euch davon befreien!\nTretet vor!\nNehmt nicht ein einiziges Mal\nEure Augen von mir!\nDenn ich\nBin die Zukunft!*\n\nMasses!\nYou see me!\nYou hear me!\nI am the architect of all your actions and thoughts!\nFollow me!\nI know your thirst for revenge\nyour fears and weaknesses\nand your torment!\nI will set you free!\nApproach me!\nDo not even once\ntake your eyes off me!\nbecause I\nam the future!",
+    "highlight": null,
+    "sections": [
+      {
+        "title": "The event",
+        "text": "",
+        "poster": null,
+        "images": [
+          {
+            "src": "images/news/coaxial/001.webp",
+            "w": 1600,
+            "h": 900,
+            "thumb": "images/news/coaxial/001-t.webp"
+          },
+          {
+            "src": "images/news/coaxial/002.webp",
+            "w": 1800,
+            "h": 1528,
+            "thumb": "images/news/coaxial/002-t.webp"
+          },
+          {
+            "src": "images/news/coaxial/003.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/coaxial/003-t.webp"
+          },
+          {
+            "src": "images/news/coaxial/004.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/coaxial/004-t.webp"
+          },
+          {
+            "src": "images/news/coaxial/005.webp",
+            "w": 1800,
+            "h": 1350,
+            "thumb": "images/news/coaxial/005-t.webp"
+          }
+        ],
+        "links": []
+      }
+    ],
+    "video": null,
+    "links": [
+      {
+        "label": "Alessandro Bavari — Coaxial Sharing of the Big Deception",
+        "url": "https://www.alessandrobavari.com/coaxial-sharing-of-the-big-deception"
+      },
+      {
+        "label": "SuperRare",
+        "url": "https://superrare.com/artwork/eth/0xb932a70a57673d89f4acffbe830e8ed7f75fb9e0/sharing-of-ther-big-deception.-34049"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=-5x1yGe1FiI"
+      },
+      {
+        "label": "Vimeo",
+        "url": "https://vimeo.com/700200348"
+      }
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Sara Aliscioni — sito statico a sezioni.
-   I contenuti sono in /content/*.json (modificabili dal CMS): qui li leggiamo
-   e costruiamo le pagine. Niente animazioni, tranne la dissolvenza della home.
+   Sara Aliscioni — static site in sections.
+   Content lives in /content/*.json (editable from the CMS); this script
+   reads it and builds each page. No animations except the home dissolve.
    ========================================================================== */
 (() => {
   "use strict";
@@ -12,76 +12,31 @@
   const PAGE = document.body.dataset.page;
   const params = new URLSearchParams(location.search);
 
-  /* ---------- language ---------- */
-  let stored = null;
-  try { stored = localStorage.getItem("sa-lang"); } catch (e) { /* storage blocked */ }
-  const qLang = params.get("lang");
-  let lang = (qLang === "it" || qLang === "en") ? qLang
-    : (stored === "it" || stored === "en") ? stored
-    : ((navigator.language || "it").toLowerCase().startsWith("it") ? "it" : "en");
-
-  const UI = {
-    it: {
-      role: "Fotografa", menu: "Menu", close: "Chiudi",
-      "nav.home": "Home", "nav.serie": "Serie", "nav.impressioni": "Impressioni di viaggio", "nav.bio": "Bio",
-      "nav.biography": "Biografia", "nav.exhibitions": "Mostre e premi", "nav.publications": "Pubblicazioni",
-      "nav.news": "News", "nav.blog": "Blog", "nav.contact": "Contatti",
-      rights: "Tutte le fotografie sono protette da diritto d'autore.",
-      allSerie: "Tutte le serie", allImp: "Tutte le impressioni di viaggio",
-      galleries: "Gallerie", all: "Tutte",
-      "cat.serie": "Serie", "cat.impressioni": "Impressioni di viaggio",
-      "intro.serie": "Progetti e ricerche tematiche, sviluppati nel tempo.",
-      "intro.impressioni": "Taccuini di viaggio in bianco e nero: persone, strade e luoghi dimenticati.",
-      "intro.all": "Tutte le gallerie fotografiche, serie e impressioni di viaggio.",
-      photos: n => `${n} ${n === 1 ? "foto" : "foto"}`,
-      prev: "Precedente", next: "Successiva",
-      biography: "Biografia", education: "Formazione", languages: "Lingue",
-      exhibitions: "Mostre e premi", solo: "Mostre personali", group: "Mostre collettive", awards: "Premi e riconoscimenti",
-      publications: "Pubblicazioni", work: "Backstage e collaborazioni",
-      news: "News", newsEmpty: "Nessuna news al momento.",
-      blog: "Blog", blogEmpty: "Il blog è in preparazione: i primi articoli arriveranno presto.",
-      readMore: "Leggi", backBlog: "← Tutti gli articoli", link: "Approfondisci",
-      contact: "Contatti", email: "Email", phone: "Telefono",
-      notFound: "Pagina non trovata", notFoundText: "La pagina che cerchi non esiste o è stata spostata.", home: "Torna alla home",
-      galleryMissing: "Galleria non trovata.", loadError: "Impossibile caricare i contenuti. Riprova tra poco."
-    },
-    en: {
-      role: "Photographer", menu: "Menu", close: "Close",
-      "nav.home": "Home", "nav.serie": "Series", "nav.impressioni": "Travel impressions", "nav.bio": "Bio",
-      "nav.biography": "Biography", "nav.exhibitions": "Exhibitions & awards", "nav.publications": "Publications",
-      "nav.news": "News", "nav.blog": "Blog", "nav.contact": "Contact",
-      rights: "All photographs are protected by copyright.",
-      allSerie: "All series", allImp: "All travel impressions",
-      galleries: "Galleries", all: "All",
-      "cat.serie": "Series", "cat.impressioni": "Travel impressions",
-      "intro.serie": "Thematic projects and research, developed over time.",
-      "intro.impressioni": "Black and white travel notebooks: people, streets and forgotten places.",
-      "intro.all": "All photo galleries, series and travel impressions.",
-      photos: n => `${n} ${n === 1 ? "photo" : "photos"}`,
-      prev: "Previous", next: "Next",
-      biography: "Biography", education: "Education", languages: "Languages",
-      exhibitions: "Exhibitions & awards", solo: "Solo exhibitions", group: "Group exhibitions", awards: "Awards & recognitions",
-      publications: "Publications", work: "Backstage & collaborations",
-      news: "News", newsEmpty: "No news at the moment.",
-      blog: "Blog", blogEmpty: "The blog is being prepared: the first posts are coming soon.",
-      readMore: "Read", backBlog: "← All posts", link: "Read more",
-      contact: "Contact", email: "Email", phone: "Phone",
-      notFound: "Page not found", notFoundText: "The page you are looking for doesn't exist or has moved.", home: "Back to home",
-      galleryMissing: "Gallery not found.", loadError: "Couldn't load the content. Please try again shortly."
-    }
-  };
-  const u = key => UI[lang][key] ?? UI.it[key] ?? "";
-  /* bilingual field: tr(obj, "title") → obj.title_it / obj.title_en (falls back to Italian) */
-  const tr = (o, f) => (o && (o[`${f}_${lang}`] || o[`${f}_it`])) || "";
-
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const paras = text => String(text || "").split(/\n\s*\n/).map(p => p.trim()).filter(Boolean).map(p => `<p>${esc(p).replace(/\n/g, "<br>")}</p>`).join("");
   const pad = n => String(n).padStart(2, "0");
-  /* images/l/x.webp has a 720px sibling in images/s/ */
-  const small = src => (src && src.startsWith("images/l/")) ? src.replace("images/l/", "images/s/") : src;
-  const imgAttrs = (src, sizes) => {
-    const s = small(src);
-    return s !== src ? `src="${esc(s)}" srcset="${esc(s)} 720w, ${esc(src)} 1600w" sizes="${sizes}"` : `src="${esc(src)}"`;
+  const thumb = im => (im && (im.thumb || im.src)) || "";
+  const dims = im => (im && im.w ? `width="${im.w}" height="${im.h}"` : "");
+
+  /* Tiny markdown: "### heading", *italic*, [label](url), blank line = new paragraph, single newline = line break */
+  function inline(s) {
+    return esc(s)
+      .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, label, url) => {
+        const ext = /^https?:/.test(url);
+        return `<a href="${url}"${ext ? ' target="_blank" rel="noopener"' : ""}>${label}</a>`;
+      })
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>")
+      .replace(/\n/g, "<br>");
+  }
+  function md(text) {
+    return String(text || "").split(/\n\s*\n/).map(p => p.trim()).filter(Boolean).map(p => {
+      if (p.startsWith("### ")) return `<h3>${esc(p.slice(4))}</h3>`;
+      return `<p>${inline(p)}</p>`;
+    }).join("");
+  }
+  const excerpt = (text, n = 220) => {
+    const first = String(text || "").split(/\n\s*\n/).find(p => p.trim() && !p.startsWith("###")) || "";
+    const plain = first.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*/g, "").replace(/\n/g, " ");
+    return plain.length > n ? plain.slice(0, n).replace(/\s+\S*$/, "") + "…" : plain;
   };
 
   /* ---------- data ---------- */
@@ -92,41 +47,28 @@
   }));
 
   /* ==========================================================================
-     Header: menus, current page, mobile
+     Header: submenus, current page, mobile menu, footer
      ========================================================================== */
-  function applyUI() {
-    document.documentElement.lang = lang;
-    $$("[data-t]").forEach(el => { el.textContent = u(el.dataset.t); });
-    $$(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    const tog = $(".menu-toggle span");
-    if (tog) tog.textContent = $(".site-nav").classList.contains("is-open") ? u("close") : u("menu");
-    $$(".js-year").forEach(el => { el.textContent = new Date().getFullYear(); });
-  }
-
-  function buildMenus(galleries) {
-    const fill = (cat, allKey) => {
-      const ul = $(`[data-sub="${cat}"]`);
+  async function buildMenus() {
+    const fill = (key, list, href, allLabel, allHref) => {
+      const ul = $(`[data-sub="${key}"]`);
       if (!ul) return;
-      const items = galleries.filter(g => g.category === cat);
-      ul.innerHTML = `<li class="sub__all"><a href="gallerie.html?cat=${cat}">${esc(u(allKey))}</a></li>` +
-        items.map(g => `<li><a href="galleria.html?g=${encodeURIComponent(g.id)}" data-g="${esc(g.id)}">${esc(tr(g, "title"))}</a></li>`).join("");
+      ul.innerHTML = `<li class="sub__all"><a href="${allHref}">${esc(allLabel)}</a></li>` +
+        list.map(x => `<li><a href="${href(x)}" data-id="${esc(x.id)}">${esc(x.title)}</a></li>`).join("");
     };
-    fill("serie", "allSerie");
-    fill("impressioni", "allImp");
-    markCurrent(galleries);
+    try {
+      const [projects, pubs] = await Promise.all([load("projects"), load("publications")]);
+      fill("projects", projects, p => `projects.html?p=${encodeURIComponent(p.id)}`, "All projects", "projects.html");
+      fill("publications", pubs, p => `publications.html?p=${encodeURIComponent(p.id)}`, "All publications", "publications.html");
+    } catch (e) { /* menus stay without submenus */ }
+    markCurrent();
   }
 
-  function markCurrent(galleries) {
-    let nav = document.body.dataset.nav;
-    if (PAGE === "galleries") nav = params.get("cat") || "";
-    if (PAGE === "gallery" && galleries) {
-      const g = galleries.find(x => x.id === params.get("g"));
-      nav = g ? g.category : "";
-      $$(`.sub a[data-g]`).forEach(a => a.classList.toggle("is-current", g && a.dataset.g === g.id));
-    }
+  function markCurrent() {
+    const nav = document.body.dataset.nav;
     $$(".nav > li > a").forEach(a => a.classList.toggle("is-current", !!nav && a.dataset.nav === nav));
-    const file = location.pathname.split("/").pop() || "index.html";
-    $$(".sub a:not([data-g])").forEach(a => a.classList.toggle("is-current", a.getAttribute("href") === file));
+    const id = params.get("p");
+    $$(`[data-sub="${PAGE}"] a[data-id]`).forEach(a => a.classList.toggle("is-current", !!id && a.dataset.id === id));
   }
 
   const navEl = $(".site-nav");
@@ -135,7 +77,7 @@
     navEl.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     document.body.classList.toggle("no-scroll", open);
-    $("span", toggle).textContent = open ? u("close") : u("menu");
+    $("span", toggle).textContent = open ? "Close" : "Menu";
   }
   toggle.addEventListener("click", () => setMenu(!navEl.classList.contains("is-open")));
   $$(".sub-toggle").forEach(b => b.addEventListener("click", () => {
@@ -146,23 +88,74 @@
   }));
   window.matchMedia("(min-width: 1081px)").addEventListener("change", e => { if (e.matches) setMenu(false); });
 
-  $$(".lang button").forEach(b => b.addEventListener("click", () => {
-    if (b.dataset.lang === lang) return;
-    lang = b.dataset.lang;
-    try { localStorage.setItem("sa-lang", lang); } catch (e) { /* ignore */ }
-    applyUI();
-    load("galleries").then(buildMenus).catch(() => {});
-    render();
-  }));
-
+  const SOCIAL = [["Facebook", "facebook"], ["Instagram", "instagram"], ["LinkedIn", "linkedin"], ["X", "x"], ["Behance", "behance"]];
   async function footer() {
+    $$(".js-year").forEach(el => { el.textContent = new Date().getFullYear(); });
     const ul = $("[data-social]");
     if (!ul) return;
     try {
       const s = await load("site");
-      const links = [["Instagram", s.instagram], ["Facebook", s.facebook], ["LinkedIn", s.linkedin], ["Behance", s.behance]].filter(x => x[1]);
-      ul.innerHTML = links.map(([n, h]) => `<li><a href="${esc(h)}" target="_blank" rel="noopener">${n}</a></li>`).join("");
-    } catch (e) { /* footer stays without links */ }
+      ul.innerHTML = SOCIAL.filter(([, k]) => s[k]).map(([n, k]) => `<li><a href="${esc(s[k])}" target="_blank" rel="noopener">${n}</a></li>`).join("");
+    } catch (e) { /* no links */ }
+  }
+
+  /* ==========================================================================
+     Shared blocks
+     ========================================================================== */
+  // square thumbnails that open the lightbox
+  const thumbs = (images, group) => !images || !images.length ? "" : `
+    <div class="thumbs" data-group="${group}">
+      ${images.map((im, i) => `<button type="button" data-i="${i}" aria-label="${esc(im.caption || `Photograph ${i + 1}`)}"><img src="${esc(thumb(im))}" alt="${esc(im.caption || "")}" loading="lazy" decoding="async"></button>`).join("")}
+    </div>`;
+  const groups = {};
+  function bindThumbs(root = app) {
+    $$(".thumbs", root).forEach(t => {
+      const list = groups[t.dataset.group] || [];
+      $$("button", t).forEach(b => b.addEventListener("click", () => lightbox.open(list, +b.dataset.i)));
+    });
+    $$("[data-zoom]", root).forEach(el => el.addEventListener("click", () => {
+      lightbox.open([{ src: el.dataset.zoom, caption: el.dataset.caption || "" }], 0);
+    }));
+  }
+  const register = (group, images) => { groups[group] = images || []; return group; };
+
+  const endorsement = o => o && o.endorsement ? `
+    <blockquote class="endorsement">
+      ${md(o.endorsement)}
+      ${o.endorsement_author ? `<footer>— ${esc(o.endorsement_author)}</footer>` : ""}
+    </blockquote>` : "";
+
+  const pager = (list, i, href, label) => {
+    if (!list || list.length < 2) return "";
+    const prev = list[(i - 1 + list.length) % list.length];
+    const next = list[(i + 1) % list.length];
+    return `<nav class="pager" aria-label="${esc(label)}">
+      <a class="prev" href="${href(prev)}"><span class="label">← Previous</span><b>${esc(prev.title)}</b></a>
+      <a class="next" href="${href(next)}"><span class="label">Next →</span><b>${esc(next.title)}</b></a>
+    </nav>`;
+  };
+
+  const photoCount = n => `${n} ${n === 1 ? "photograph" : "photographs"}`;
+
+  // a project-like page: title, date, endorsement, text (+ side photo), thumbnails
+  function projectPage(p, opts = {}) {
+    const g = register("main", p.images);
+    const n = (p.images || []).length;
+    return `
+      <div class="page">
+        ${opts.crumbs ? `<p class="crumbs label">${opts.crumbs}</p>` : ""}
+        <header class="page-head">
+          <h1>${esc(p.title)}</h1>
+          <p class="meta label">${esc(p.date || "")}${n ? ` · ${photoCount(n)} · <a href="#photographs">View photographs ↓</a>` : ""}</p>
+        </header>
+        ${endorsement(p)}
+        <div class="project-text${p.side_image ? " has-side" : ""}">
+          <div class="prose">${md(p.text)}</div>
+          ${p.side_image ? `<figure class="side-image"><img src="${esc(p.side_image.src)}" ${dims(p.side_image)} alt="Sara Aliscioni" loading="lazy" decoding="async"></figure>` : ""}
+        </div>
+        ${n ? `<h2 class="section-title" id="photographs">Photographs</h2>${thumbs(p.images, g)}` : ""}
+        ${opts.pager || ""}
+      </div>`;
   }
 
   /* ==========================================================================
@@ -179,32 +172,29 @@
       app.innerHTML = `
         <section class="home" aria-label="Sara Aliscioni">
           <div class="slides">
-            ${slides.map((s, i) => `<a class="slide${i === 0 ? " is-active" : ""}" href="${s.gallery ? `galleria.html?g=${encodeURIComponent(s.gallery)}` : "gallerie.html"}" tabindex="${i === 0 ? 0 : -1}">
-              <img ${i < 2 ? `src="${esc(s.src)}"` : `data-src="${esc(s.src)}"`} alt="${esc(tr(s, "caption"))}" ${i === 0 ? 'fetchpriority="high"' : ""} decoding="async">
-            </a>`).join("")}
+            ${slides.map((s, i) => `<div class="slide${i === 0 ? " is-active" : ""}">
+              <img ${i < 2 ? `src="${esc(s.src)}"` : `data-src="${esc(s.src)}"`} alt="" ${i === 0 ? 'fetchpriority="high"' : ""} decoding="async">
+            </div>`).join("")}
           </div>
           <div class="home-bar">
-            <a class="home-bar__cap" href="#"></a>
+            <span class="home-bar__cap">Sara Aliscioni — Photographer</span>
             <div class="home-bar__ctrl">
-              <button type="button" data-step="-1" aria-label="${esc(u("prev"))}">‹</button>
+              <button type="button" data-step="-1" aria-label="Previous photograph">‹</button>
               <span class="home-bar__n"></span>
-              <button type="button" data-step="1" aria-label="${esc(u("next"))}">›</button>
+              <button type="button" data-step="1" aria-label="Next photograph">›</button>
             </div>
           </div>
         </section>`;
       const els = $$(".slide", app);
-      const cap = $(".home-bar__cap", app);
       const num = $(".home-bar__n", app);
       let i = 0, timer = null;
       const ms = Math.max(3, +h.interval_seconds || 5) * 1000;
       const ready = k => { const img = $("img", els[k]); if (img && img.dataset.src) { img.src = img.dataset.src; img.removeAttribute("data-src"); } };
       const show = k => {
-        els[i].classList.remove("is-active"); els[i].tabIndex = -1;
+        els[i].classList.remove("is-active");
         i = (k + els.length) % els.length;
         ready(i); ready((i + 1) % els.length);
-        els[i].classList.add("is-active"); els[i].tabIndex = 0;
-        cap.textContent = tr(slides[i], "caption");
-        cap.href = els[i].getAttribute("href");
+        els[i].classList.add("is-active");
         num.textContent = `${pad(i + 1)} / ${pad(els.length)}`;
       };
       const start = () => { clearInterval(timer); timer = setInterval(() => { if (!document.hidden) show(i + 1); }, ms); };
@@ -213,231 +203,285 @@
       stopSlideshow = () => clearInterval(timer);
     },
 
-    /* ---------- Galleries index (?cat=serie|impressioni) ---------- */
-    async galleries() {
-      const all = await load("galleries");
-      const cat = ["serie", "impressioni"].includes(params.get("cat")) ? params.get("cat") : "all";
-      const list = cat === "all" ? all : all.filter(g => g.category === cat);
-      const title = cat === "all" ? u("galleries") : u(`cat.${cat}`);
-      document.title = `${title} — Sara Aliscioni`;
+    /* ---------- Bio ---------- */
+    async bio() {
+      const b = await load("bio");
+      const rows = (list, withPlace = true) => `<ul class="rows">${(list || []).map(r => `
+        <li><span class="y">${esc(r.year)}</span><div><p class="t">${esc(r.title || r.text)}</p>${withPlace && r.place ? `<p class="p">${esc(r.place)}</p>` : ""}</div></li>`).join("")}</ul>`;
       app.innerHTML = `
         <div class="page">
-          <header class="page-head"><h1>${esc(title)}</h1></header>
-          <p class="cat-intro">${esc(u(`intro.${cat}`))}</p>
-          <nav class="cat-switch" aria-label="${esc(u("galleries"))}">
-            <a href="gallerie.html?cat=serie"${cat === "serie" ? ' class="is-current"' : ""}>${esc(u("cat.serie"))}</a>
-            <a href="gallerie.html?cat=impressioni"${cat === "impressioni" ? ' class="is-current"' : ""}>${esc(u("cat.impressioni"))}</a>
-            <a href="gallerie.html"${cat === "all" ? ' class="is-current"' : ""}>${esc(u("all"))}</a>
+          <nav class="subnav label" aria-label="Bio sections">
+            <a href="#biography">Biography</a><a href="#statement">Artist statement</a><a href="#education">Education & activities</a><a href="#exhibitions">Exhibitions & awards</a>
           </nav>
+          <div class="two-col">
+            <figure class="two-col__media">
+              ${b.portrait ? `<img src="${esc(b.portrait.src || b.portrait)}" ${dims(b.portrait)} alt="Sara Aliscioni" decoding="async">` : ""}
+            </figure>
+            <div>
+              <header class="page-head" id="biography"><h1>Biography</h1></header>
+              <div class="prose">${md(b.biography)}</div>
+              <h2 class="section-title" id="statement">Artist statement</h2>
+              <div class="prose statement">${md(b.statement)}</div>
+              ${(b.facts || []).length ? `<dl class="facts">${b.facts.map(f => `<div><dt class="label">${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("")}</dl>` : ""}
+              <h2 class="section-title" id="education">Education</h2>
+              ${rows(b.education, false)}
+              ${(b.activities || []).length ? `<h2 class="section-title">Activities</h2>${rows(b.activities, false)}` : ""}
+              ${b.languages ? `<h2 class="section-title">Languages</h2><p>${esc(b.languages)}</p>` : ""}
+            </div>
+          </div>
+          <h2 class="page-title" id="exhibitions">Exhibitions & awards</h2>
+          <div class="cv-grid">
+            <div><h3 class="section-title">Solo exhibitions</h3>${rows(b.solo)}</div>
+            <div><h3 class="section-title">Group exhibitions</h3>${rows(b.group)}</div>
+            <div><h3 class="section-title">Awards & recognitions</h3>${rows(b.awards)}</div>
+          </div>
+        </div>`;
+    },
+
+    /* ---------- Projects (list, or ?p=id) ---------- */
+    async projects() {
+      const list = await load("projects");
+      const id = params.get("p");
+      if (id) {
+        const i = list.findIndex(x => x.id === id);
+        if (i < 0) return notFound("This project doesn't exist.", "projects.html", "All projects");
+        const p = list[i];
+        document.title = `${p.title} — Sara Aliscioni`;
+        app.innerHTML = projectPage(p, {
+          crumbs: `<a href="projects.html">Projects</a>`,
+          pager: pager(list, i, x => `projects.html?p=${encodeURIComponent(x.id)}`, "Projects")
+        });
+        bindThumbs();
+        return;
+      }
+      app.innerHTML = `
+        <div class="page">
+          <header class="page-head"><h1>Projects</h1></header>
           <div class="cards">
-            ${list.map(g => `
-              <a class="card" href="galleria.html?g=${encodeURIComponent(g.id)}">
-                <div class="card__img"><img ${imgAttrs(g.cover || (g.images[0] || {}).src, "(max-width: 700px) 46vw, (max-width: 1100px) 31vw, 23vw")} alt="${esc(tr(g, "title"))}" loading="lazy" decoding="async"></div>
-                <h2 class="card__title">${esc(tr(g, "title"))}</h2>
-                <p class="card__meta label">${esc([g.year, u("photos")((g.images || []).length)].filter(Boolean).join(" · "))}</p>
+            ${list.map(p => `
+              <a class="card" href="projects.html?p=${encodeURIComponent(p.id)}">
+                <div class="card__img"><img src="${esc(thumb(p.cover) || thumb((p.images || [])[0]))}" alt="${esc(p.title)}" loading="lazy" decoding="async"></div>
+                <h2 class="card__title">${esc(p.title)}</h2>
+                <p class="card__meta label">${esc(p.date || "")}</p>
               </a>`).join("")}
           </div>
         </div>`;
     },
 
-    /* ---------- Single gallery (?g=id) ---------- */
-    async gallery() {
-      const all = await load("galleries");
-      const idx = all.findIndex(x => x.id === params.get("g"));
-      if (idx < 0) { app.innerHTML = `<div class="page"><p class="empty">${esc(u("galleryMissing"))} <a class="more-link" href="gallerie.html">${esc(u("galleries"))}</a></p></div>`; return; }
-      const g = all[idx];
-      const same = all.filter(x => x.category === g.category);
-      const k = same.indexOf(g);
-      const prev = same[(k - 1 + same.length) % same.length];
-      const next = same[(k + 1) % same.length];
-      const imgs = g.images || [];
-      document.title = `${tr(g, "title")} — Sara Aliscioni`;
-      app.innerHTML = `
-        <div class="page">
-          <p class="crumbs label"><a href="gallerie.html?cat=${esc(g.category)}">${esc(u(`cat.${g.category}`))}</a></p>
-          <div class="gallery-intro">
-            <header class="page-head">
-              <h1>${esc(tr(g, "title"))}</h1>
-              <p class="meta label">${esc([tr(g, "place"), g.year, u("photos")(imgs.length)].filter(Boolean).join(" · "))}</p>
-            </header>
-            <div class="prose">${paras(tr(g, "text"))}</div>
-          </div>
-          <div class="masonry">
-            ${imgs.map((im, i) => `
-              <figure>
-                <button type="button" data-i="${i}" aria-label="${esc(tr(im, "caption") || tr(g, "title"))}">
-                  <img ${imgAttrs(im.src, "(max-width: 400px) 92vw, (max-width: 700px) 46vw, 31vw")} ${im.w ? `width="${im.w}" height="${im.h}"` : ""} alt="${esc(tr(im, "caption") || tr(g, "title"))}" loading="lazy" decoding="async">
-                </button>
-                ${tr(im, "caption") ? `<figcaption>${esc(tr(im, "caption"))}</figcaption>` : ""}
-              </figure>`).join("")}
-          </div>
-          ${same.length > 1 ? `<nav class="pager">
-            <a class="prev" href="galleria.html?g=${encodeURIComponent(prev.id)}"><span class="label">← ${esc(u("prev"))}</span><b>${esc(tr(prev, "title"))}</b></a>
-            <a class="next" href="galleria.html?g=${encodeURIComponent(next.id)}"><span class="label">${esc(u("next"))} →</span><b>${esc(tr(next, "title"))}</b></a>
-          </nav>` : ""}
-        </div>`;
-      $$(".masonry button", app).forEach(b => b.addEventListener("click", () => lightbox.open(imgs.map(im => ({ src: im.src, cap: tr(im, "caption") || tr(g, "title") })), +b.dataset.i)));
-      markCurrent(all);
+    /* ---------- Observations Photography ---------- */
+    async observations() {
+      const o = await load("observations");
+      app.innerHTML = projectPage(o);
+      bindThumbs();
     },
 
-    /* ---------- Bio ---------- */
-    async bio() {
-      const b = await load("bio");
-      document.title = `${u("biography")} — Sara Aliscioni`;
-      app.innerHTML = `
-        <div class="page two-col">
-          <figure class="two-col__media">
-            ${b.portrait ? `<img src="${esc(b.portrait)}" alt="Sara Aliscioni" decoding="async">` : ""}
-            <figcaption class="label">Sara Aliscioni</figcaption>
-          </figure>
-          <div>
-            <header class="page-head"><h1>${esc(u("biography"))}</h1></header>
-            ${tr(b, "lead") ? `<p class="lead">${esc(tr(b, "lead"))}</p>` : ""}
-            <div class="prose">${paras(tr(b, "text"))}</div>
-            ${(b.facts || []).length ? `<dl class="facts">${b.facts.map(f => `<div><dt class="label">${esc(tr(f, "label"))}</dt><dd>${esc(tr(f, "value"))}</dd></div>`).join("")}</dl>` : ""}
-            ${(b.education || []).length ? `<h2 class="section-title">${esc(u("education"))}</h2>
-              <ul class="rows">${b.education.map(e => `<li><span class="y">${esc(e.year)}</span><div><p class="t">${esc(tr(e, "text"))}</p></div></li>`).join("")}</ul>` : ""}
-            ${tr(b, "languages") ? `<h2 class="section-title">${esc(u("languages"))}</h2><p>${esc(tr(b, "languages"))}</p>` : ""}
-          </div>
-        </div>`;
-    },
-
-    /* ---------- Exhibitions & awards ---------- */
-    async exhibitions() {
-      const cv = await load("cv");
-      document.title = `${u("exhibitions")} — Sara Aliscioni`;
-      app.innerHTML = `
-        <div class="page">
-          <header class="page-head"><h1>${esc(u("exhibitions"))}</h1></header>
-          <div class="cv-grid">
-            <div>${rows(u("solo"), cv.solo)}</div>
-            <div>${rows(u("group"), cv.group)}</div>
-            <div>${rows(u("awards"), cv.awards)}</div>
-          </div>
-        </div>`;
-    },
-
-    /* ---------- Publications ---------- */
+    /* ---------- Publications (list, or ?p=id) ---------- */
     async publications() {
-      const cv = await load("cv");
-      document.title = `${u("publications")} — Sara Aliscioni`;
-      app.innerHTML = `
-        <div class="page">
-          <header class="page-head"><h1>${esc(u("publications"))}</h1></header>
-          <div class="cv-grid">
-            <div>${rows(u("publications"), cv.publications)}</div>
-            <div>${rows(u("work"), cv.work)}</div>
-          </div>
-        </div>`;
-    },
-
-    /* ---------- News ---------- */
-    async news() {
-      const items = [...await load("news")].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
-      document.title = `${u("news")} — Sara Aliscioni`;
-      app.innerHTML = `
-        <div class="page">
-          <header class="page-head"><h1>${esc(u("news"))}</h1></header>
-          ${items.length ? `<ul class="news-list">${items.map(n => `
-            <li>
-              <p class="label">${esc(tr(n, "when") || n.date || "")}</p>
+      const list = await load("publications");
+      const id = params.get("p");
+      if (id) {
+        const i = list.findIndex(x => x.id === id);
+        if (i < 0) return notFound("This publication doesn't exist.", "publications.html", "All publications");
+        const p = list[i];
+        document.title = `${p.title} — Sara Aliscioni`;
+        const imgs = p.images || [];
+        const g = register("main", imgs);
+        app.innerHTML = `
+          <div class="page">
+            <p class="crumbs label"><a href="publications.html">Publications</a></p>
+            <div class="pub-intro">
+              ${p.cover ? `<figure class="pub-cover"><button type="button" data-zoom="${esc(p.cover.src)}" data-caption="${esc(p.title)}" aria-label="Enlarge cover"><img src="${esc(p.cover.src)}" ${dims(p.cover)} alt="${esc(p.title)}" decoding="async"></button></figure>` : ""}
               <div>
-                <h2>${esc(tr(n, "title"))}</h2>
-                ${tr(n, "place") ? `<p class="place label">${esc(tr(n, "place"))}</p>` : ""}
-                <div class="prose">${paras(tr(n, "text"))}</div>
-                ${n.link ? `<a class="more-link" href="${esc(n.link)}" target="_blank" rel="noopener">${esc(u("link"))} ↗</a>` : ""}
+                <header class="page-head">
+                  <p class="label">${esc(p.year)}</p>
+                  <h1>${esc(p.title)}</h1>
+                  ${p.subtitle ? `<p class="subtitle">${esc(p.subtitle)}</p>` : ""}
+                </header>
+                ${endorsement(p)}
+                <div class="prose">${md(p.text)}</div>
               </div>
-              ${n.image ? `<div class="img"><img ${imgAttrs(n.image, "260px")} alt="${esc(tr(n, "title"))}" loading="lazy" decoding="async"></div>` : "<div></div>"}
-            </li>`).join("")}</ul>` : `<p class="empty">${esc(u("newsEmpty"))}</p>`}
-        </div>`;
-    },
-
-    /* ---------- Blog ---------- */
-    async blog() {
-      const posts = [...await load("blog")].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
-      document.title = `${u("blog")} — Sara Aliscioni`;
+            </div>
+            ${imgs.length ? (p.layout === "scroll"
+              ? `<div class="scroll-images">${imgs.map(im => `<img src="${esc(im.src)}" ${dims(im)} alt="${esc(im.caption || p.title)}" loading="lazy" decoding="async">`).join("")}</div>`
+              : `<h2 class="section-title">Images</h2>${thumbs(imgs, g)}`) : ""}
+            ${pager(list, i, x => `publications.html?p=${encodeURIComponent(x.id)}`, "Publications")}
+          </div>`;
+        bindThumbs();
+        return;
+      }
       app.innerHTML = `
         <div class="page">
-          <header class="page-head"><h1>${esc(u("blog"))}</h1></header>
-          ${posts.length ? `<div class="post-list">${posts.map(p => `
-            <article>
-              ${p.cover ? `<a class="img" href="articolo.html?p=${encodeURIComponent(p.id)}"><img ${imgAttrs(p.cover, "(max-width: 700px) 92vw, 33vw")} alt="" loading="lazy" decoding="async"></a>` : ""}
-              <span class="label">${esc(fmtDate(p.date))}</span>
-              <h2><a href="articolo.html?p=${encodeURIComponent(p.id)}">${esc(tr(p, "title"))}</a></h2>
-              <div class="prose">${paras(tr(p, "excerpt"))}</div>
-              <a class="more-link" href="articolo.html?p=${encodeURIComponent(p.id)}">${esc(u("readMore"))} →</a>
-            </article>`).join("")}</div>` : `<p class="empty">${esc(u("blogEmpty"))}</p>`}
+          <header class="page-head"><h1>Publications</h1></header>
+          <ul class="entry-list">
+            ${list.map(p => `
+              <li>
+                <a href="publications.html?p=${encodeURIComponent(p.id)}">
+                  <span class="entry-list__img">${p.cover ? `<img src="${esc(thumb(p.cover))}" alt="" loading="lazy" decoding="async">` : ""}</span>
+                  <span class="entry-list__body">
+                    <span class="label">${esc(p.year)}</span>
+                    <b>${esc(p.title)}</b>
+                    ${p.subtitle ? `<span class="entry-list__sub">${esc(p.subtitle)}</span>` : ""}
+                    <span class="entry-list__text">${esc(excerpt(p.text, 180))}</span>
+                  </span>
+                </a>
+              </li>`).join("")}
+          </ul>
         </div>`;
     },
 
-    async post() {
-      const posts = await load("blog");
-      const p = posts.find(x => x.id === params.get("p"));
-      if (!p) { app.innerHTML = `<div class="page"><p class="empty">${esc(u("notFound"))}. <a class="more-link" href="blog.html">${esc(u("backBlog"))}</a></p></div>`; return; }
-      document.title = `${tr(p, "title")} — Sara Aliscioni`;
+    /* ---------- News (list, or ?n=id) ---------- */
+    async news() {
+      const list = await load("news");
+      const id = params.get("n");
+      if (id) {
+        const i = list.findIndex(x => x.id === id);
+        if (i < 0) return notFound("This news item doesn't exist.", "news.html", "All news");
+        const n = list[i];
+        document.title = `${n.title} — Sara Aliscioni`;
+        const hl = n.highlight;
+        const secs = n.sections || [];
+        if (hl) register("hl", hl.images);
+        secs.forEach((s, k) => register("s" + k, s.images));
+        app.innerHTML = `
+          <article class="page">
+            <p class="crumbs label"><a href="news.html">News</a></p>
+            <div class="pub-intro">
+              ${n.icon ? `<figure class="pub-cover"><button type="button" data-zoom="${esc(n.icon.src)}" data-caption="${esc(n.title)}" aria-label="Enlarge image"><img src="${esc(n.icon.src)}" ${dims(n.icon)} alt="${esc(n.title)}" decoding="async"></button></figure>` : ""}
+              <div>
+                <header class="page-head">
+                  <p class="label">${esc(n.when || "")}</p>
+                  <h1>${esc(n.title)}</h1>
+                  ${n.details ? `<p class="subtitle">${esc(n.details)}</p>` : ""}
+                </header>
+                <div class="prose">${md(n.text)}</div>
+              </div>
+            </div>
+            ${hl ? `<section class="highlight">
+              <h2 class="section-title">${esc(hl.title || "Highlight")}</h2>
+              ${hl.quote ? `<blockquote class="endorsement">${md(hl.quote)}${hl.author ? `<footer>— ${esc(hl.author)}</footer>` : ""}</blockquote>` : ""}
+              ${(hl.images || []).length ? `<div class="highlight__images">${hl.images.map((im, k) => `<button type="button" data-hl="${k}"><img src="${esc(im.src)}" ${dims(im)} alt="${esc(im.caption || "")}" loading="lazy" decoding="async"></button>`).join("")}</div>` : ""}
+            </section>` : ""}
+            ${n.video && n.video.src ? `<section><h2 class="section-title">${esc(n.video.title || "Video")}</h2>
+              <video class="video" src="${esc(n.video.src)}" ${n.video.poster ? `poster="${esc(n.video.poster)}"` : ""} controls preload="metadata" playsinline></video></section>` : ""}
+            ${secs.map((s, k) => `<section class="news-section">
+              <h2 class="section-title">${esc(s.title)}</h2>
+              ${s.text || s.poster ? `<div class="news-section__intro${s.poster ? " has-poster" : ""}">
+                ${s.poster ? `<button type="button" class="news-section__poster" data-zoom="${esc(s.poster.src)}" data-caption="${esc(s.title)}" aria-label="Enlarge poster"><img src="${esc(thumb(s.poster))}" alt="Poster — ${esc(s.title)}" loading="lazy" decoding="async"></button>` : ""}
+                ${s.text ? `<div class="prose">${md(s.text)}</div>` : ""}
+              </div>` : ""}
+              ${thumbs(s.images, "s" + k)}
+              ${(s.links || []).length ? `<ul class="links">${s.links.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a></li>`).join("")}</ul>` : ""}
+            </section>`).join("")}
+            ${(n.links || []).length ? `<section><h2 class="section-title">Press & links</h2><ul class="links">${n.links.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a></li>`).join("")}</ul></section>` : ""}
+            ${pager(list, i, x => `news.html?n=${encodeURIComponent(x.id)}`, "News")}
+          </article>`;
+        bindThumbs();
+        $$("[data-hl]", app).forEach(b => b.addEventListener("click", () => lightbox.open(hl.images, +b.dataset.hl)));
+        return;
+      }
       app.innerHTML = `
-        <article class="page">
-          <p class="crumbs label"><a href="blog.html">${esc(u("backBlog"))}</a></p>
-          <header class="page-head"><h1>${esc(tr(p, "title"))}</h1><p class="meta label">${esc(fmtDate(p.date))}</p></header>
-          ${p.cover ? `<img class="post-cover" src="${esc(p.cover)}" alt="" decoding="async">` : ""}
-          <div class="prose">${paras(tr(p, "body"))}</div>
-        </article>`;
+        <div class="page">
+          <header class="page-head"><h1>News</h1></header>
+          <ul class="entry-list entry-list--news">
+            ${list.map(n => `
+              <li>
+                <a href="news.html?n=${encodeURIComponent(n.id)}">
+                  <span class="entry-list__img">${n.icon ? `<img src="${esc(thumb(n.icon))}" alt="" loading="lazy" decoding="async">` : ""}</span>
+                  <span class="entry-list__body">
+                    <span class="label">${esc(n.when || "")}</span>
+                    <b>${esc(n.title)}</b>
+                    ${n.details ? `<span class="entry-list__sub">${esc(n.details)}</span>` : ""}
+                    <span class="entry-list__text">${esc(excerpt(n.text))}</span>
+                    <span class="more-link">Read more →</span>
+                  </span>
+                </a>
+              </li>`).join("")}
+          </ul>
+        </div>`;
     },
 
     /* ---------- Contact ---------- */
     async contact() {
       const s = await load("site");
-      document.title = `${u("contact")} — Sara Aliscioni`;
-      const handle = url => { try { const p = new URL(url).pathname.replace(/\/+$/, "").split("/").pop(); return p || url; } catch (e) { return url; } };
-      const links = [
-        s.email && ["Email", `mailto:${s.email}`, s.email],
-        s.phone && [u("phone"), `tel:${s.phone.replace(/\s+/g, "")}`, s.phone],
-        s.instagram && ["Instagram", s.instagram, "@" + handle(s.instagram)],
-        s.facebook && ["Facebook", s.facebook, handle(s.facebook)],
-        s.linkedin && ["LinkedIn", s.linkedin, "Sara Aliscioni"],
-        s.behance && ["Behance", s.behance, handle(s.behance)],
-        s.x && ["X / Twitter", s.x, "@" + handle(s.x)]
-      ].filter(Boolean);
-      app.innerHTML = `
-        <div class="page two-col">
-          <figure class="two-col__media">${s.contact_photo ? `<img src="${esc(s.contact_photo)}" alt="Sara Aliscioni" decoding="async">` : ""}</figure>
-          <div>
-            <header class="page-head"><h1>${esc(u("contact"))}</h1></header>
-            <div class="prose">${paras(tr(s, "contact_text"))}</div>
-            <div class="contact-links">
-              ${links.map(([n, h, label]) => `<a href="${esc(h)}"${h.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}><b>${esc(n)}</b><span>${esc(label)}</span><i aria-hidden="true">↗</i></a>`).join("")}
-            </div>
-          </div>
-        </div>`;
-    },
-
-    async notfound() {
+      const endpoint = s.form_endpoint || (s.email ? `https://formsubmit.co/ajax/${encodeURIComponent(s.email)}` : "");
       app.innerHTML = `
         <div class="page">
-          <header class="page-head"><h1>${esc(u("notFound"))}</h1></header>
-          <p class="prose">${esc(u("notFoundText"))}</p>
-          <a class="more-link" href="index.html">${esc(u("home"))} →</a>
+          <div class="two-col">
+            <figure class="two-col__media">${s.contact_photo ? `<img src="${esc(s.contact_photo.src || s.contact_photo)}" ${dims(s.contact_photo)} alt="Sara Aliscioni" decoding="async">` : ""}</figure>
+            <div>
+              <header class="page-head"><h1>Contact</h1></header>
+              ${s.contact_text ? `<div class="prose">${md(s.contact_text)}</div>` : ""}
+              <form class="form" novalidate>
+                <fieldset>
+                  <legend class="form__legend">Name</legend>
+                  <div class="form__row">
+                    <label><span>First name <small>(required)</small></span><input name="first_name" autocomplete="given-name" required></label>
+                    <label><span>Last name <small>(required)</small></span><input name="last_name" autocomplete="family-name" required></label>
+                  </div>
+                </fieldset>
+                <label><span>Email <small>(required)</small></span><input type="email" name="email" autocomplete="email" required></label>
+                <label><span>Subject <small>(required)</small></span><input name="subject" required></label>
+                <label><span>Message <small>(required)</small></span><textarea name="message" rows="6" required></textarea></label>
+                <input type="text" name="_honey" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <p class="form__note">Your details are used only to reply to your message.</p>
+                <button type="submit" class="form__send"${endpoint ? "" : " disabled"}>Send</button>
+                <p class="form__status" role="status">${endpoint ? "" : "The contact form will be active shortly. In the meantime you can reach Sara on the social networks below."}</p>
+              </form>
+            </div>
+          </div>
+          <h2 class="section-title">Contacts</h2>
+          <div class="contact-links">
+            ${s.email ? `<a href="mailto:${esc(s.email)}"><b>Email</b><span>${esc(s.email)}</span><i aria-hidden="true">↗</i></a>` : ""}
+            ${SOCIAL.filter(([, k]) => s[k]).map(([name, k]) => `<a href="${esc(s[k])}" target="_blank" rel="noopener"><b>${name}</b><span>${esc(handle(k, s[k]))}</span><i aria-hidden="true">↗</i></a>`).join("")}
+          </div>
         </div>`;
-    }
+      const form = $(".form", app);
+      const status = $(".form__status", app);
+      form.addEventListener("submit", async e => {
+        e.preventDefault();
+        if (!endpoint) return;
+        if (!form.reportValidity()) return;
+        const data = Object.fromEntries(new FormData(form));
+        if (data._honey) return;
+        const btn = $(".form__send", form);
+        btn.disabled = true; status.textContent = "Sending…";
+        try {
+          const r = await fetch(endpoint, {
+            method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify({
+              name: `${data.first_name} ${data.last_name}`.trim(), email: data.email, subject: data.subject, message: data.message,
+              _subject: `Website — ${data.subject}`, _replyto: data.email, _template: "table"
+            })
+          });
+          if (!r.ok) throw new Error(r.status);
+          form.reset(); status.textContent = "Thank you — your message has been sent.";
+        } catch (err) {
+          status.textContent = "Sorry, the message could not be sent. Please try again later or write on Instagram.";
+        } finally { btn.disabled = false; }
+      });
+    },
+
+    async notfound() { notFound("The page you are looking for doesn't exist or has moved.", "index.html", "Back to home"); }
   };
 
-  function rows(title, list) {
-    if (!list || !list.length) return "";
-    return `<h2 class="section-title">${esc(title)}</h2>
-      <ul class="rows">${list.map(r => `<li><span class="y">${esc(r.year)}</span><div><p class="t">${esc(tr(r, "title"))}</p>${tr(r, "place") ? `<p class="p">${esc(tr(r, "place"))}</p>` : ""}</div></li>`).join("")}</ul>`;
+  function handle(k, url) {
+    if (k === "linkedin") return "Sara Aliscioni";
+    try {
+      const p = new URL(url).pathname.replace(/\/+$/, "").split("/").pop();
+      return (k === "instagram" || k === "x") ? "@" + p : p;
+    } catch (e) { return url; }
   }
 
-  function fmtDate(d) {
-    if (!d) return "";
-    const dt = new Date(d);
-    if (isNaN(dt)) return d;
-    return dt.toLocaleDateString(lang === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
+  function notFound(msg, href, label) {
+    app.innerHTML = `<div class="page"><header class="page-head"><h1>Not found</h1></header><p class="empty">${esc(msg)}</p><a class="more-link" href="${href}">${esc(label)} →</a></div>`;
   }
 
   function render() {
     if (stopSlideshow) { stopSlideshow(); stopSlideshow = null; }
     const fn = PAGES[PAGE] || PAGES.notfound;
-    fn().catch(() => { app.innerHTML = `<div class="page"><p class="empty">${esc(u("loadError"))}</p></div>`; });
+    fn().then(() => {
+      if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
+    }).catch(() => { app.innerHTML = `<div class="page"><p class="empty">Couldn't load the content. Please try again shortly.</p></div>`; });
   }
 
   /* ==========================================================================
@@ -447,19 +491,24 @@
     const box = $(".lightbox");
     const img = $("img", box);
     const cap = $("figcaption", box);
+    const prevB = $(".lightbox__prev", box), nextB = $(".lightbox__next", box);
     let list = [], i = 0;
     const show = () => {
       const it = list[i];
-      img.src = it.src; img.alt = it.cap || "";
-      cap.textContent = `${pad(i + 1)} / ${pad(list.length)}${it.cap ? " — " + it.cap : ""}`;
-      const nx = list[(i + 1) % list.length]; if (nx) { const pre = new Image(); pre.src = nx.src; }
+      img.src = it.src; img.alt = it.caption || "";
+      cap.textContent = list.length > 1 ? `${pad(i + 1)} / ${pad(list.length)}${it.caption ? " — " + it.caption : ""}` : (it.caption || "");
+      const nx = list[(i + 1) % list.length]; if (nx && list.length > 1) { const pre = new Image(); pre.src = nx.src; }
     };
-    const open = (l, k) => { list = l; i = k; box.hidden = false; document.body.classList.add("no-scroll"); show(); $(".lightbox__close", box).focus({ preventScroll: true }); };
+    const open = (l, k) => {
+      list = l; i = k; box.hidden = false; document.body.classList.add("no-scroll");
+      prevB.hidden = nextB.hidden = list.length < 2;
+      show(); $(".lightbox__close", box).focus({ preventScroll: true });
+    };
     const close = () => { box.hidden = true; document.body.classList.remove("no-scroll"); img.removeAttribute("src"); };
-    const go = d => { i = (i + d + list.length) % list.length; show(); };
+    const go = d => { if (list.length < 2) return; i = (i + d + list.length) % list.length; show(); };
     $(".lightbox__close", box).addEventListener("click", close);
-    $(".lightbox__prev", box).addEventListener("click", () => go(-1));
-    $(".lightbox__next", box).addEventListener("click", () => go(1));
+    prevB.addEventListener("click", () => go(-1));
+    nextB.addEventListener("click", () => go(1));
     box.addEventListener("click", e => { if (e.target === box || e.target.classList.contains("lightbox__fig")) close(); });
     document.addEventListener("keydown", e => {
       if (box.hidden) { if (e.key === "Escape" && navEl.classList.contains("is-open")) setMenu(false); return; }
@@ -474,8 +523,7 @@
   })();
 
   /* ---------- boot ---------- */
-  applyUI();
-  load("galleries").then(buildMenus).catch(() => markCurrent(null));
+  buildMenus();
   footer();
   render();
 })();

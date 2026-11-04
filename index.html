@@ -1,22 +1,22 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Sara Aliscioni — Fotografa</title>
-  <meta name="description" content="Sara Aliscioni, fotografa di Roma. Reportage e street photography in bianco e nero.">
+  <title>Sara Aliscioni — Photographer</title>
+  <meta name="description" content="Sara Aliscioni, photographer based in Rome. Reportage and street photography in a strict black-and-white language.">
   <meta name="theme-color" content="#000000">
-  <!-- Anteprima: togliere questa riga quando il sito è approvato per l'indicizzazione -->
+  <!-- Preview: remove this line when the site is approved for search engines -->
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sara Aliscioni — Fotografa">
-  <meta property="og:description" content="Sara Aliscioni, fotografa di Roma. Reportage e street photography in bianco e nero.">
+  <meta property="og:title" content="Sara Aliscioni — Photographer">
+  <meta property="og:description" content="Sara Aliscioni, photographer based in Rome. Reportage and street photography in a strict black-and-white language.">
   <meta property="og:image" content="https://tommyzaffa.github.io/sara-aliscioni/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Sofia Pro è un font a licenza (Adobe Fonts): se Sara attiva un kit, incollare qui il <link> di Adobe Fonts. Fino ad allora si usa Mulish. -->
+  <!-- Sofia Pro is a licensed font (Adobe Fonts): paste the Adobe Fonts kit <link> here to enable it. Until then Mulish is used. -->
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,50 +24,39 @@
   <header class="site-header">
     <a class="brand" href="index.html">
       <span class="brand__name">Sara Aliscioni</span>
-      <span class="brand__role" data-t="role">Fotografa</span>
+      <span class="brand__role">Photographer</span>
     </a>
-    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span data-t="menu">Menu</span><i aria-hidden="true"></i></button>
-    <nav class="site-nav" id="site-nav" aria-label="Menu principale">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main menu">
       <ul class="nav">
-        <li><a href="index.html" data-nav="home" data-t="nav.home">Home</a></li>
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="bio.html" data-nav="bio">Bio</a></li>
         <li class="has-sub">
-          <a href="gallerie.html?cat=serie" data-nav="serie" data-t="nav.serie">Serie</a>
-          <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Sottomenu"></button>
-          <ul class="sub" data-sub="serie"></ul>
+          <a href="projects.html" data-nav="projects">Projects</a>
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Open submenu"></button>
+          <ul class="sub" data-sub="projects"></ul>
         </li>
+        <li><a href="observations.html" data-nav="observations">Observations Photography</a></li>
         <li class="has-sub">
-          <a href="gallerie.html?cat=impressioni" data-nav="impressioni" data-t="nav.impressioni">Impressioni di viaggio</a>
-          <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Sottomenu"></button>
-          <ul class="sub sub--cols" data-sub="impressioni"></ul>
+          <a href="publications.html" data-nav="publications">Publications</a>
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Open submenu"></button>
+          <ul class="sub" data-sub="publications"></ul>
         </li>
-        <li class="has-sub">
-          <a href="bio.html" data-nav="bio" data-t="nav.bio">Bio</a>
-          <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Sottomenu"></button>
-          <ul class="sub">
-            <li><a href="bio.html" data-t="nav.biography">Biografia</a></li>
-            <li><a href="mostre.html" data-t="nav.exhibitions">Mostre e premi</a></li>
-            <li><a href="pubblicazioni.html" data-t="nav.publications">Pubblicazioni</a></li>
-          </ul>
-        </li>
-        <li><a href="news.html" data-nav="news" data-t="nav.news">News</a></li>
-        <li><a href="blog.html" data-nav="blog" data-t="nav.blog">Blog</a></li>
-        <li><a href="contatti.html" data-nav="contact" data-t="nav.contact">Contatti</a></li>
+        <li><a href="news.html" data-nav="news">News</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
       </ul>
-      <div class="lang" role="group" aria-label="Lingua / Language">
-        <button type="button" data-lang="it" aria-pressed="true">IT</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
     </nav>
   </header>
 
   <main class="site-main" id="app">
-    <noscript><p class="page">Per vedere il sito è necessario attivare JavaScript.</p></noscript>
+    <noscript><p class="page">Please enable JavaScript to view this site.</p></noscript>
   </main>
 
   <div class="lightbox" hidden>
-    <button type="button" class="lightbox__close" aria-label="Chiudi">✕</button>
-    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Precedente">‹</button>
+    <button type="button" class="lightbox__close" aria-label="Close">✕</button>
+    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Previous">‹</button>
     <figure class="lightbox__fig"><img alt=""><figcaption></figcaption></figure>
-    <button type="button" class="lightbox__nav lightbox__next" aria-label="Successiva">›</button>
+    <button type="button" class="lightbox__nav lightbox__next" aria-label="Next">›</button>
   </div>
   <script src="js/app.js"></script>
 </body>

@@ -1,12 +1,15 @@
 # Sara Aliscioni — sito
 
-Sito statico a sezioni, bilingue (IT/EN), in bianco e nero. Nessun build, nessuna libreria esterna.
+Sito statico a sezioni, in inglese, in bianco e nero. Nessun build, nessuna libreria esterna. Struttura e contenuti seguono le linee guida di Sara (novembre 2026).
 
-- **Pagine:** `index.html` (home con foto a rotazione), `gallerie.html?cat=serie|impressioni`, `galleria.html?g=<id>`, `bio.html`, `mostre.html`, `pubblicazioni.html`, `news.html`, `blog.html`, `articolo.html?p=<id>`, `contatti.html`
-- **Contenuti:** tutti in `content/*.json` (home, gallerie, news, blog, bio, curriculum, contatti). Le pagine li leggono all'apertura.
+- **Menu:** Home · Bio · Projects · Observations Photography · Publications · News · Contact
+- **Pagine:** `index.html` (12 foto a rotazione), `bio.html` (biography, statement, education, activities, exhibitions & awards), `projects.html` (elenco) e `projects.html?p=<id>`, `observations.html`, `publications.html` e `publications.html?p=<id>`, `news.html` e `news.html?n=<id>`, `contact.html` (modulo + contatti)
+- **Contenuti:** tutti in `content/*.json` (home, bio, projects, observations, publications, news, site). Le pagine li leggono all'apertura.
 - **Codice:** `css/style.css`, `js/app.js`. Header e footer sono generati da `tools/build_pages.py` (`python3 tools/build_pages.py` dopo aver cambiato il template).
-- **Immagini:** `images/l` (1600 px), `images/s` (720 px), `images/hero` (home, 1920 px), `images/uploads` (caricate dal CMS).
-- **Font:** titoli Archivo Black, testi Sofia Pro. Sofia Pro è a licenza (Adobe Fonts): finché non c'è un kit si usa Mulish, molto simile. Per attivarlo basta incollare il `<link>` del kit Adobe Fonts nel template di `tools/build_pages.py` e rigenerare le pagine.
+- **Immagini:** `images/<sezione>/<progetto>/NNN.webp` (lato lungo 1800 px) + `NNN-t.webp` (miniatura quadrata); `images/uploads` per le foto caricate dal CMS. Video in `media/`.
+- **Testi:** riga vuota = nuovo paragrafo · `### Titolo` = sottotitolo · `*testo*` = corsivo · `[testo](https://…)` = link.
+- **Modulo contatti:** usa FormSubmit. Basta scrivere l'email di Sara nel campo `email` di `content/site.json`; al primo messaggio FormSubmit le chiede di confermare l'indirizzo.
+- **Font:** titoli Archivo Black, testi Sofia Pro. Sofia Pro è a licenza (Adobe Fonts): finché non c'è un kit si usa Mulish, molto simile.
 
 ## Gestione dei contenuti (senza toccare il codice)
 

@@ -1,62 +1,202 @@
 {
-  "portrait": "images/sara-ritratto.webp",
-  "lead_it": "Si dedica alla fotografia e alla calligrafia fotografica dal 2006.",
-  "lead_en": "She has dedicated herself to photography and photographic calligraphy since 2006.",
-  "text_it": "La scelta fotografica, orientata al reportage e alla street photography, si esprime in una calligrafia rigorosamente in bianco e nero.\n\nIspirata al linguaggio del regista ungherese Béla Tarr, Sara Aliscioni propone immagini fatte di simbolismo, dramma e poesia: un'interpretazione oggettiva e insieme sentimentale, che racconta la dura realtà dell'uomo nei suoi contesti familiari e quotidiani. Il filo conduttore è sempre la ricerca della bellezza, anche quando ciò che circonda il soggetto è decadente, oscuro e dimenticato.\n\nLa matrice artistica le viene dal padre, musicista e compositore, che la porta a esplorare il teatro, a cui si dedica per anni sia come interprete sia come fotografa di scena, la musica, con lo studio del solfeggio classico e del basso, e il cinema, grazie al Centro Sperimentale di Cinematografia dove il padre lavorava come tecnico del suono.\n\nOltre a corsi di tecnica fotografica e workshop di reportage di viaggio, segue la formazione del MoMA sulla fotografia come mezzo di espressione artistica, di esplorazione della realtà e di critica della cultura. Spinta dall'interesse per la storia, studia con la University of London & Royal Holloway l'uso delle immagini e dei film e la loro interpretazione storica nel Novecento.\n\nHa curato numerosi backstage fotografici, l'ultimo al Museo MACRO di Roma, e dal 2022 pubblica fotografia NFT su ninfa.io e KnownOrigin. Ha maturato il suo stile anche grazie al confronto quotidiano con l'artista Alessandro Bavari, con cui firma il libro «Kill the Covid!». Dal 2025 insegna Fotografia di scena al CSF Adams.",
-  "text_en": "Her photographic choice, oriented towards reportage and street photography, is expressed in a strictly black and white calligraphy.\n\nInspired by the language of Hungarian filmmaker Béla Tarr, Sara Aliscioni offers images made of symbolism, drama and poetry: an objective yet sentimental interpretation describing the harsh reality of man in familiar, everyday contexts. The common thread is always the search for beauty, even when what surrounds the subject is decadent, dark and forgotten.\n\nHer artistic matrix comes from her father, a musician and composer, which led her to explore theatre, where she worked for years both as a performer and as a stage photographer, music, studying classical solfège and bass, and cinema, through the Centro Sperimentale di Cinematografia where her father worked as a sound engineer.\n\nAlongside courses in photographic technique and travel reportage workshops, she followed MoMA's training on photography as a means of artistic expression, of exploring reality and of cultural critique. Driven by an interest in history, she studied with the University of London & Royal Holloway the use of images and films and their historical interpretation in the twentieth century.\n\nShe has curated several photographic backstages, most recently at the MACRO Museum in Rome, and since 2022 has released NFT photography on ninfa.io and KnownOrigin. Her style also matured through daily exchange with the artist Alessandro Bavari, co-author of the book “Kill the Covid!”. Since 2025 she has taught stage photography at CSF Adams.",
+  "portrait": {
+    "src": "images/bio/sara/portrait.webp",
+    "w": 1500,
+    "h": 1125
+  },
+  "biography": "Sara has been dedicated to photography and photographic calligraphy since 2006. She inherited the artistic sensibility of her father, a musician and composer, which led her to explore not only the world of theatre — to which she devoted several years both as a performer and as a stage photographer — but also music, studying classical solfège and bass for several years, and cinema, influenced by the Centro Sperimentale di Cinematografia, where her father worked as a sound engineer.\n\nAlongside various courses in photographic techniques and workshops focused on travel reportage, she pursued the training promoted by MoMA on photography as a means of individual artistic expression, as a tool for exploring reality and documenting society, as well as a form of communication and cultural critique. Later, driven by an interest in history, with photojournalism as one of its primary sources, she attended the course on the use of images and films and their historical interpretation in the twentieth century at the University of London & Royal Holloway. In 2022, she joined the platforms “Ninfa. io” and “KnownOrigin.io”, which curate and publish NFT collections, making artworks — and photography NFTs in particular — more accessible to both artists and collectors.\n\nIn 2023, she created the book Portraits of NFT Artists, a project dedicated to the dialogue between photography, contemporary art, and new forms of digital expression.\n\nIn 2025, she deepened her visual and narrative research through a multidisciplinary path intertwining cinema, photography, and digital experimentation. She attended the course Scandinavian Film and Television at the University of Copenhagen, where she studied the Scandinavian audiovisual system in relation to European and global cultural, institutional, and political contexts, with particular attention to the role of cinema as a vehicle for the social values of Nordic welfare societies. At the same time, she took part in the workshop AI and Creativity – Midjourney, dedicated to the use of artificial intelligence in generative image processes, conducted by Alessandro Bavari. Among her professional activities, she has curated several photographic backstage projects, the latest of which took place at the MACRO Museum in Rome.\n\nAfter developing a deeper artistic connection with Alessandro Bavari, she further shaped her style through his continuous and daily mentorship. United by photography as an artistic form of expression, as well as by their personal bond, they published together the book Kill the Covid!, a photographic rural horror mockumentary set in the Marche region, faithful to their visionary and provocative artistic language.\n\nIn 2026, she created the photographic book Meta-Est, a visual journey through the suspended territories of Eastern Europe and beyond, conveyed through the narrative power of black and white, understood not as an aesthetic choice but as an expressive necessity. An exploration of places where reality transforms into symbol, and where the boundaries between memory, identity, and imagination become blurred.\n\nIn the same year, together with Alessandro Bavari, she won first prize for the animated short film Artefatti at the Rome Creative Contest.\n\nHer artistic practice constantly moves between documentation and vision, between traditional languages and emerging tools, offering a poetic and critical perspective on the social and cultural dynamics of Eastern Europe and beyond.",
+  "statement": "ARTIST STATEMENT Her photographic approach, rooted in reportage and street photography, is defined by a strict black-and-white visual language.\n\nInspired by the cinematic work of Hungarian director Béla Tarr, Sara Aliscioni constructs images shaped by symbolism, drama, and poetry, offering an objective yet deeply emotional interpretation of reality.\n\nHer work often places the human figure at the center of familiar, everyday contexts, where fragility and presence coexist.\n\nA constant thread throughout her research is the pursuit of beauty, even in environments marked by decay, darkness, and oblivion.",
   "facts": [
     {
-      "label_it": "Base",
-      "label_en": "Based in",
-      "value_it": "Roma",
-      "value_en": "Rome"
+      "label": "Based in",
+      "value": "Rome, Italy"
     },
     {
-      "label_it": "Dal",
-      "label_en": "Since",
-      "value_it": "2006",
-      "value_en": "2006"
+      "label": "Photographer since",
+      "value": "2006"
     },
     {
-      "label_it": "Linguaggio",
-      "label_en": "Language",
-      "value_it": "Bianco e nero",
-      "value_en": "Black & white"
-    },
-    {
-      "label_it": "Insegna",
-      "label_en": "Teaches",
-      "value_it": "Fotografia di scena, CSF Adams",
-      "value_en": "Stage photography, CSF Adams"
+      "label": "Language",
+      "value": "Black & white"
     }
   ],
   "education": [
     {
       "year": "2025",
-      "text_it": "Spazio Nicolosi — «AI Creatività: Midjourney», workshop a cura di Alessandro Bavari",
-      "text_en": "Spazio Nicolosi — “AI Creativity: Midjourney”, workshop led by Alessandro Bavari"
+      "text": "Spazio Nicolosi — “AI and Creativity: Midjourney”, workshop led by Alessandro Bavari"
     },
     {
       "year": "2024–25",
-      "text_it": "University of Copenhagen — Scandinavian Film and Television",
-      "text_en": "University of Copenhagen — Scandinavian Film and Television"
+      "text": "University of Copenhagen — Scandinavian Film and Television"
     },
     {
       "year": "2022",
-      "text_it": "University of London & Royal Holloway — immagini, film e interpretazione storica del Novecento",
-      "text_en": "University of London & Royal Holloway — images, film and historical interpretation of the 20th century"
+      "text": "University of London & Royal Holloway — images, film and historical interpretation of the 20th century"
     },
     {
       "year": "—",
-      "text_it": "MoMA — la fotografia come espressione artistica, documentazione della società e critica della cultura",
-      "text_en": "MoMA — photography as artistic expression, documentation of society and cultural critique"
+      "text": "MoMA — photography as artistic expression, documentation of society and cultural critique"
     },
     {
       "year": "2007",
-      "text_it": "Sapienza Università di Roma — Laurea in Economia",
-      "text_en": "Sapienza University of Rome — Degree in Economics"
+      "text": "Sapienza University of Rome — Degree in Economics"
     }
   ],
-  "languages_it": "Italiano, inglese, francese",
-  "languages_en": "Italian, English, French"
+  "activities": [
+    {
+      "year": "Dec 2024 – Present",
+      "text": "Photographic Portfolio Review — personalised photographic portfolio reviews"
+    },
+    {
+      "year": "2022 – Present",
+      "text": "Photographer NFT — NFT photography on ninfa.io and KnownOrigin"
+    }
+  ],
+  "solo": [
+    {
+      "year": "2026",
+      "title": "Uomo-Animale",
+      "place": "Arturo Ghergo Photography Festival, 11th edition — Associazione Effetto Ghergo, Montefano (Macerata)"
+    },
+    {
+      "year": "2022",
+      "title": "I figli di Butuceni",
+      "place": "Photographic installation, Maggio Sermonetano Festival — street photography, Moldova"
+    },
+    {
+      "year": "2016",
+      "title": "110 vs 220",
+      "place": "Cuba — supported by the Embassy of the Republic of Cuba, promoted by Le Monde Diplomatique"
+    },
+    {
+      "year": "2015",
+      "title": "Industrial Records",
+      "place": "Rome"
+    },
+    {
+      "year": "2009",
+      "title": "Lateral points of view",
+      "place": "Quarticciolo Theatre, Rome"
+    }
+  ],
+  "group": [
+    {
+      "year": "2026",
+      "title": "Un mare di Novecento — video Meta-Est",
+      "place": "MADXI Museo Contemporaneo, Latina"
+    },
+    {
+      "year": "2026",
+      "title": "Il silenzio delle Dee",
+      "place": "Church of San Michele Arcangelo, Sermoneta"
+    },
+    {
+      "year": "2026",
+      "title": "Condividere Scattando",
+      "place": "Maison des Arts, Pescara"
+    },
+    {
+      "year": "2025",
+      "title": "Energia",
+      "place": "Museo Cambellotti, Latina"
+    },
+    {
+      "year": "2024",
+      "title": "Travelgram — Colornophotolife",
+      "place": "Colorno"
+    },
+    {
+      "year": "2023",
+      "title": "@obscuradao show — NFT NYC 2023",
+      "place": "New York"
+    },
+    {
+      "year": "2022",
+      "title": "Symphony of Art",
+      "place": "Sermoneta"
+    },
+    {
+      "year": "2022",
+      "title": "Sacred Sense",
+      "place": "Sermoneta"
+    },
+    {
+      "year": "2020",
+      "title": "Travel photography",
+      "place": "Museo Tadini"
+    },
+    {
+      "year": "2018",
+      "title": "The woman today",
+      "place": "San Cesario"
+    },
+    {
+      "year": "2017",
+      "title": "Operation Marketing — Nowa Huta, Kraków",
+      "place": "Rome"
+    },
+    {
+      "year": "2016",
+      "title": "My Sabina",
+      "place": "Poggio Mirteto Museum"
+    },
+    {
+      "year": "2010",
+      "title": "Absence",
+      "place": "Torretta Valadier, Rome"
+    },
+    {
+      "year": "2010",
+      "title": "From woman to woman",
+      "place": "Museum of Rome in Trastevere"
+    },
+    {
+      "year": "2010",
+      "title": "Path of a glance",
+      "place": "Monterotondo, Rome"
+    }
+  ],
+  "awards": [
+    {
+      "year": "2026",
+      "title": "Multimedia LIVE performance",
+      "place": "Officine Fotografiche, Rome"
+    },
+    {
+      "year": "2025",
+      "title": "Artefatti, with Alessandro Bavari — First prize",
+      "place": "International Short Film Festival, Rome Creative Contest"
+    },
+    {
+      "year": "2025",
+      "title": "Finalist — Città di Latina international competition",
+      "place": "Latina Mater, Energia exhibition"
+    },
+    {
+      "year": "2023",
+      "title": "Colornophotolife — selected photographs",
+      "place": "Exhibitions in Corigliano and Colorno"
+    },
+    {
+      "year": "2019",
+      "title": "FIAP Image & Art Salon Moldova — Best author",
+      "place": "Open color, Man/Woman, Photo travel"
+    },
+    {
+      "year": "2014",
+      "title": "Full Bike Day — International photography competition",
+      "place": "Academy of Fine Arts of Lecce, Puglia Region"
+    },
+    {
+      "year": "2014",
+      "title": "Société Générale — Citizen Games competition",
+      "place": ""
+    },
+    {
+      "year": "2006",
+      "title": "British Council — Contemporary Italy competition",
+      "place": ""
+    }
+  ],
+  "languages": "Italian, English, French"
 }
