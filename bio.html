@@ -14,10 +14,9 @@
   <meta property="og:image" content="https://tommyzaffa.github.io/sara-aliscioni/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Sofia Pro is a licensed font (Adobe Fonts): paste the Adobe Fonts kit <link> here to enable it. Until then Mulish is used. -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts are self-hosted (no requests to Google). Sofia Pro is licensed (Adobe Fonts): until a kit is added, Mulish is used. -->
+  <link rel="preload" href="fonts/mulish.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="bio" data-nav="bio">
@@ -52,7 +51,8 @@
     <noscript><p class="page">Please enable JavaScript to view this site.</p></noscript>
   </main>
   <footer class="site-footer">
-    <p>© <span class="js-year">2026</span> Sara Aliscioni — All photographs are protected by copyright.</p>
+    <p>© <span class="js-year">2026</span> Sara Aliscioni<span class="js-vat"></span> — All photographs are protected by copyright.</p>
+    <p class="legal-links"><a href="privacy.html">Privacy Policy</a> · <a href="cookies.html">Cookie Policy</a> · <a href="terms.html">Terms of Use</a></p>
     <ul class="social" data-social></ul>
   </footer>
 

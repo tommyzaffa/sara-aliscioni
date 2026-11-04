@@ -1,3 +1,6 @@
+@font-face { font-family: "Archivo Black"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/archivo-black.woff2") format("woff2"); }
+@font-face { font-family: "Mulish"; font-style: normal; font-weight: 300 700; font-display: swap; src: url("../fonts/mulish.woff2") format("woff2"); }
+
 /* ==========================================================================
    Sara Aliscioni — fotografa
    Statico, a sezioni, bianco e nero con grigio chiaro.
@@ -355,3 +358,17 @@ body.no-scroll { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .slide { transition: none; }
 }
+
+
+/* ---------- Legal pages & links ---------- */
+.legal .prose ul { list-style: disc; padding-left: 1.2em; margin-top: 1em; }
+.legal .prose li + li { margin-top: .4em; }
+.legal__it { margin-top: clamp(56px, 7vw, 96px); padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--line); }
+.legal-links a { color: var(--gray); }
+.legal-links a:hover { color: #fff; }
+.home-bar__legal { margin-left: 14px; text-transform: none; letter-spacing: .04em; font-weight: 400; }
+.home-bar__legal a:hover { color: #fff; }
+.form__check { display: flex !important; grid-template-columns: none; align-items: flex-start; gap: 10px; font-size: 14px; }
+.form__check input { width: 16px; height: 16px; margin-top: 4px; flex: none; accent-color: #fff; }
+.form__check a { color: var(--white); border-bottom: 1px solid var(--line-2); }
+@media (max-width: 700px) { .home-bar__legal { display: none; } }

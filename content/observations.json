@@ -3,499 +3,499 @@
   "date": "Open Project",
   "cover": {
     "src": "images/observations/observations/cover.webp",
-    "w": 1400,
-    "h": 962,
+    "w": 1200,
+    "h": 824,
     "thumb": "images/observations/observations/cover-t.webp"
   },
   "text": "Aliscioni's photographic work is rooted in the direct observation of reality and develops through an ongoing exploration centred primarily on the human figure, its relationship with the surrounding environment, and the conditions in which everyday life unfolds.\n\nTaken across different places and contexts, the images do not follow a predetermined narrative structure, nor do they seek to provide a descriptive account of the territories encountered. People, architecture, landscapes and everyday situations are observed without any particular hierarchy, as elements of the same reality.\n\nThe focus lies on human presence, behaviour, relationships and the material conditions of existence. The subjects are neither idealised nor turned into characters. They remain part of a concrete, often complex context, in which spaces and objects also contribute to the construction of the image. Photography thus takes on a predominantly observational approach. Rather than seeking extraordinary events, it focuses on ordinary situations, suspended moments and details that would normally escape a hurried glance.\n\nThe result is a collection of independent images, free from narrative conclusions, in which the relationship between the individual, the environment and reality becomes the central element of continuity.\n\nAn open-ended body of work that does not claim to interpret or explain what it observes, but instead presents a personal and unfiltered view of the world.",
   "images": [
     {
       "src": "images/observations/observations/001.webp",
-      "w": 1800,
-      "h": 1296,
+      "w": 1600,
+      "h": 1152,
       "thumb": "images/observations/observations/001-t.webp",
       "caption": "Albania"
     },
     {
       "src": "images/observations/observations/002.webp",
-      "w": 1800,
-      "h": 1332,
+      "w": 1600,
+      "h": 1184,
       "thumb": "images/observations/observations/002-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/003.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/003-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/004.webp",
-      "w": 1800,
-      "h": 1374,
+      "w": 1600,
+      "h": 1222,
       "thumb": "images/observations/observations/004-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/005.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/005-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/006.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/006-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/007.webp",
-      "w": 1800,
-      "h": 1328,
+      "w": 1360,
+      "h": 1004,
       "thumb": "images/observations/observations/007-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/008.webp",
-      "w": 1800,
-      "h": 1347,
+      "w": 1600,
+      "h": 1198,
       "thumb": "images/observations/observations/008-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/009.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/009-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/010.webp",
-      "w": 1800,
-      "h": 1331,
+      "w": 1600,
+      "h": 1183,
       "thumb": "images/observations/observations/010-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/011.webp",
-      "w": 1800,
-      "h": 1336,
+      "w": 1360,
+      "h": 1009,
       "thumb": "images/observations/observations/011-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/012.webp",
-      "w": 1341,
-      "h": 1800,
+      "w": 1192,
+      "h": 1600,
       "thumb": "images/observations/observations/012-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/013.webp",
-      "w": 1800,
-      "h": 1386,
+      "w": 1360,
+      "h": 1047,
       "thumb": "images/observations/observations/013-t.webp",
       "caption": "Armenia"
     },
     {
       "src": "images/observations/observations/014.webp",
-      "w": 1800,
-      "h": 1314,
+      "w": 1600,
+      "h": 1168,
       "thumb": "images/observations/observations/014-t.webp",
       "caption": "Burgundy"
     },
     {
       "src": "images/observations/observations/015.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/015-t.webp",
       "caption": "Burgundy"
     },
     {
       "src": "images/observations/observations/016.webp",
-      "w": 1157,
-      "h": 1800,
+      "w": 1029,
+      "h": 1600,
       "thumb": "images/observations/observations/016-t.webp",
       "caption": "Cape Cod"
     },
     {
       "src": "images/observations/observations/017.webp",
-      "w": 1800,
-      "h": 1173,
+      "w": 1600,
+      "h": 1042,
       "thumb": "images/observations/observations/017-t.webp",
       "caption": "Cape Cod"
     },
     {
       "src": "images/observations/observations/018.webp",
-      "w": 1800,
-      "h": 1294,
+      "w": 1600,
+      "h": 1150,
       "thumb": "images/observations/observations/018-t.webp",
       "caption": "Córdoba"
     },
     {
       "src": "images/observations/observations/019.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/019-t.webp",
       "caption": "Kraków"
     },
     {
       "src": "images/observations/observations/020.webp",
-      "w": 1800,
-      "h": 1302,
+      "w": 1600,
+      "h": 1158,
       "thumb": "images/observations/observations/020-t.webp",
       "caption": "Kraków"
     },
     {
       "src": "images/observations/observations/021.webp",
-      "w": 1800,
-      "h": 1237,
+      "w": 1600,
+      "h": 1099,
       "thumb": "images/observations/observations/021-t.webp",
       "caption": "Cuba"
     },
     {
       "src": "images/observations/observations/022.webp",
-      "w": 1800,
-      "h": 1375,
+      "w": 1600,
+      "h": 1222,
       "thumb": "images/observations/observations/022-t.webp",
       "caption": "Cuba"
     },
     {
       "src": "images/observations/observations/023.webp",
-      "w": 1318,
-      "h": 1800,
+      "w": 1172,
+      "h": 1600,
       "thumb": "images/observations/observations/023-t.webp",
       "caption": "Cuba"
     },
     {
       "src": "images/observations/observations/024.webp",
-      "w": 1800,
-      "h": 1197,
+      "w": 1600,
+      "h": 1064,
       "thumb": "images/observations/observations/024-t.webp",
       "caption": "Iceland"
     },
     {
       "src": "images/observations/observations/025.webp",
-      "w": 1800,
-      "h": 1160,
+      "w": 1600,
+      "h": 1031,
       "thumb": "images/observations/observations/025-t.webp",
       "caption": "Iceland"
     },
     {
       "src": "images/observations/observations/026.webp",
-      "w": 1800,
-      "h": 1197,
+      "w": 1600,
+      "h": 1064,
       "thumb": "images/observations/observations/026-t.webp",
       "caption": "Iceland"
     },
     {
       "src": "images/observations/observations/027.webp",
-      "w": 1800,
-      "h": 1197,
+      "w": 1600,
+      "h": 1064,
       "thumb": "images/observations/observations/027-t.webp",
       "caption": "Iceland"
     },
     {
       "src": "images/observations/observations/028.webp",
-      "w": 1800,
-      "h": 1197,
+      "w": 1600,
+      "h": 1064,
       "thumb": "images/observations/observations/028-t.webp",
       "caption": "Iceland"
     },
     {
       "src": "images/observations/observations/029.webp",
-      "w": 1800,
-      "h": 1197,
+      "w": 1600,
+      "h": 1064,
       "thumb": "images/observations/observations/029-t.webp",
       "caption": "Iceland"
     },
     {
       "src": "images/observations/observations/030.webp",
-      "w": 1800,
-      "h": 1356,
+      "w": 1600,
+      "h": 1206,
       "thumb": "images/observations/observations/030-t.webp",
       "caption": "Latina"
     },
     {
       "src": "images/observations/observations/031.webp",
-      "w": 1800,
-      "h": 1346,
+      "w": 1600,
+      "h": 1197,
       "thumb": "images/observations/observations/031-t.webp",
       "caption": "Latina"
     },
     {
       "src": "images/observations/observations/032.webp",
-      "w": 1800,
-      "h": 1676,
+      "w": 1600,
+      "h": 1490,
       "thumb": "images/observations/observations/032-t.webp",
       "caption": "Latina"
     },
     {
       "src": "images/observations/observations/033.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/033-t.webp",
       "caption": "Linz"
     },
     {
       "src": "images/observations/observations/034.webp",
-      "w": 1800,
-      "h": 1418,
+      "w": 1600,
+      "h": 1261,
       "thumb": "images/observations/observations/034-t.webp",
       "caption": "Linz"
     },
     {
       "src": "images/observations/observations/035.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/035-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/036.webp",
-      "w": 1300,
-      "h": 1800,
+      "w": 1155,
+      "h": 1600,
       "thumb": "images/observations/observations/036-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/037.webp",
-      "w": 1419,
-      "h": 1800,
+      "w": 1262,
+      "h": 1600,
       "thumb": "images/observations/observations/037-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/038.webp",
-      "w": 1800,
-      "h": 1411,
+      "w": 1600,
+      "h": 1254,
       "thumb": "images/observations/observations/038-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/039.webp",
-      "w": 1800,
-      "h": 1373,
+      "w": 1600,
+      "h": 1221,
       "thumb": "images/observations/observations/039-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/040.webp",
-      "w": 1800,
-      "h": 1648,
+      "w": 1600,
+      "h": 1465,
       "thumb": "images/observations/observations/040-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/041.webp",
-      "w": 1800,
-      "h": 1350,
+      "w": 1600,
+      "h": 1200,
       "thumb": "images/observations/observations/041-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/042.webp",
-      "w": 1800,
-      "h": 1421,
+      "w": 1600,
+      "h": 1263,
       "thumb": "images/observations/observations/042-t.webp",
       "caption": "Morocco"
     },
     {
       "src": "images/observations/observations/043.webp",
-      "w": 1795,
-      "h": 1800,
+      "w": 1595,
+      "h": 1600,
       "thumb": "images/observations/observations/043-t.webp",
       "caption": "New York"
     },
     {
       "src": "images/observations/observations/044.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/044-t.webp",
       "caption": "New York"
     },
     {
       "src": "images/observations/observations/045.webp",
-      "w": 1800,
-      "h": 1246,
+      "w": 1600,
+      "h": 1107,
       "thumb": "images/observations/observations/045-t.webp",
       "caption": "New York"
     },
     {
       "src": "images/observations/observations/046.webp",
-      "w": 1598,
-      "h": 1800,
+      "w": 1421,
+      "h": 1600,
       "thumb": "images/observations/observations/046-t.webp",
       "caption": "New York"
     },
     {
       "src": "images/observations/observations/047.webp",
-      "w": 1800,
-      "h": 1329,
+      "w": 1600,
+      "h": 1182,
       "thumb": "images/observations/observations/047-t.webp",
       "caption": "New York"
     },
     {
       "src": "images/observations/observations/048.webp",
-      "w": 1800,
-      "h": 1329,
+      "w": 1600,
+      "h": 1182,
       "thumb": "images/observations/observations/048-t.webp",
       "caption": "New York"
     },
     {
       "src": "images/observations/observations/049.webp",
-      "w": 1800,
-      "h": 1377,
+      "w": 1600,
+      "h": 1224,
       "thumb": "images/observations/observations/049-t.webp",
       "caption": "Paris"
     },
     {
       "src": "images/observations/observations/050.webp",
-      "w": 1800,
-      "h": 1268,
+      "w": 1600,
+      "h": 1127,
       "thumb": "images/observations/observations/050-t.webp",
       "caption": "Paris"
     },
     {
       "src": "images/observations/observations/051.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1360,
+      "h": 908,
       "thumb": "images/observations/observations/051-t.webp",
       "caption": "Paris"
     },
     {
       "src": "images/observations/observations/052.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/052-t.webp",
       "caption": "Paris"
     },
     {
       "src": "images/observations/observations/053.webp",
-      "w": 1800,
-      "h": 1408,
+      "w": 1600,
+      "h": 1252,
       "thumb": "images/observations/observations/053-t.webp",
       "caption": "Rome"
     },
     {
       "src": "images/observations/observations/054.webp",
-      "w": 1800,
-      "h": 1485,
+      "w": 1600,
+      "h": 1320,
       "thumb": "images/observations/observations/054-t.webp",
       "caption": "Rome"
     },
     {
       "src": "images/observations/observations/055.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/055-t.webp",
       "caption": "Rome"
     },
     {
       "src": "images/observations/observations/056.webp",
-      "w": 1800,
-      "h": 1212,
+      "w": 1600,
+      "h": 1077,
       "thumb": "images/observations/observations/056-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/057.webp",
-      "w": 1800,
-      "h": 1203,
+      "w": 1600,
+      "h": 1070,
       "thumb": "images/observations/observations/057-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/058.webp",
-      "w": 1800,
-      "h": 1292,
+      "w": 1600,
+      "h": 1148,
       "thumb": "images/observations/observations/058-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/059.webp",
-      "w": 1800,
-      "h": 1232,
+      "w": 1600,
+      "h": 1095,
       "thumb": "images/observations/observations/059-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/060.webp",
-      "w": 1800,
-      "h": 1199,
+      "w": 1600,
+      "h": 1066,
       "thumb": "images/observations/observations/060-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/061.webp",
-      "w": 1800,
-      "h": 1211,
+      "w": 1600,
+      "h": 1077,
       "thumb": "images/observations/observations/061-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/062.webp",
-      "w": 1800,
-      "h": 1205,
+      "w": 1600,
+      "h": 1071,
       "thumb": "images/observations/observations/062-t.webp",
       "caption": "Seychelles"
     },
     {
       "src": "images/observations/observations/063.webp",
-      "w": 1265,
-      "h": 1800,
+      "w": 1124,
+      "h": 1600,
       "thumb": "images/observations/observations/063-t.webp",
       "caption": "Sicily"
     },
     {
       "src": "images/observations/observations/064.webp",
-      "w": 1800,
-      "h": 1418,
+      "w": 1600,
+      "h": 1261,
       "thumb": "images/observations/observations/064-t.webp",
       "caption": "Turin"
     },
     {
       "src": "images/observations/observations/065.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/065-t.webp",
       "caption": "Tuscany"
     },
     {
       "src": "images/observations/observations/066.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/066-t.webp",
       "caption": "Tuscany"
     },
     {
       "src": "images/observations/observations/067.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/067-t.webp",
       "caption": "Tuscany"
     },
     {
       "src": "images/observations/observations/068.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1156,
+      "h": 772,
       "thumb": "images/observations/observations/068-t.webp",
       "caption": "Tuscany"
     },
     {
       "src": "images/observations/observations/069.webp",
-      "w": 1800,
-      "h": 1218,
+      "w": 1600,
+      "h": 1082,
       "thumb": "images/observations/observations/069-t.webp",
       "caption": "Tuscany"
     },
     {
       "src": "images/observations/observations/070.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/070-t.webp",
       "caption": "Tuscany"
     },
@@ -515,64 +515,64 @@
     },
     {
       "src": "images/observations/observations/073.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1069,
       "thumb": "images/observations/observations/073-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/074.webp",
-      "w": 1800,
-      "h": 1319,
+      "w": 1600,
+      "h": 1173,
       "thumb": "images/observations/observations/074-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/075.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/075-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/076.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/076-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/077.webp",
-      "w": 1800,
-      "h": 1282,
+      "w": 1600,
+      "h": 1139,
       "thumb": "images/observations/observations/077-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/078.webp",
-      "w": 1800,
-      "h": 1215,
+      "w": 1600,
+      "h": 1080,
       "thumb": "images/observations/observations/078-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/079.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/079-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/080.webp",
-      "w": 1800,
-      "h": 917,
+      "w": 1600,
+      "h": 815,
       "thumb": "images/observations/observations/080-t.webp",
       "caption": "Vietnam"
     },
     {
       "src": "images/observations/observations/081.webp",
-      "w": 1800,
-      "h": 1202,
+      "w": 1600,
+      "h": 1068,
       "thumb": "images/observations/observations/081-t.webp",
       "caption": "Vietnam"
     }

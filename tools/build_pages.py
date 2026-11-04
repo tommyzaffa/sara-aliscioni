@@ -23,6 +23,9 @@ PAGES = [
      "Exhibitions, screenings, presentations and news about Sara Aliscioni."),
     ("contact.html", "contact", "contact", "Contact — Sara Aliscioni",
      "Contact Sara Aliscioni."),
+    ("privacy.html", "legal", "", "Privacy Policy — Sara Aliscioni", "Privacy Policy of the Sara Aliscioni website."),
+    ("cookies.html", "legal", "", "Cookie Policy — Sara Aliscioni", "Cookie Policy of the Sara Aliscioni website."),
+    ("terms.html", "legal", "", "Terms of Use — Sara Aliscioni", "Terms of use and copyright of the Sara Aliscioni website."),
     ("404.html", "notfound", "", "Page not found — Sara Aliscioni",
      "Page not found."),
 ]
@@ -56,7 +59,8 @@ HEADER = """  <header class="site-header">
 """
 
 FOOTER = """  <footer class="site-footer">
-    <p>© <span class="js-year">2026</span> Sara Aliscioni — All photographs are protected by copyright.</p>
+    <p>© <span class="js-year">2026</span> Sara Aliscioni<span class="js-vat"></span> — All photographs are protected by copyright.</p>
+    <p class="legal-links"><a href="privacy.html">Privacy Policy</a> · <a href="cookies.html">Cookie Policy</a> · <a href="terms.html">Terms of Use</a></p>
     <ul class="social" data-social></ul>
   </footer>
 """
@@ -77,16 +81,15 @@ TEMPLATE = """<!doctype html>
   <meta property="og:image" content="https://tommyzaffa.github.io/sara-aliscioni/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Sofia Pro is a licensed font (Adobe Fonts): paste the Adobe Fonts kit <link> here to enable it. Until then Mulish is used. -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts are self-hosted (no requests to Google). Sofia Pro is licensed (Adobe Fonts): until a kit is added, Mulish is used. -->
+  <link rel="preload" href="fonts/mulish.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>{extra_head}
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="{page}" data-nav="{nav}">
 {header}
   <main class="site-main" id="app">
-    <noscript><p class="page">Please enable JavaScript to view this site.</p></noscript>
+{main}
   </main>
 {footer}
   <div class="lightbox" hidden>
@@ -102,6 +105,10 @@ TEMPLATE = """<!doctype html>
 
 for file, page, nav, title, desc in PAGES:
     footer = "" if page == "home" else FOOTER
-    html = TEMPLATE.format(title=title, desc=desc, page=page, nav=nav, header=HEADER, footer=footer)
+    main = '    <noscript><p class="page">Please enable JavaScript to view this site.</p></noscript>'
+    if page == "legal":
+        main = (ROOT / "tools/legal" / file).read_text(encoding="utf-8")
+    extra = '\n  <link rel="preload" href="content/home.json" as="fetch" crossorigin>' if page == "home" else ""
+    html = TEMPLATE.format(title=title, desc=desc, page=page, nav=nav, header=HEADER, footer=footer, main=main, extra_head=extra)
     (ROOT / file).write_text(html, encoding="utf-8")
     print("wrote", file)

@@ -41,7 +41,7 @@
 
   /* ---------- data ---------- */
   const cache = {};
-  const load = name => cache[name] || (cache[name] = fetch(`content/${name}.json`, { cache: "no-cache" }).then(r => {
+  const load = name => cache[name] || (cache[name] = fetch(`content/${name}.json`).then(r => {
     if (!r.ok) throw new Error(name);
     return r.json();
   }));
@@ -96,6 +96,7 @@
     try {
       const s = await load("site");
       ul.innerHTML = SOCIAL.filter(([, k]) => s[k]).map(([n, k]) => `<li><a href="${esc(s[k])}" target="_blank" rel="noopener">${n}</a></li>`).join("");
+      if (s.vat) $$(".js-vat").forEach(el => { el.textContent = ` · VAT ${s.vat}`; });
     } catch (e) { /* no links */ }
   }
 
@@ -173,11 +174,11 @@
         <section class="home" aria-label="Sara Aliscioni">
           <div class="slides">
             ${slides.map((s, i) => `<div class="slide${i === 0 ? " is-active" : ""}">
-              <img ${i < 2 ? `src="${esc(s.src)}"` : `data-src="${esc(s.src)}"`} alt="" ${i === 0 ? 'fetchpriority="high"' : ""} decoding="async">
+              <img ${i < 2 ? `src="${esc(s.src)}"` : `data-src="${esc(s.src)}"`} ${s.mobile ? `${i < 2 ? "srcset" : "data-srcset"}="${esc(s.mobile)} 1080w, ${esc(s.src)} 1920w" sizes="100vw"` : ""} alt="" ${i === 0 ? 'fetchpriority="high"' : ""} decoding="async">
             </div>`).join("")}
           </div>
           <div class="home-bar">
-            <span class="home-bar__cap">Sara Aliscioni — Photographer</span>
+            <span class="home-bar__cap">Sara Aliscioni — Photographer <span class="home-bar__legal"><a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="terms.html">Terms</a></span></span>
             <div class="home-bar__ctrl">
               <button type="button" data-step="-1" aria-label="Previous photograph">‹</button>
               <span class="home-bar__n"></span>
@@ -189,7 +190,12 @@
       const num = $(".home-bar__n", app);
       let i = 0, timer = null;
       const ms = Math.max(3, +h.interval_seconds || 5) * 1000;
-      const ready = k => { const img = $("img", els[k]); if (img && img.dataset.src) { img.src = img.dataset.src; img.removeAttribute("data-src"); } };
+      const ready = k => {
+        const img = $("img", els[k]);
+        if (!img || !img.dataset.src) return;
+        if (img.dataset.srcset) { img.srcset = img.dataset.srcset; img.removeAttribute("data-srcset"); }
+        img.src = img.dataset.src; img.removeAttribute("data-src");
+      };
       const show = k => {
         els[i].classList.remove("is-active");
         i = (k + els.length) % els.length;
@@ -403,7 +409,10 @@
     /* ---------- Contact ---------- */
     async contact() {
       const s = await load("site");
-      const endpoint = s.form_endpoint || (s.email ? `https://formsubmit.co/ajax/${encodeURIComponent(s.email)}` : "");
+      // Default: the form opens the visitor's own email app with the message ready (no data passes through third parties).
+      // form_endpoint can point to a form service with a GDPR data-processing agreement, if one is set up in the future.
+      const endpoint = s.form_endpoint || "";
+      const canSend = !!(endpoint || s.email);
       app.innerHTML = `
         <div class="page">
           <div class="two-col">
@@ -423,9 +432,10 @@
                 <label><span>Subject <small>(required)</small></span><input name="subject" required></label>
                 <label><span>Message <small>(required)</small></span><textarea name="message" rows="6" required></textarea></label>
                 <input type="text" name="_honey" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-                <p class="form__note">Your details are used only to reply to your message.</p>
-                <button type="submit" class="form__send"${endpoint ? "" : " disabled"}>Send</button>
-                <p class="form__status" role="status">${endpoint ? "" : "The contact form will be active shortly. In the meantime you can reach Sara on the social networks below."}</p>
+                <label class="form__check"><input type="checkbox" name="privacy" required> <span>I have read the <a href="privacy.html" target="_blank">Privacy Policy</a> <small>(required)</small></span></label>
+                <p class="form__note">${endpoint ? "Your message is sent to Sara and used only to reply to you." : "Pressing “Send” opens your email app with the message ready: nothing is sent until you send it yourself."}</p>
+                <button type="submit" class="form__send"${canSend ? "" : " disabled"}>Send</button>
+                <p class="form__status" role="status">${canSend ? "" : "The contact form will be active shortly. In the meantime you can reach Sara on the social networks below."}</p>
               </form>
             </div>
           </div>
@@ -439,10 +449,17 @@
       const status = $(".form__status", app);
       form.addEventListener("submit", async e => {
         e.preventDefault();
-        if (!endpoint) return;
+        if (!canSend) return;
         if (!form.reportValidity()) return;
         const data = Object.fromEntries(new FormData(form));
         if (data._honey) return;
+        if (!endpoint) {
+          const name = `${data.first_name} ${data.last_name}`.trim();
+          const body = `${data.message}\n\n—\n${name}\n${data.email}`;
+          location.href = `mailto:${s.email}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(body)}`;
+          status.innerHTML = `Your email app should now open with the message ready to send. If nothing happens, write to <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>.`;
+          return;
+        }
         const btn = $(".form__send", form);
         btn.disabled = true; status.textContent = "Sending…";
         try {
@@ -450,7 +467,7 @@
             method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify({
               name: `${data.first_name} ${data.last_name}`.trim(), email: data.email, subject: data.subject, message: data.message,
-              _subject: `Website — ${data.subject}`, _replyto: data.email, _template: "table"
+              _subject: `Website — ${data.subject}`, _replyto: data.email
             })
           });
           const res = await r.json().catch(() => ({}));
@@ -463,6 +480,8 @@
         } finally { btn.disabled = false; }
       });
     },
+
+    async legal() { /* static content */ },
 
     async notfound() { notFound("The page you are looking for doesn't exist or has moved.", "index.html", "Back to home"); }
   };

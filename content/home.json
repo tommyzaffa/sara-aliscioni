@@ -3,63 +3,75 @@
   "slides": [
     {
       "src": "images/home/slides/01.webp",
-      "w": 2000,
-      "h": 1496
+      "w": 1632,
+      "h": 1221,
+      "mobile": "images/home/slides/01-m.webp"
     },
     {
       "src": "images/home/slides/02.webp",
-      "w": 2000,
-      "h": 1500
+      "w": 1920,
+      "h": 1440,
+      "mobile": "images/home/slides/02-m.webp"
     },
     {
       "src": "images/home/slides/03.webp",
-      "w": 2000,
-      "h": 1500
+      "w": 1920,
+      "h": 1440,
+      "mobile": "images/home/slides/03-m.webp"
     },
     {
       "src": "images/home/slides/04.webp",
-      "w": 2000,
-      "h": 1500
+      "w": 1920,
+      "h": 1440,
+      "mobile": "images/home/slides/04-m.webp"
     },
     {
       "src": "images/home/slides/05.webp",
-      "w": 2000,
-      "h": 1500
+      "w": 1920,
+      "h": 1440,
+      "mobile": "images/home/slides/05-m.webp"
     },
     {
       "src": "images/home/slides/06.webp",
-      "w": 1800,
-      "h": 1742
+      "w": 1530,
+      "h": 1481,
+      "mobile": "images/home/slides/06-m.webp"
     },
     {
       "src": "images/home/slides/07.webp",
-      "w": 2000,
-      "h": 1466
+      "w": 1920,
+      "h": 1407,
+      "mobile": "images/home/slides/07-m.webp"
     },
     {
       "src": "images/home/slides/08.webp",
-      "w": 2000,
-      "h": 1374
+      "w": 1920,
+      "h": 1319,
+      "mobile": "images/home/slides/08-m.webp"
     },
     {
       "src": "images/home/slides/09.webp",
-      "w": 2000,
-      "h": 1336
+      "w": 1920,
+      "h": 1283,
+      "mobile": "images/home/slides/09-m.webp"
     },
     {
       "src": "images/home/slides/10.webp",
-      "w": 2000,
-      "h": 1336
+      "w": 1920,
+      "h": 1283,
+      "mobile": "images/home/slides/10-m.webp"
     },
     {
       "src": "images/home/slides/11.webp",
-      "w": 2000,
-      "h": 1458
+      "w": 1920,
+      "h": 1400,
+      "mobile": "images/home/slides/11-m.webp"
     },
     {
       "src": "images/home/slides/12.webp",
-      "w": 2000,
-      "h": 1335
+      "w": 1920,
+      "h": 1282,
+      "mobile": "images/home/slides/12-m.webp"
     }
   ]
 }
