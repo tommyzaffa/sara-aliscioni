@@ -176,6 +176,7 @@ content:
     format: json
     fields:
       - { name: email, label: "Email (riceve i messaggi del modulo)", type: string }
+      - { name: show_email, label: "Mostrare l'email nella pagina Contact", type: boolean }
       - { name: form_endpoint, label: "Indirizzo del servizio del modulo (lasciare vuoto)", type: string }
       - { name: contact_text, label: Testo della pagina Contact, type: text }
       - { name: contact_photo, label: Foto della pagina Contact, component: photo }

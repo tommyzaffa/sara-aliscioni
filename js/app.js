@@ -431,7 +431,7 @@
           </div>
           <h2 class="section-title">Contacts</h2>
           <div class="contact-links">
-            ${s.email ? `<a href="mailto:${esc(s.email)}"><b>Email</b><span>${esc(s.email)}</span><i aria-hidden="true">↗</i></a>` : ""}
+            ${s.email && s.show_email ? `<a href="mailto:${esc(s.email)}"><b>Email</b><span>${esc(s.email)}</span><i aria-hidden="true">↗</i></a>` : ""}
             ${SOCIAL.filter(([, k]) => s[k]).map(([name, k]) => `<a href="${esc(s[k])}" target="_blank" rel="noopener"><b>${name}</b><span>${esc(handle(k, s[k]))}</span><i aria-hidden="true">↗</i></a>`).join("")}
           </div>
         </div>`;
@@ -453,10 +453,13 @@
               _subject: `Website — ${data.subject}`, _replyto: data.email, _template: "table"
             })
           });
-          if (!r.ok) throw new Error(r.status);
+          const res = await r.json().catch(() => ({}));
+          if (!r.ok || String(res.success) === "false") throw new Error(res.message || r.status);
           form.reset(); status.textContent = "Thank you — your message has been sent.";
         } catch (err) {
-          status.textContent = "Sorry, the message could not be sent. Please try again later or write on Instagram.";
+          status.textContent = /activat/i.test(String(err && err.message))
+            ? "The contact form is being activated: please try again in a little while, or write on Instagram."
+            : "Sorry, the message could not be sent. Please try again later or write on Instagram.";
         } finally { btn.disabled = false; }
       });
     },
