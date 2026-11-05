@@ -3,9 +3,11 @@
 Uso:  python3 tools/build_pages.py
 I contenuti NON stanno qui: vengono letti a runtime dai file in /content (modificabili dal CMS).
 """
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+SITE_URL = "https://www.saraaliscioni.com/"
 
 PAGES = [
     # file, data-page, nav attivo, titolo, descrizione
@@ -73,12 +75,12 @@ TEMPLATE = """<!doctype html>
   <title>{title}</title>
   <meta name="description" content="{desc}">
   <meta name="theme-color" content="#000000">
-  <!-- Preview: remove this line when the site is approved for search engines -->
-  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="{canonical}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{desc}">
-  <meta property="og:image" content="https://tommyzaffa.github.io/sara-aliscioni/images/og.jpg">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="https://www.saraaliscioni.com/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <!-- Fonts are self-hosted (no requests to Google). Sofia Pro is licensed (Adobe Fonts): until a kit is added, Mulish is used. -->
@@ -109,6 +111,19 @@ for file, page, nav, title, desc in PAGES:
     if page == "legal":
         main = (ROOT / "tools/legal" / file).read_text(encoding="utf-8")
     extra = '\n  <link rel="preload" href="content/home.json" as="fetch" crossorigin>' if page == "home" else ""
-    html = TEMPLATE.format(title=title, desc=desc, page=page, nav=nav, header=HEADER, footer=footer, main=main, extra_head=extra)
+    canonical = SITE_URL + ("" if file == "index.html" else file)
+    html = TEMPLATE.format(title=title, desc=desc, page=page, nav=nav, header=HEADER, footer=footer, main=main, extra_head=extra, canonical=canonical)
     (ROOT / file).write_text(html, encoding="utf-8")
     print("wrote", file)
+
+# ---- sitemap.xml and robots.txt (detail pages are read from the content files)
+urls = [SITE_URL + ("" if f == "index.html" else f) for f, page, *_ in PAGES if page not in ("notfound",)]
+for name, prefix, key in [("projects", "projects.html?p=", "id"), ("publications", "publications.html?p=", "id"), ("news", "news.html?n=", "id")]:
+    for item in json.loads((ROOT / "content" / f"{name}.json").read_text(encoding="utf-8")):
+        urls.append(SITE_URL + prefix + item[key])
+xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+xml += [f"  <url><loc>{u.replace('&', '&amp;')}</loc></url>" for u in urls]
+xml += ["</urlset>", ""]
+(ROOT / "sitemap.xml").write_text("\n".join(xml), encoding="utf-8")
+(ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8")
+print("wrote sitemap.xml with", len(urls), "urls, robots.txt")

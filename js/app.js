@@ -545,6 +545,18 @@
     return { open };
   })();
 
+  /* detail pages (?p= / ?n=) get their own canonical URL */
+  (() => {
+    const key = params.get("p") ? "p" : params.get("n") ? "n" : null;
+    if (!key) return;
+    $$('link[rel="canonical"], meta[property="og:url"]').forEach(el => {
+      const attr = el.tagName === "LINK" ? "href" : "content";
+      const u = new URL(el.getAttribute(attr));
+      u.search = `?${key}=${encodeURIComponent(params.get(key))}`;
+      el.setAttribute(attr, u.href);
+    });
+  })();
+
   /* ---------- boot ---------- */
   buildMenus();
   footer();
