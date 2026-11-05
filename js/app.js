@@ -232,6 +232,7 @@
               <h2 class="section-title" id="education">Education</h2>
               ${rows(b.education, false)}
               ${(b.activities || []).length ? `<h2 class="section-title">Activities</h2>${rows(b.activities, false)}` : ""}
+              ${(b.collaborations || []).length ? `<h2 class="section-title">Backstage & collaborations</h2>${rows(b.collaborations)}` : ""}
               ${b.languages ? `<h2 class="section-title">Languages</h2><p>${esc(b.languages)}</p>` : ""}
             </div>
           </div>

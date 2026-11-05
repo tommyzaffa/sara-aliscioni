@@ -70,6 +70,7 @@ content:
         fields:
           - { name: year, label: Periodo, type: string }
           - { name: text, label: Descrizione, type: string }
+      - { name: collaborations, label: Backstage & collaborations, component: row, list: true }
       - { name: solo, label: Solo exhibitions, component: row, list: true }
       - { name: group, label: Group exhibitions, component: row, list: true }
       - { name: awards, label: Awards & recognitions, component: row, list: true }
