@@ -292,12 +292,11 @@
         const p = list[i];
         document.title = `${p.title} — Sara Aliscioni`;
         const imgs = p.images || [];
-        const g = register("main", imgs);
         app.innerHTML = `
           <div class="page">
             <p class="crumbs label"><a href="publications.html">Publications</a></p>
             <div class="pub-intro">
-              ${p.cover ? `<figure class="pub-cover"><button type="button" data-zoom="${esc(p.cover.src)}" data-caption="${esc(p.title)}" aria-label="Enlarge cover"><img src="${esc(p.cover.src)}" ${dims(p.cover)} alt="${esc(p.title)}" decoding="async"></button></figure>` : ""}
+              ${p.cover ? `<figure class="pub-cover"><img src="${esc(p.cover.src)}" ${dims(p.cover)} alt="${esc(p.title)}" decoding="async"></figure>` : ""}
               <div>
                 <header class="page-head">
                   <p class="label">${esc(p.year)}</p>
@@ -310,7 +309,7 @@
             </div>
             ${imgs.length ? (p.layout === "scroll"
               ? `<div class="scroll-images">${imgs.map(im => `<img src="${esc(im.src)}" ${dims(im)} alt="${esc(im.caption || p.title)}" loading="lazy" decoding="async">`).join("")}</div>`
-              : `<h2 class="section-title">Images</h2>${thumbs(imgs, g)}`) : ""}
+              : `<div class="pub-images">${imgs.map(im => `<img src="${esc(im.src)}" ${dims(im)} alt="${esc(im.caption || p.title)}" loading="lazy" decoding="async">`).join("")}</div>`) : ""}
             ${pager(list, i, x => `publications.html?p=${encodeURIComponent(x.id)}`, "Publications")}
           </div>`;
         bindThumbs();

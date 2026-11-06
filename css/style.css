@@ -136,6 +136,8 @@ ul, ol { list-style: none; }
 /* ---------- Publication / news intro: image + text ---------- */
 .pub-intro { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
 .pub-cover button { display: block; width: 100%; cursor: zoom-in; }
+.pub-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: clamp(12px, 1.6vw, 22px); margin-top: clamp(40px, 5vw, 64px); align-items: start; }
+.pub-images img { width: 100%; height: auto; background: var(--panel); }
 .pub-cover img { width: 100%; height: auto; background: var(--panel); }
 .scroll-images { display: grid; gap: clamp(16px, 2.4vw, 32px); margin-top: clamp(40px, 5vw, 64px); max-width: 1100px; margin-left: auto; margin-right: auto; }
 .scroll-images img { width: 100%; height: auto; }
@@ -274,10 +276,13 @@ body[data-page="home"] .site-main { min-height: 0; }
 /* ---------- Lightbox ---------- */
 .lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(0, 0, 0, .97); display: grid; grid-template-columns: 64px minmax(0, 1fr) 64px; align-items: center; }
 .lightbox[hidden] { display: none; }
-.lightbox__fig { height: 100vh; height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 56px 0 24px; min-width: 0; }
+.lightbox__fig { grid-column: 2; height: 100vh; height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 56px 0 24px; min-width: 0; }
 .lightbox__fig img { max-width: 100%; max-height: calc(100% - 44px); width: auto; height: auto; object-fit: contain; }
 .lightbox__fig figcaption { margin-top: 14px; font-size: 12px; letter-spacing: .06em; color: var(--gray); text-align: center; padding: 0 8px; }
 .lightbox__close { position: absolute; top: 16px; right: var(--pad); z-index: 1; font-size: 18px; color: var(--gray); padding: 6px; }
+.lightbox__prev { grid-column: 1; grid-row: 1; }
+.lightbox__next { grid-column: 3; grid-row: 1; }
+.lightbox__fig { grid-row: 1; }
 .lightbox__nav { height: 100%; font-size: 40px; font-weight: 300; color: var(--gray-2); }
 .lightbox__close:hover, .lightbox__nav:hover { color: #fff; }
 body.no-scroll { overflow: hidden; }
