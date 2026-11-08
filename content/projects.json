@@ -1762,6 +1762,18 @@
         "w": 1600,
         "h": 1200,
         "thumb": "images/projects/portraits/014-t.webp"
+      },
+      {
+        "src": "images/projects/portraits/015.webp",
+        "w": 1139,
+        "h": 1600,
+        "thumb": "images/projects/portraits/015-t.webp"
+      },
+      {
+        "src": "images/projects/portraits/016.webp",
+        "w": 1600,
+        "h": 1205,
+        "thumb": "images/projects/portraits/016-t.webp"
       }
     ]
   },
